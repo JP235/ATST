@@ -1,0 +1,604 @@
+Assay Time Series Tabular Format (.atst.txt)
+
+ATST is a TAB based data-sharing format for assay time-series readouts. It's intention is
+to allow sharing of assay readouts with enough structure for easy parsing, inspection, and basic validation.
+
+Sigils:
+===
+:::
+%%%
+<<<
+_START
+_END
+
+File sections delimiters:
+
+=== FILE_START
+::: {block_name}_START
+::: {block_name}_END
+%%% {sub_field_name}_START
+%%% {sub_field_name}_END
+<<< {linked_field_name} readout_id={readout_id} file={relative_file_path.tsv}
+=== FILE_END
+
+
+::: encloses top-level blocks
+%%% encloses in-file multi-line fields
+<<< declares linked external fields
+
+A %%% field MAY contain either:
+- a long two-column table
+- a wide table
+- a readout-specific in-file payload
+
+<<< Linked files contain only the field payload and MUST NOT include block or field delimiters
+
+
+blocks order:
+
+FILE_INFO
+   atst file metadata
+STUDY
+   who did this, where, why, funding, etc.
+READOUT_MANIFEST (optional)
+   readouts id declaration
+   file links to metadata_file assay_file layout_file and data_file for each readout_id of the study
+METADATA
+   instrument, acquisition date, software version, lab, etc.
+ASSAY
+   readout type information
+ENTITIES (optional)
+   data of entities studied
+LAYOUT_SCHEMA (optional)
+   data validation rules for LAYOUT block
+LAYOUT
+   plate layout
+DATA
+   plate readout data
+
+
+Inline field:
+{field_name}<TAB>{value}
+
+
+"Long table", rows of inline fields, no headers:
+{field_name}<TAB>{value}
+{field_name}<TAB>{value}
+{field_name}<TAB>{value}
+...
+
+"Wide table", one line header with column names, no index numbers:
+{column_1_name}<TAB>{column_2_name}<TAB>...
+{value_row_1_column_1}<TAB>{value_row_1_column_2}<TAB>...
+{value_row_2_column_1}<TAB>{value_row_2_column_2}<TAB>...
+{value_row_3_column_1}<TAB>{value_row_3_column_2}<TAB>...
+...
+
+
+===FILE_START
+
+:::FILE_INFO_START
+Long table
+
+Mandatory fields:
+
+file_name       	{name}.atst.txt
+format          	ATST
+format_version  	0.1
+created_on      	{created_on_date}
+field_delimiter 	TAB
+encoding        	UTF-8
+
+
+field_delimiter MUST be TAB
+encoding MUST be UTF-8
+:::FILE_INFO_END
+
+::: STUDY_START
+Long table
+
+title         	{title}
+study_id      	{study_id}
+...
+
+::: STUDY_END
+
+::: READOUT_MANIFEST_START
+Wide table
+
+(optional only for single-readout files that do not use readout_id anywhere)
+
+Mandatory column: readout_id
+Optional: all columns metadata_file, assay_file, layout_file, and data_file.
+
+Every readout_id used anywhere in the file MUST appear in the READOUT_MANIFEST
+If the block is not included everything MUST be declared in-file, no linking allowed.
+
+Optional columns have paths for links of block field values for a given readout_id.
+  data_file > DATA.READOUT
+  layout_file > LAYOUT.LAYOUT_READOUT
+  assay_file > ASSAY.ASSAY_READOUT
+  metadata_file > METADATA.METADATA_READOUT
+
+If optional columns are included but file linking is not used, the value MUST be NA.
+For each manifest file column, linking MUST be consistent across readouts. If any readout has a non-NA value in data_file, then every readout MUST have a non-NA value 
+in data_file, and the DATA block may be omitted.
+If every value in data_file is NA or the column is absent, DATA MUST be provided in-file.
+The same rule applies independently to metadata_file, assay_file, layout_file, and data_file.
+
+If a file path for a given readout is specified in both READOUT_MANIFEST and the corresponding
+block-level external link, the paths MUST be identical.
+
+example 1.1:
+READOUT_MANIFEST not declared.
+METADATA, ASSAY, LAYOUT, and DATA blocks MUST be defined in the file.
+No linking blocks allowed.
+
+example 1.2:
+METADATA, ASSAY, LAYOUT, and DATA blocks MUST be defined in the file.
+Linking blocks are allowed with readout_id=OD600
+
+readout_id
+OD600
+
+example 1.3:
+METADATA, ASSAY, LAYOUT, and DATA blocks MUST be defined in the file.
+Linking blocks are allowed with readout_id=OD600
+
+readout_id 	metadata_file 	assay_file 	layout_file 	data_file
+OD600      	NA            	NA         	NA          	NA
+
+example 2:
+METADATA and DATA blocks MAY (and SHOULD) be omitted.
+ASSAY and LAYOUT MUST be defined in the file.
+
+readout_id 	metadata_file 	assay_file 	layout_file 	data_file
+GFP        	meta.tsv      	NA         	NA          	gfp_00001.tsv
+OD600      	meta.tsv      	NA         	NA          	od600_00001.tsv
+
+example 2.1:
+NOT allowed
+MUST NOT mix linking policy within a block
+
+           	              	wrong      	            	wrong
+readout_id 	metadata_file 	assay_file 	layout_file 	data_file
+GFP        	NA            	assay.tsv  	NA          	gfp_00001.tsv
+OD600      	NA           	NA         	NA          	NA
+
+
+example 3:
+METADATA, ASSAY, LAYOUT, and DATA blocks MAY (and SHOULD) be omitted.
+File could end after closing READOUT_MANIFEST
+
+readout_id 	metadata_file  	assay_file      	layout_file      	data_file
+OD600_1    	meta_00001.tsv 	assay_00001.tsv 	layout_00001.tsv 	data_00001.tsv
+OD600_2    	meta_00002.tsv 	assay_00002.tsv 	layout_00002.tsv 	data_00002.tsv
+OD600_3    	meta_00003.tsv 	assay_00003.tsv 	layout_00003.tsv 	data_00003.tsv
+OD600_4    	meta_00004.tsv 	assay_00004.tsv 	layout_00004.tsv 	data_00004.tsv
+
+::: READOUT_MANIFEST_END
+
+::: METADATA_START
+Long table(S)
+
+File-level and study-run metadata:
+
+example 1:
+instrument   	SuperDuperReader
+plate_type   	Corning 96 well for SuperDuperReader
+date_start   	2026-01-01
+operator     	OP1
+
+example 2:
+<<< METADATA_READOUT file=meta.tsv readout_id=GFP
+<<< METADATA_READOUT file=meta.tsv readout_id=OD600
+
+example 3:
+<<< METADATA_READOUT readout_id=OD600_1 file=meta_00001.tsv
+<<< METADATA_READOUT readout_id=OD600_2 file=meta_00002.tsv
+<<< METADATA_READOUT readout_id=OD600_3 file=meta_00003.tsv
+<<< METADATA_READOUT readout_id=OD600_4 file=meta_00004.tsv
+
+::: METADATA_END
+
+::: ASSAY_START
+Long table(s)
+
+Mandatory fields:
+readout_type   	string
+readout_unit   	string
+time_unit      	time_unit
+plate_format   	string
+
+extra fields:
+any extra device configuration or measurement setup.
+
+allowed time_unit are:
+- s (seconds, numeric)
+- min (minutes, numeric), or
+- h (hours, numeric)
+
+if multiple, use linked files or encapsulate each in %%% ASSAY_READOUT fields with readout_id values
+
+example 1:
+readout_type      	absorbance
+readout_unit      	od600
+time_unit         	s
+plate_format      	96_well
+temperature       	37°C
+shaking           	ON
+shaking_frequency 	100rpm
+
+example 2:
+%%% ASSAY_READOUT_START readout_id=GFP
+readout_type         	GFP
+readout_unit         	RFU
+time_unit            	s
+plate_format         	96_well
+temperature_gradient 	ON
+%%% ASSAY_READOUT_END
+
+%%% ASSAY_READOUT_START readout_id=OD600
+readout_type         	absorbance
+readout_unit         	od600
+time_unit            	s
+plate_format         	96_well
+temperature_gradient 	ON
+%%% ASSAY_READOUT_END
+
+example 3:
+<<< ASSAY_READOUT readout_id=OD600_1 file=assay_00001.tsv
+<<< ASSAY_READOUT readout_id=OD600_2 file=assay_00002.tsv
+<<< ASSAY_READOUT readout_id=OD600_3 file=assay_00003.tsv
+<<< ASSAY_READOUT readout_id=OD600_4 file=assay_00004.tsv
+
+::: ASSAY_END
+
+::: ENTITIES_START
+Wide table(s)
+(optional, SHOULD be used as centralized place to share data on entities used in the study)
+
+Each table is a field that has to have NAME and PK values declared
+Each entity table MUST contain the declared primary key column.
+Primary key values MUST be unique within that table.
+
+name and pk values MUST be declared in the TABLE tag:
+%%% TABLE_START name={table_name} pk={pk_column}
+<<< TABLE name={table_name} pk={pk_column} file=study_1_entities.tsv
+
+example:
+%%% TABLE_START name=PHAGES pk=PHAGE_ID
+PHAGE_ID 	source         	family         	genome
+ph_1     	sputum_isolate 	Myoviridae     	phage_genes/ph_1.fasta
+ph_2     	engineered     	Bruynoghevirus 	phage_genes/ph_2.fasta
+%%% TABLE_END
+
+%%% TABLE_START name=ISOLATES pk=ISOLATE_ID
+ISOLATE_ID
+ISO_1
+ISO_2
+%%% TABLE_END
+
+%%% TABLE_START name=SMALL_MOLECULE pk=SMALL_MOLECULE_ID
+SMALL_MOLECULE_ID 	pubchem_id
+SM_MOL_1          	0001
+%%% TABLE_END
+
+::: ENTITIES_END
+
+::: LAYOUT_SCHEMA_START
+(optional, used to validate LAYOUT data types and references at read-time)
+
+data types recognized for layout values:
+	- string
+	- integer
+	- float
+	- numeric
+	- boolean
+	- CATEGORICAL({comma separated values})
+	- CONSTANT("value")
+	- ENTITY_REF({table_name}.{pk_column})
+
+%%% TYPE_DEFINITIONS_START
+Long table
+
+first and second rows MUST be definition of well_loc and type
+well_loc MUST be string
+type MUST be CATEGORICAL
+
+After type definition, study specific values. They MAY be named anything but MUST match a column in layout.
+
+If a column is declared as CONSTANT in LAYOUT_SCHEMA, that column MAY be omitted from LAYOUT.
+A value within CONSTANT(...) MUST be double-quoted if it contains characters other than alphanumerics, 
+underscores, dots, and hyphens; and SHOULD always be double-quoted.
+Value inside quotes follows other standard text value rules.
+If present, every non-empty row MUST have the declared constant value.
+
+ENTITY_REF will check for a match in {pk_column} column of ENTITIES.TABLE name={table_name}.
+ENTITY_REF({table_name}) without a primary key reference defaults to the primary key declared in 
+%%% TABLE_START name={table_name} pk={...}. ENTITY_REF({table_name}.{pk_column}) is the explicit form. Both are valid.
+References to other columns are not supported. 
+
+example 1:
+well_loc 	string
+type     	CATEGORICAL(Treatment_1, Treatment_2, Isolate_ctrl, Blank)
+isolate  	ENTITY_REF(ISOLATES.ISOLATE_ID)
+phage    	ENTITY_REF(PHAGES.PHAGE_ID)
+MOI      	float
+sm       	ENTITY_REF(SMALL_MOLECULE.SMALL_MOLECULE_ID)
+conc_uM  	float
+replicate	integer
+comments 	string
+
+example 2:
+well_loc 	string
+type     	CATEGORICAL(Treatment, Isolate_ctrl, Blank)
+isolate  	CONSTANT("test_isolate")
+phage_1  	ENTITY_REF(PHAGES.PHAGE_ID)
+phage_2  	ENTITY_REF(PHAGES.PHAGE_ID)
+MOI_1    	float
+MOI_2    	float
+
+
+example 3:
+well_loc 	string
+type     	CATEGORICAL(treated, control, Blank)
+phage    	ENTITY_REF(PHAGES.PHAGE_ID)
+MOI      	float
+
+%%% TYPE_DEFINITIONS_END
+
+%%% TYPE_CONSTRAINTS_START
+(optional)
+Wide table
+
+Mandatory columns: type ,REQUIRED_COLUMNS, and OPTIONAL_COLUMNS
+type column values MUST match the declared CATEGORICAL values of the type column in TYPE_DEFINITIONS
+for a row REQUIRED_COLUMNS and OPTIONAL_COLUMNS value is a list of TYPE_DEFINITIONS field names
+   list fields are comma-separated
+   whitespace around list items is ignored
+
+for a LAYOUT row with a given type in TYPE_CONSTRAINTS table:
+   columns in REQUIRED_COLUMNS MUST have a value
+   columns in OPTIONAL_COLUMNS MAY have a value
+   columns not in REQUIRED_COLUMNS or OPTIONAL_COLUMNS MUST be empty
+
+all columns are optional for a type not present in TYPE_CONSTRAINTS table
+
+example 1:
+type        	REQUIRED_COLUMNS                            	OPTIONAL_COLUMNS
+Treatment_1 	isolate, phage, MOI, replicate              	comments
+Treatment_2 	isolate, phage, MOI, sm, conc_uM, replicate 	comments
+Isolate_ctrl	isolate, replicate                          	comments
+Blank       	replicate                                   	comments
+
+example 2:
+type         	REQUIRED_COLUMNS 	OPTIONAL_COLUMNS
+Treatment    	isolate          	phage_1, phage_2, MOI_1, MOI_2
+Isolate_ctrl 	isolate          	
+Blank        	                 	
+
+example 3:
+Empty TYPE_CONSTRAINTS table
+Same as not defining it
+No LAYOUT required/optional column validation
+
+type 	REQUIRED_COLUMNS 	OPTIONAL_COLUMNS
+			
+
+%%% TYPE_CONSTRAINTS_END
+
+::: LAYOUT_SCHEMA_END
+
+::: LAYOUT_START
+Wide table
+Mandatory columns: well_loc
+
+Other columns: defined in LAYOUT_SCHEMA (if present), or all values interpreted as string
+If LAYOUT_SCHEMA is present, columns listed in TYPE_DEFINITIONS are validated and unlisted
+columns MUST NOT appear in LAYOUT.
+
+Empty cell means the column does not apply to that well_loc's type.
+Every well_loc value MUST have a corresponding column in DATA, even if all values are empty.
+A row MAY be completely empty (other than well_loc) if no data was collected for that well_loc but
+it MUST still appear as a column in DATA, with all values empty.
+
+example 1:
+well_loc	type        	isolate 	phage 	MOI 	sm       	conc_uM 	replicate
+A1      	Treatment_1 	ISO_1   	ph_1  	0.1 	         	        	1
+A2      	Treatment_2 	ISO_1   	ph_1  	0.1 	SM_MOL_1 	5.0     	1
+A3      	Isolate_ctrl	ISO_1   	      	    	         	        	1
+A4      	            	        	      	    	         	        	
+A5      	Treatment_1 	ISO_2   	ph_1  	0.1 	         	        	1
+A6      	Treatment_2 	ISO_2   	ph_1  	0.1 	SM_MOL_1 	5.0     	1
+A7      	Isolate_ctrl	ISO_2   	      	    	         	        	1
+A8      	            	        	      	    	         	        	
+A9      	Blank       	        	      	    	        	        	1
+...
+
+example 2:
+isolate column is CONSTANT and could be omitted from the layout
+
+well_loc	type         	isolate      	phage_1 	MOI_1 	phage_2 	MOI_2
+A1      	Treatment    	test_isolate 	ph_1    	0.1   	ph_2    	0.1
+A2      	Treatment    	test_isolate 	ph_1    	0.1   	ph_2    	0.01
+A3      	Isolate_ctrl 	test_isolate 	        	      	        	
+A4      	Treatment    	test_isolate 	ph_1    	0.01  	ph_2    	0.1
+A5      	Treatment    	test_isolate 	ph_1    	0.01  	ph_2    	0.01
+A6      	Isolate_ctrl 	test_isolate 	        	      	        	
+A7      	Blank        	             	        	      	        	
+...
+
+example 3:
+<<< LAYOUT_READOUT readout_id=OD600_1 file=layout_00001.tsv
+<<< LAYOUT_READOUT readout_id=OD600_2 file=layout_00002.tsv
+<<< LAYOUT_READOUT readout_id=OD600_3 file=layout_00003.tsv
+<<< LAYOUT_READOUT readout_id=OD600_4 file=layout_00004.tsv
+
+
+::: LAYOUT_END
+
+::: DATA_START
+tab separated wide table
+First cell of the first line MUST be "Time".
+Every DATA column other than Time MUST correspond to a well_loc in LAYOUT.
+Time column values are numeric as defined by time_unit in the
+Corresponding ASSAY block or ASSAY_READOUT for the same readout_id.
+Time values MUST be unique and strictly increasing within a READOUT.
+
+Empty columns, (i.e example 1 column A4) represent no data collected,
+for detection/Instrument errors use "NA" (i.e example 1 column A1).
+
+Single readout studies data does not need a table delimiter or readout_id.
+In multi-readout studies each READOUT MUST have a readout_id.
+
+example 1:
+Time 	A1     	A2     	A3     	A4 	A5     	...
+0    	NA     	0.3241 	0.2912 	   	0.2512 	...
+600  	0.3211 	0.3352 	0.2989 	   	0.2552 	...
+...
+
+example 2:
+%%% READOUT_START readout_id=GFP
+Time 	A1   	A2   	...
+0    	0.11 	0.22 	...
+...
+%%% READOUT_END
+%%% READOUT_START readout_id=OD600
+Time 	A1   	A2   	...
+0    	0.31 	0.34 	...
+...
+%%% READOUT_END
+
+example 3:
+<<< READOUT readout_id=OD600_1 file=data_00001.tsv
+<<< READOUT readout_id=OD600_2 file=data_00002.tsv
+<<< READOUT readout_id=OD600_3 file=data_00003.tsv
+<<< READOUT readout_id=OD600_4 file=data_00004.tsv
+
+::: DATA_END
+
+===FILE_END
+
+
+
+Reserved names MAY be used only where defined by the ATST specification.
+User-defined identifiers, entity IDs, table names, column names, and readout IDs MUST NOT equal reserved
+names under case-insensitive comparison.
+
+Reserved names:
+   readout_id
+   Time
+   type
+   well_loc
+   NA
+   FILE_INFO
+   STUDY
+   READOUT_MANIFEST
+   METADATA
+   METADATA_READOUT
+   ASSAY
+   ASSAY_READOUT
+   ENTITIES
+   LAYOUT_SCHEMA
+   TYPE_DEFINITIONS
+   TYPE_CONSTRAINTS
+   LAYOUT
+   LAYOUT_READOUT
+   DATA
+   READOUT
+
+Field names:
+   MUST NOT contain reserved sigils
+   MUST NOT contain tabs, or newlines
+   snake_case SHOULD be used for everything other than ENTITIES.TABLE fields
+
+Text values:
+   MUST NOT contain reserved sigils
+   Placeholders for empty values MUST NOT be used. Empty values are allowed
+   Error and non-applicable values SHOULD be marked as NA
+
+Numeric values:
+   Decimal point is "."
+   Scientific notation is allowed
+   Thousands separators are not allowed
+
+All dates MUST follow ISO8601 format:
+   YYYY-MM-DD"
+   YYYY-MM-DDThh:mm:ssZ or with timezone offset
+
+A single TAB separates fields and table row cells.
+Additional TAB characters MUST NOT be used for visual alignment.
+Leading and trailing spaces around keys and values are ignored.
+Spaces MAY be used for visual alignment only after field content, not as field delimiters.
+
+{field_name}<TAB>{value}
+and 
+{field_name  }<TAB>{value  }
+will be treated the same
+
+
+for multi-ASSAY / multi-LAYOUT / multi-DATA studies it is possible to have everything in a single file
+but it's recommended to use links to files with per-readout values
+
+Linking to other files supported for fields:
+   DATA.READOUT
+   LAYOUT.LAYOUT_READOUT
+   ASSAY.ASSAY_READOUT
+   METADATA.METADATA_READOUT
+   ENTITIES.TABLE
+
+Same linking policy MUST be followed for all fields within a block.
+Either all fields encapsulated readout_id or all in linked files.
+A different block MAY follow a different approach.
+
+this is allowed:
+
+:::ASSAY_START
+%%% ASSAY_READOUT_START readout_id=1
+...
+%%% ASSAY_READOUT_END
+%%% ASSAY_READOUT_START readout_id=2
+...
+%%% ASSAY_READOUT_END
+:::ASSAY_END
+
+:::DATA_START
+<<<READOUT readout_id=1 file=...
+<<<READOUT readout_id=2 file=...
+:::DATA_END
+
+this is not allowed:
+
+:::ASSAY_START
+<<< ASSAY_READOUT readout_id=1 file=...
+%%% ASSAY_READOUT_START readout_id=2
+...
+%%% ASSAY_READOUT_END
+:::ASSAY_END
+
+:::DATA_START
+<<<READOUT readout_id=1 file=...
+%%% READOUT_START readout_id=2
+....
+%%% READOUT_END
+:::DATA_END
+
+Linked files paths MUST be relative to FILE_INFO.{file_name} parent file's directory.
+
+Linked fields MUST include a readout_id value unless specified in the specs.
+Linked files MUST follow the format of the field without block markers.
+
+accepted <<< READOUT payload example:
+Time  	A1   	A2
+0     	0.11 	0.22
+600   	0.33 	0.44
+
+
+wrong <<< READOUT payload example:
+%%% READOUT_START readout_id=id1
+Time 	A1   	A2
+0    	0.11 	0.22
+600  	0.33 	0.44
+%%% READOUT_END
+
