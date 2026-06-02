@@ -144,7 +144,7 @@ def _format_table_rows(
         row_cells = []
         for column_index, cell in enumerate(row):
             if column_index == 0 and pad_first_column:
-                row_cells.append("    " + cell.ljust(widths[column_index] + 1))
+                row_cells.append("   " + cell.ljust(widths[column_index] + 1))
             elif column_index == column_count - 1:
                 row_cells.append(cell)
             else:
