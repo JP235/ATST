@@ -63,6 +63,7 @@ dependencies = [
     { name = "pandas" },
     { name = "pytz" },
     { name = "streamlit", extra = ["charts"] },
+    { name = "streamlit-tags" },
 ]
 
 [package.dev-dependencies]
@@ -77,6 +78,7 @@ requires-dist = [
     { name = "pandas", specifier = ">=3.0.3" },
     { name = "pytz", specifier = ">=2026.2" },
     { name = "streamlit", extras = ["charts"], specifier = ">=1.58.0" },
+    { name = "streamlit-tags", specifier = ">=1.2.8" },
 ]
 
 [package.metadata.requires-dev]
@@ -1206,6 +1208,18 @@ charts = [
     { name = "matplotlib" },
     { name = "orjson" },
     { name = "plotly" },
+]
+
+[[package]]
+name = "streamlit-tags"
+version = "1.2.8"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "streamlit" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/c8/c9/047d5e24f3ca5d31ed8c0ced4ed2e6ac20db5514c7fc814583b0c495e6ee/streamlit_tags-1.2.8.tar.gz", hash = "sha256:9ea46b21f206dc73164e59e3c800a96c863c90af57afde20115f001a6d986583", size = 561247, upload-time = "2021-07-16T17:41:57.503Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/19/56/75000c009c3cdbb960783580dd3b51e1483b3cfa8f2967669fccd4cff894/streamlit_tags-1.2.8-py3-none-any.whl", hash = "sha256:c71b10666f3fce67d8e0b3c089aa50dc48830d310223fb88005b08f157586f95", size = 2678564, upload-time = "2021-07-16T17:41:55.38Z" },
 ]
 
 [[package]]

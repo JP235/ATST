@@ -9,6 +9,7 @@ dependencies = [
     "matplotlib>=3.10.9",
     "pandas>=3.0.3",
     "pytz>=2026.2",
+    "streamlit-tags>=1.2.8",
     "streamlit[charts]>=1.58.0",
 ]
 
