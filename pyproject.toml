@@ -21,3 +21,16 @@ package-dir = {"" = "src"}
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.uv.workspace]
+members = [
+    ".",
+]
+
+[tool.uv.sources]
+atst = { workspace = true }
+
+[dependency-groups]
+dev = [
+    "atst",
+]
