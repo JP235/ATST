@@ -6,11 +6,13 @@ from io import StringIO
 from pathlib import Path
 import re
 
+from ATST.ATSTFile.ATST import ATSTFile, MultiReadoutATST
+from ATST.ATSTFile.read_files import read_atst
+from ATST.ATSTFile.write_files import write_atst
 import pandas as pd
 import streamlit as st
 from streamlit_tags import st_tags
 
-from ATST.ATSTFile.ATST import ATSTFile, MultiReadoutATST, read_atst, write_file
 from ATST.blocks import (
     Assay,
     Data,
@@ -1140,7 +1142,7 @@ def main() -> None:
             )
 
             output_path = Path("data_exporter") / path.name
-            write_file(atst, output_path, human_readable=True)
+            write_atst(atst, output_path, human_readable=True)
             text = output_path.read_text(encoding="utf-8")
 
         except Exception as exc:
