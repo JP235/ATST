@@ -1,0 +1,85 @@
+===FILE_START
+:::FILE_INFO_START
+file_name	example_2.atst.tsv
+format	ATST
+format_version	0.1
+created_on	2026-01-01
+field_delimiter	TAB
+encoding	UTF-8
+:::FILE_INFO_END
+
+:::STUDY_START
+title	Example 2 multi-readout assay with linked metadata and data
+study_id	ATST_EXAMPLE_2
+description	Two readouts share in-file assay and layout definitions while metadata and data payloads are linked externally.
+:::STUDY_END
+
+:::READOUT_MANIFEST_START
+readout_id 	metadata_file 	assay_file	layout_file 	data_file
+GFP        	meta.tsv      	NA        	NA          	gfp_00001.tsv
+OD600      	meta.tsv      	NA        	NA          	od600_00001.tsv
+:::READOUT_MANIFEST_END
+
+:::ASSAY_START
+%%%ASSAY_READOUT_START readout_id=GFP
+readout_type         	GFP
+readout_unit         	RFU
+time_unit            	s
+plate_format         	96_well
+temperature_gradient 	ON
+%%%ASSAY_READOUT_END
+
+%%%ASSAY_READOUT_START readout_id=OD600
+readout_type         	absorbance
+readout_unit         	od600
+time_unit            	s
+plate_format         	96_well
+temperature_gradient 	ON
+%%%ASSAY_READOUT_END
+:::ASSAY_END
+
+:::ENTITIES_START
+%%%TABLE_START name=PHAGES pk=PHAGE_ID
+PHAGE_ID 	source	family	genome
+ph_1     	sputum_isolate	Myoviridae	phage_genes/ph_1.fasta
+ph_2     	engineered	Bruynoghevirus	phage_genes/ph_2.fasta
+%%%TABLE_END
+:::ENTITIES_END
+
+:::LAYOUT_SCHEMA_START
+%%%TYPE_DEFINITIONS_START
+well_loc 	string
+type     	CATEGORICAL(Treatment, Isolate_ctrl, Blank)
+isolate  	CONSTANT("test_isolate")
+phage_1  	ENTITY_REF(PHAGES.PHAGE_ID)
+phage_2  	ENTITY_REF(PHAGES.PHAGE_ID)
+MOI_1    	float
+MOI_2    	float
+%%%TYPE_DEFINITIONS_END
+
+%%%TYPE_CONSTRAINTS_START
+type         	REQUIRED_COLUMNS	OPTIONAL_COLUMNS
+Treatment    	isolate         	phage_1, phage_2, MOI_1, MOI_2
+Isolate_ctrl 	isolate         	
+Blank        		
+%%%TYPE_CONSTRAINTS_END
+:::LAYOUT_SCHEMA_END
+
+:::LAYOUT_START
+well_loc 	type        	isolate         	phage_1 	MOI_1   	phage_2 	MOI_2
+A1       	Treatment   	test_isolate    	ph_1    	0.1     	ph_2    	0.1
+A2       	Treatment   	test_isolate    	ph_1    	0.1     	ph_2    	0.01
+A3       	Isolate_ctrl	test_isolate    		    		
+A4       	Treatment   	test_isolate    	ph_1    	0.01    	ph_2    	0.1
+A5       	Treatment   	test_isolate    	ph_1    	0.01    	ph_2    	0.01
+A6       	Isolate_ctrl	test_isolate    				
+A7       	Blank					
+:::LAYOUT_END
+
+:::DATA_START
+<<< READOUT readout_id=GFP   file=/readings/gfp_00001.tsv
+<<< READOUT readout_id=OD600 file=/readings/od600_00001.tsv
+:::DATA_END
+
+
+===FILE_END

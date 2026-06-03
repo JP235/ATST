@@ -1,0 +1,24 @@
+===FILE_START
+:::FILE_INFO_START
+file_name	example_3.atst.tsv
+format	ATST
+format_version	0.1
+created_on	2026-01-01
+field_delimiter	TAB
+encoding	UTF-8
+:::FILE_INFO_END
+
+:::STUDY_START
+title	Example 3 fully linked multi-readout assay
+study_id	ATST_EXAMPLE_3
+description	Four readouts with metadata, assay, layout, and data payloads declared by manifest file links.
+:::STUDY_END
+
+:::READOUT_MANIFEST_START
+readout_id	metadata_file        	assay_file              	layout_file              	data_file
+OD600_1   	/meta/meta_00001.tsv 	/assays/assay_00001.tsv 	/layouts/layout_00001.tsv	/data/data_00001.tsv
+OD600_2   	/meta/meta_00002.tsv 	/assays/assay_00002.tsv 	/layouts/layout_00002.tsv	/data/data_00002.tsv
+OD600_3   	/meta/meta_00003.tsv 	/assays/assay_00003.tsv 	/layouts/layout_00003.tsv	/data/data_00003.tsv
+OD600_4   	/meta/meta_00004.tsv 	/assays/assay_00004.tsv 	/layouts/layout_00004.tsv	/data/data_00004.tsv
+:::READOUT_MANIFEST_END
+===FILE_END

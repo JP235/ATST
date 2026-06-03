@@ -1,0 +1,158 @@
+===FILE_START
+:::FILE_INFO_START
+   file_name       	template.atst.txt
+   format          	ATST
+   format_version  	0.1
+   created_on      	2026-06-02
+   field_delimiter 	TAB
+   encoding        	UTF-8
+:::FILE_INFO_END
+
+:::STUDY_START
+   title    	Pseudomonas phage screening
+   study_id 	pseud_vs_panel_sceen_2025_2026
+   description 	This is the study description
+:::STUDY_END
+
+:::METADATA_START
+   instrument      	LogPhase600
+   plate_type      	Corning 96 well for LogPhase600
+   date_start      	2026_03_12
+   operator        	LB
+   experiment_type 	QC
+:::METADATA_END
+
+:::ASSAY_START
+   readout_type   	absorbance
+   readout_unit   	od600
+   time_unit      	seconds
+   plate_format   	96_well
+   read_wavelenth 	600nm
+:::ASSAY_END
+
+:::LAYOUT_SCHEMA_START
+%%%TYPE_DEFINITIONS_START
+   well_loc 	string
+   type     	CATEGORICAL(treated, phage_host_0_01, phage_only, host_only, phage_host_0_1, lb_control, isolate_control, pao1_control)
+   isolate  	string
+   phage    	string
+   MOI      	float
+   comments 	string
+%%%TYPE_DEFINITIONS_END
+
+%%%TYPE_CONSTRAINTS_START
+type            	REQUIRED_COLUMNS    	OPTIONAL_COLUMNS
+treated         	MOI, isolate, phage 	comments
+phage_host_0_01 	phage, isolate, MOI 	comments
+phage_host_0_1  	MOI, phage, isolate 	comments
+lb_control      	                    	comments
+isolate_control 	isolate             	comments
+pao1_control    	isolate             	comments
+%%%TYPE_CONSTRAINTS_END
+:::LAYOUT_SCHEMA_END
+
+:::LAYOUT_START
+well_loc 	type             	isolate       	phage 	MOI  	comments
+A1       	treated          	plate_isolate 	4TWA  	0.1  	
+A2       	treated          	plate_isolate 	VKO7  	0.1  	
+A3       	treated          	plate_isolate 	Z6TS  	1    	
+A4       	treated          	plate_isolate 	LG65  	0.1  	
+A5       	treated          	plate_isolate 	4TWA  	1123 	
+A6       	treated          	plate_isolate 	VKO7  	13   	
+A7       	treated          	plate_isolate 	Z6TS  	1312 	
+A8       	treated          	plate_isolate 	LG65  	1412 	
+A9       	phage_host_0_01  	M079          	4TWA  	5435 	
+A10      	phage_host_0_1   	M090          	VKO7  	63   	
+A11      	phage_host_0_1   	M034          	Z6TS  	0.1  	
+A12      	phage_host_0_1   	M108          	LG65  	0.1  	
+B1       	treated          	plate_isolate 	V1IB  	0.01 	
+B2       	treated          	plate_isolate 	WDPI  	0.01 	
+B3       	treated          	plate_isolate 	NC61  	0.01 	
+B4       	treated          	plate_isolate 	J5TC  	0.01 	
+B5       	treated          	plate_isolate 	V1IB  	0.1  	
+B6       	treated          	plate_isolate 	WDPI  	0.1  	
+B7       	treated          	plate_isolate 	NC61  	0.1  	
+B8       	treated          	plate_isolate 	J5TC  	0.1  	
+B9       	phage_host_0_1   	M081          	V1IB  	0.1  	
+B10      	phage_host_0_1   	M081          	WDPI  	0.1  	
+B11      	phage_host_0_1   	M052          	NC61  	0.1  	
+B12      	phage_host_0_1   	M074          	J5TC  	0.1  	
+C1       	treated          	plate_isolate 	N5HX  	0.01 	
+C2       	treated          	plate_isolate 	YK3I  	0.01 	
+C3       	treated          	plate_isolate 	MZOB  	0.01 	
+C4       	treated          	plate_isolate 	O8XK  	0.01 	
+C5       	treated          	plate_isolate 	N5HX  	0.1  	
+C6       	treated          	plate_isolate 	YK3I  	0.1  	
+C7       	treated          	plate_isolate 	MZOB  	0.1  	
+C8       	treated          	plate_isolate 	O8XK  	0.1  	
+C9       	phage_host_0_1   	M108          	N5HX  	0.1  	
+C10      	phage_host_0_1   	M054          	YK3I  	0.1  	
+C11      	phage_host_0_1   	PAO1          	MZOB  	0.1  	
+C12      	phage_host_0_1   	M034          	O8XK  	0.1  	
+D1       	treated          	plate_isolate 	EUVX  	0.01 	
+D2       	treated          	plate_isolate 	XMDS  	0.01 	
+D3       	treated          	plate_isolate 	DKQ8  	0.01 	
+D4       	treated          	plate_isolate 	GE9K  	0.01 	
+D5       	treated          	plate_isolate 	EUVX  	0.1  	
+D6       	treated          	plate_isolate 	XMDS  	0.1  	
+D7       	treated          	plate_isolate 	DKQ8  	0.1  	
+D8       	treated          	plate_isolate 	GE9K  	0.1  	
+D9       	phage_host_0_1   	M108          	EUVX  	0.1  	
+D10      	phage_host_0_1   	M130          	XMDS  	0.1  	
+D11      	phage_host_0_1   	M090          	DKQ8  	0.1  	
+D12      	phage_host_0_1   	PAO1          	GE9K  	0.1  	
+E1       	treated          	plate_isolate 	0VBC  	0.01 	
+E2       	treated          	plate_isolate 	P71S  	0.01 	
+E3       	treated          	plate_isolate 	2CJA  	0.01 	
+E4       	treated          	plate_isolate 	EBID  	0.01 	
+E5       	treated          	plate_isolate 	0VBC  	0.1  	
+E6       	treated          	plate_isolate 	P71S  	0.1  	
+E7       	treated          	plate_isolate 	2CJA  	0.1  	
+E8       	treated          	plate_isolate 	EBID  	0.1  	
+E9       	phage_host_0_1   	M108          	0VBC  	0.1  	
+E10      	phage_host_0_1   	M064          	P71S  	0.1  	
+E11      	phage_host_0_1   	M130          	2CJA  	0.1  	
+E12      	phage_host_0_1   	M093          	EBID  	0.1  	
+F1       	treated          	plate_isolate 	4NWX  	0.01 	
+F2       	treated          	plate_isolate 	T0U1  	0.01 	
+F3       	treated          	plate_isolate 	6281  	0.01 	
+F4       	lb_control       	              	      	     	
+F5       	treated          	plate_isolate 	4NWX  	0.1  	
+F6       	treated          	plate_isolate 	T0U1  	0.1  	
+F7       	treated          	plate_isolate 	6281  	0.1  	
+F8       	lb_control       	              	      	     	
+F9       	phage_host_0_1   	M086          	4NWX  	0.1  	
+F10      	phage_host_0_1   	M123          	T0U1  	0.1  	
+F11      	phage_host_0_1   	PAO1          	6281  	0.1  	
+F12      	lb_control       	              	      	     	
+G1       	treated          	plate_isolate 	KPSM  	0.01 	
+G2       	treated          	plate_isolate 	9XQE  	0.01 	
+G3       	treated          	plate_isolate 	NQ4L  	0.01 	
+G4       	isolate_control  	plate_isolate 	      	     	
+G5       	treated          	plate_isolate 	KPSM  	0.1  	
+G6       	treated          	plate_isolate 	9XQE  	0.1  	
+G7       	treated          	plate_isolate 	NQ4L  	0.1  	
+G8       	isolate_control  	plate_isolate 	      	     	
+G9       	phage_host_0_1   	M130          	KPSM  	0.1  	
+G10      	phage_host_0_1   	M074          	9XQE  	0.1  	
+G11      	phage_host_0_1   	M037          	NQ4L  	0.1  	
+G12      	isolate_control  	plate_isolate 	      	     	
+H1       	treated          	plate_isolate 	C7E4  	0.01 	
+H2       	treated          	plate_isolate 	AUV6  	0.01 	
+H3       	treated          	plate_isolate 	R4QE  	0.01 	
+H4       	pao1_control     	PAO1          	      	     	
+H5       	treated          	plate_isolate 	C7E4  	0.1  	
+H6       	treatedasdasdasd 	plate_isolate 	AUV6  	0.1  	
+H7       	treated          	plate_isolate 	R4QE  	0.1  	
+H8       	pao1_control     	PAO1          	      	     	
+H9       	phage_host_0_1   	M037          	C7E4  	-1   	
+H10      	phage_host_0_1   	M108          	AUV6  	0.1  	
+H11      	phage_host_0_1   	M037          	R4QE  	0.1  	
+H12      	pao1_control     	PAO1          	      	     	
+:::LAYOUT_END
+
+:::DATA_START
+Time
+0
+:::DATA_END
+===FILE_END
