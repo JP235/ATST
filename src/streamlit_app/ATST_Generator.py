@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from copy import deepcopy
 from datetime import date
+from html import escape
 from io import StringIO
 from pathlib import Path
 import re
@@ -50,9 +51,41 @@ ASSAY_SELECT_OPTIONS = {
 }
 INTEGER_RE = re.compile(r"^[+-]?\d+$")
 CATEGORICAL_RE = re.compile(r"^CATEGORICAL\((.*)\)$", re.IGNORECASE)
+WELL_LOC_RE = re.compile(r"^([A-Za-z]+)(\d+)$")
 TAG_BACKGROUND_COLOR = "#eef9ef"
 TAG_TEXT_COLOR = "#1f3b22"
 TAG_BORDER_COLOR = "#cdeecd"
+PLATE_FORMAT_DIMENSIONS = {
+    "6_well": (["A", "B"], 3),
+    "12_well": (["A", "B", "C"], 4),
+    "24_well": ([chr(code) for code in range(ord("A"), ord("D") + 1)], 6),
+    "48_well": ([chr(code) for code in range(ord("A"), ord("F") + 1)], 8),
+    "96_well": ([chr(code) for code in range(ord("A"), ord("H") + 1)], 12),
+    "384_well": ([chr(code) for code in range(ord("A"), ord("P") + 1)], 24),
+    "1536_well": (
+        [chr(code) for code in range(ord("A"), ord("Z") + 1)]
+        + [f"A{chr(code)}" for code in range(ord("A"), ord("F") + 1)],
+        48,
+    ),
+}
+LAYOUT_TYPE_COLORS = [
+    "#2f6fed",
+    "#d64545",
+    "#158f63",
+    "#b45f06",
+    "#7c4dff",
+    "#008c95",
+    "#c02f87",
+    "#6b7f00",
+    "#e07a22",
+    "#4f6f52",
+    "#84563c",
+    "#5065a8",
+    "#9b5cc6",
+    "#3a8ca5",
+    "#c44f63",
+    "#6c6f7f",
+]
 
 
 def _init_state() -> None:
@@ -694,6 +727,243 @@ def _layout_schema_constraints_editor(schema_df: pd.DataFrame) -> pd.DataFrame:
     return output
 
 
+def _selected_plate_format(assay_table: pd.DataFrame) -> str:
+    if {"field", "value"}.issubset(assay_table.columns):
+        matching = assay_table.loc[assay_table["field"].astype(str) == "plate_format"]
+        if not matching.empty:
+            return _normalize_assay_select_value(
+                "plate_format",
+                str(matching.iloc[0].get("value", "")),
+            )
+    return ""
+
+
+def _plate_dimensions_for_preview(
+    layout_df: pd.DataFrame,
+    plate_format: str,
+) -> tuple[list[str], int]:
+    if plate_format in PLATE_FORMAT_DIMENSIONS:
+        return PLATE_FORMAT_DIMENSIONS[plate_format]
+
+    rows = []
+    columns = []
+    if "well_loc" in layout_df.columns:
+        for well_loc in layout_df["well_loc"].fillna(""):
+            parsed = _parse_well_loc(well_loc)
+            if parsed is None:
+                continue
+            row_label, column_number = parsed
+            rows.append(row_label)
+            columns.append(column_number)
+
+    if not rows or not columns:
+        return [], 0
+
+    return _unique_values(rows), max(columns)
+
+
+def _parse_well_loc(value: object) -> tuple[str, int] | None:
+    match = WELL_LOC_RE.fullmatch(str(value).strip())
+    if match is None:
+        return None
+    return match.group(1).upper(), int(match.group(2))
+
+
+def _layout_preview_groupby_options(layout_df: pd.DataFrame) -> list[str]:
+    df = layout_df.copy()
+    df.columns = [str(column).strip() for column in df.columns]
+    return [column for column in df.columns if column != "well_loc"]
+
+
+def _default_layout_groupby_column(options: list[str]) -> str:
+    if "type" in options:
+        return "type"
+    return options[0] if options else ""
+
+
+def _value_color_map(layout_df: pd.DataFrame, groupby_column: str) -> dict[str, str]:
+    if groupby_column not in layout_df.columns:
+        return {}
+    values = _unique_values(_non_empty_values(layout_df[groupby_column]))
+    return {
+        value: LAYOUT_TYPE_COLORS[index % len(LAYOUT_TYPE_COLORS)]
+        for index, value in enumerate(values)
+    }
+
+
+def _layout_preview_html(
+    layout_df: pd.DataFrame,
+    assay_table: pd.DataFrame,
+    groupby_column: str,
+) -> str | None:
+    df = layout_df.copy().fillna("")
+    df.columns = [str(column).strip() for column in df.columns]
+    if "well_loc" not in df.columns or groupby_column not in df.columns:
+        return None
+
+    value_colors = _value_color_map(df, groupby_column)
+    plate_format = _selected_plate_format(assay_table)
+    row_labels, column_count = _plate_dimensions_for_preview(df, plate_format)
+    if not row_labels or column_count == 0:
+        return None
+
+    wells_by_location = {}
+    for _, row in df.iterrows():
+        parsed = _parse_well_loc(row.get("well_loc", ""))
+        if parsed is None:
+            continue
+        row_label, column_number = parsed
+        wells_by_location[(row_label, column_number)] = str(
+            row.get(groupby_column, "")
+        ).strip()
+
+    header_cells = "".join(
+        f'<th class="layout-preview-column">{column_number}</th>'
+        for column_number in range(1, column_count + 1)
+    )
+    body_rows = []
+    has_blank_wells = False
+    for row_label in row_labels:
+        cells = []
+        for column_number in range(1, column_count + 1):
+            well_loc = f"{row_label}{column_number}"
+            group_value = wells_by_location.get((row_label, column_number), "")
+            if not group_value:
+                has_blank_wells = True
+            color = value_colors.get(group_value, "#d9dde3")
+            title = (
+                f"{well_loc} {groupby_column}: {group_value}"
+                if group_value
+                else f"{well_loc} {groupby_column}: blank"
+            )
+            cells.append(
+                "<td>"
+                f'<span class="layout-preview-dot" '
+                f'style="background-color: {color};" '
+                f'title="{escape(title)}"></span>'
+                "</td>"
+            )
+        body_rows.append(
+            "<tr>"
+            f'<th class="layout-preview-row">{escape(row_label)}</th>'
+            + "".join(cells)
+            + "</tr>"
+        )
+
+    legend_items = []
+    for group_value, color in value_colors.items():
+        legend_items.append(
+            '<span class="layout-preview-legend-item">'
+            f'<span class="layout-preview-dot" style="background-color: {color};">'
+            "</span>"
+            f"<span>{escape(group_value)}</span>"
+            "</span>"
+        )
+    if has_blank_wells:
+        legend_items.append(
+            '<span class="layout-preview-legend-item">'
+            '<span class="layout-preview-dot" '
+            'style="background-color: #d9dde3;"></span>'
+            "<span>blank</span>"
+            "</span>"
+        )
+    legend_html = (
+        '<div class="layout-preview-legend">' + "".join(legend_items) + "</div>"
+        if legend_items
+        else ""
+    )
+
+    return f"""
+<style>
+.layout-preview-wrap {{
+    overflow-x: auto;
+    border: 1px solid #e4e7eb;
+    border-radius: 8px;
+    padding: 10px;
+    background: #ffffff;
+}}
+.layout-preview-table {{
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: max-content;
+}}
+.layout-preview-table th,
+.layout-preview-table td {{
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    padding: 2px;
+    text-align: center;
+    vertical-align: middle;
+}}
+.layout-preview-table th {{
+    color: #4b5563;
+    font-size: 11px;
+    font-weight: 600;
+}}
+.layout-preview-row {{
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: #ffffff;
+}}
+.layout-preview-dot {{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid rgba(31, 41, 55, 0.25);
+    border-radius: 50%;
+    box-sizing: border-box;
+}}
+.layout-preview-legend {{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    margin-top: 10px;
+    color: #374151;
+    font-size: 12px;
+}}
+.layout-preview-legend-item {{
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    max-width: 180px;
+}}
+</style>
+<div class="layout-preview-wrap">
+    <table class="layout-preview-table">
+        <thead><tr><th></th>{header_cells}</tr></thead>
+        <tbody>{"".join(body_rows)}</tbody>
+    </table>
+    {legend_html}
+</div>
+"""
+
+
+def _layout_preview(layout_df: pd.DataFrame, assay_table: pd.DataFrame) -> None:
+    st.markdown("**Plate preview**")
+
+    groupby_options = _layout_preview_groupby_options(layout_df)
+    if not groupby_options:
+        st.caption("Add a layout column other than well_loc to preview groups.")
+        return
+
+    groupby_key = "layout_preview_groupby"
+    if st.session_state.get(groupby_key) not in groupby_options:
+        st.session_state[groupby_key] = _default_layout_groupby_column(groupby_options)
+
+    groupby_column = st.selectbox(
+        "Group by",
+        groupby_options,
+        key=groupby_key,
+    )
+    preview_html = _layout_preview_html(layout_df, assay_table, groupby_column)
+    if preview_html is None:
+        st.caption("Add valid well_loc values and select a plate_format to preview.")
+        return
+    st.markdown(preview_html, unsafe_allow_html=True)
+
+
 def _load_template(uploaded_file) -> str:
     cache_dir = Path("data_exporter") / "_cache"
     cache_dir.mkdir(parents=True, exist_ok=True)
@@ -929,11 +1199,23 @@ def layout_upload_callback(upload_key: str):
 def data_upload_callback():
     if st.session_state.get("data_message") is not None:
         st.session_state.data_table = pd.DataFrame()
-        # st.rerun()  
+        # st.rerun()
     st.session_state.data_message = None
 
+
 def main() -> None:
-    st.set_page_config(page_title="ATST Generator", layout="wide")
+    # st.set_page_config(page_title="ATST Generator", layout="wide")
+    st.html(
+        """
+    <style>
+        .stMainBlockContainer {
+            max-width: min(70rem, 1200px, 90%);
+            margin: auto;
+        }
+    </style>
+    """
+    )
+
     _init_state()
 
     st.title("ATST Generator")
@@ -1036,6 +1318,8 @@ def main() -> None:
             num_rows="dynamic",
             width="stretch",
         ).fillna("")
+
+        _layout_preview(current_layout_table, assay_default_table)
 
     with st.expander("ENTITIES"):
         entity_uploads = st.file_uploader(
