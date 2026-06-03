@@ -640,7 +640,12 @@ def _constraint_rows(
 
 
 def _layout_schema_constraints_editor(schema_df: pd.DataFrame) -> pd.DataFrame:
-    enabled = st.checkbox("Advanced config", key="layout_schema_constraints_enabled")
+    enabled = st.checkbox(
+        "Advanced config",
+        value=False,
+        key="layout_schema_constraints_enabled",
+        disabled=True,
+    )
     if not enabled:
         return pd.DataFrame(columns=["type", "REQUIRED_COLUMNS", "OPTIONAL_COLUMNS"])
 
@@ -673,7 +678,6 @@ def _layout_schema_constraints_editor(schema_df: pd.DataFrame) -> pd.DataFrame:
             value=type_value,
             disabled=True,
             key=f"layout_constraint_type_{widget_version}_{key_part}",
-            label_visibility="collapsed",
         )
         with columns[1]:
             required_values = (
@@ -694,6 +698,7 @@ def _layout_schema_constraints_editor(schema_df: pd.DataFrame) -> pd.DataFrame:
                     value=optional_values,
                     suggestions=schema_columns,
                     key=f"layout_constraint_optional_{widget_version}_{key_part}",
+                    # label_visibility="collapsed",
                 )
                 or []
             )
@@ -876,16 +881,18 @@ def _layout_preview_html(
     return f"""
 <style>
 .layout-preview-wrap {{
+    margin-block-end: 1rem;
+    display: flex;
+    gap: 1rem;
     overflow-x: auto;
-    border: 1px solid #e4e7eb;
-    border-radius: 8px;
-    padding: 10px;
     background: #ffffff;
+    max-height: {24 * (5 + len(row_labels))}px;
 }}
 .layout-preview-table {{
     border-collapse: collapse;
     table-layout: fixed;
     width: max-content;
+    margin: 0 !important;
 }}
 .layout-preview-table th,
 .layout-preview-table td {{
@@ -917,11 +924,12 @@ def _layout_preview_html(
 }}
 .layout-preview-legend {{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 8px 14px;
-    margin-top: 10px;
     color: #374151;
     font-size: 12px;
+    
 }}
 .layout-preview-legend-item {{
     display: inline-flex;
@@ -941,7 +949,6 @@ def _layout_preview_html(
 
 
 def _layout_preview(layout_df: pd.DataFrame, assay_table: pd.DataFrame) -> None:
-    st.markdown("**Plate preview**")
 
     groupby_options = _layout_preview_groupby_options(layout_df)
     if not groupby_options:
@@ -952,16 +959,26 @@ def _layout_preview(layout_df: pd.DataFrame, assay_table: pd.DataFrame) -> None:
     if st.session_state.get(groupby_key) not in groupby_options:
         st.session_state[groupby_key] = _default_layout_groupby_column(groupby_options)
 
-    groupby_column = st.selectbox(
-        "Group by",
-        groupby_options,
-        key=groupby_key,
-    )
-    preview_html = _layout_preview_html(layout_df, assay_table, groupby_column)
-    if preview_html is None:
-        st.caption("Add valid well_loc values and select a plate_format to preview.")
-        return
-    st.markdown(preview_html, unsafe_allow_html=True)
+    with st.container(border=True):
+        st.markdown("**Plate preview**")
+        with st.container(horizontal=True, vertical_alignment="center"):
+            st.markdown("*Group by:*")
+
+            groupby_column = st.selectbox(
+                "",
+                groupby_options,
+                key=groupby_key,
+                width=120,
+                label_visibility="collapsed",
+            )
+
+        preview_html = _layout_preview_html(layout_df, assay_table, groupby_column)
+        if preview_html is None:
+            st.caption(
+                "Add valid well_loc values and select a plate_format to preview."
+            )
+            return
+        st.markdown(preview_html, unsafe_allow_html=True)
 
 
 def _load_template(uploaded_file) -> str:
@@ -1218,11 +1235,20 @@ def main() -> None:
 
     _init_state()
 
-    st.title("ATST Generator")
+    col1, col2 = st.columns([4, 1], vertical_alignment="bottom")
+    with col1:
+        st.title("ATST Generator")
+
+    with col2:
+        st.link_button(
+            "ATST Generator GitHub",
+            "https://github.com/JP235/ATST/",
+            use_container_width=True,
+        )
 
     with st.expander("Load template", expanded=False):
         template_upload = st.file_uploader(
-            "Drop an ATST template",
+            "Drop ATST template",
             type=["txt"],
             key="template_upload",
             on_change=template_upload_callback,
@@ -1276,11 +1302,12 @@ def main() -> None:
             f"layout_upload_{st.session_state.get('layout_upload_version', 0)}"
         )
         layout_upload = st.file_uploader(
-            "Drop a LAYOUT CSV/TSV",
+            "Drop CSV/TSV/TXT",
             type=["csv", "tsv", "txt"],
             key=layout_upload_key,
             on_change=layout_upload_callback,
             args=(layout_upload_key,),
+            label_visibility="collapsed",
         )
         if layout_upload is not None:
             layout_upload_token = _uploaded_file_token(layout_upload)
@@ -1299,17 +1326,20 @@ def main() -> None:
             st.session_state.layout_message = "Loaded layout."
             st.rerun()
 
-        col_name = st.text_input("Add layout column", key="layout_new_column")
-        if st.button("Add layout column"):
-            col_name = col_name.strip()
-            if not col_name:
-                st.warning("Enter a column name first.")
-            elif col_name in st.session_state.layout_table.columns:
-                st.warning(f"Column {col_name!r} already exists.")
-            else:
-                st.session_state.layout_table[col_name] = ""
-                _clear_layout_editor_widget_state()
-                st.rerun()
+        addcol_l, addcol_r = st.columns([4, 1], vertical_alignment="bottom")
+        with addcol_l:
+            col_name = st.text_input("Add layout column", key="layout_new_column")
+        with addcol_r:
+            if st.button("Add to layout", use_container_width=True):
+                col_name = col_name.strip()
+                if not col_name:
+                    st.warning("Enter a column name first.")
+                elif col_name in st.session_state.layout_table.columns:
+                    st.warning(f"Column {col_name!r} already exists.")
+                else:
+                    st.session_state.layout_table[col_name] = ""
+                    _clear_layout_editor_widget_state()
+                    st.rerun()
 
         current_layout_table = st.data_editor(
             _editor_df(st.session_state.layout_table),
@@ -1323,10 +1353,11 @@ def main() -> None:
 
     with st.expander("ENTITIES"):
         entity_uploads = st.file_uploader(
-            "Drop entity table CSV/TSV files",
+            "Drop CSV/TSV/TXT files",
             type=["csv", "tsv", "txt"],
             accept_multiple_files=True,
             key="entity_uploads",
+            label_visibility="collapsed",
         )
         if entity_uploads and st.button("Load entity files"):
             for uploaded_file in entity_uploads:
@@ -1363,10 +1394,11 @@ def main() -> None:
 
     with st.expander("DATA", expanded=True):
         data_upload = st.file_uploader(
-            "Drop a DATA CSV/TSV",
+            "Drop CSV/TSV/TXT",
             type=["csv", "tsv", "txt"],
             key="data_upload",
             on_change=data_upload_callback,
+            label_visibility="collapsed",
         )
         if data_upload is not None and st.session_state.get("data_message") is None:
             st.session_state.data_table = _read_uploaded_table(data_upload)
