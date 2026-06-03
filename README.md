@@ -109,9 +109,9 @@ DATA
 
 
 Inline fields are represented as a single TAB-separated key-value pair:
+Inline field:
 
 ```text
-Inline field:
 {field_name}<TAB>{value}
 ```
 
@@ -142,9 +142,9 @@ Wide tables MUST NOT include index-number columns unless such columns are explic
 
 ```text
 :::FILE_INFO_START
-Long table
 ```
 
+Long table
 The FILE_INFO block is REQUIRED. It MUST be encoded as a long table and MUST contain the following fields:
 
 ```text
@@ -164,8 +164,8 @@ The encoding value MUST be UTF-8.
 
 ```text
 ::: STUDY_START
-Long table
 ```
+Long table
 
 The STUDY block is REQUIRED. It MUST be encoded as a long table. It SHOULD include a study title, a stable study_id, and any additional provenance, authorship, funding, purpose, or contextual fields needed to interpret the assay.
 
@@ -181,8 +181,8 @@ study_id      	{study_id}
 
 ```text
 ::: READOUT_MANIFEST_START
-Wide table
 ```
+Wide table
 
 The READOUT_MANIFEST block is OPTIONAL only for single-readout files that do not use readout_id anywhere in the file.
 
@@ -264,14 +264,18 @@ OD600_4    	meta_00004.tsv 	assay_00004.tsv 	layout_00004.tsv 	data_00004.tsv
 ```text
 ::: READOUT_MANIFEST_END
 
-::: METADATA_START
-Long table(s)
 ```
 
-The METADATA block contains file-level, study-run, acquisition, instrument, software, operator, and laboratory metadata. It MAY contain a file-level long table, readout-specific in-file metadata payloads, linked metadata payloads, or a combination permitted by this specification's linking policy rules.
 
 ```text
+::: METADATA_START
+```
+
+Long table(s)
+The METADATA block contains file-level, study-run, acquisition, instrument, software, operator, and laboratory metadata. It MAY contain a file-level long table, readout-specific in-file metadata payloads, linked metadata payloads, or a combination permitted by this specification's linking policy rules.
+
 example 1:
+```text
 instrument   	SuperDuperReader
 plate_type   	Corning 96 well for SuperDuperReader
 date_start   	2026-01-01
@@ -282,8 +286,10 @@ example 2:
 ```text
 <<< METADATA_READOUT file=meta.tsv readout_id=GFP
 <<< METADATA_READOUT file=meta.tsv readout_id=OD600
+```
 
 example 3:
+```text
 <<< METADATA_READOUT readout_id=OD600_1 file=meta_00001.tsv
 <<< METADATA_READOUT readout_id=OD600_2 file=meta_00002.tsv
 <<< METADATA_READOUT readout_id=OD600_3 file=meta_00003.tsv
@@ -292,10 +298,12 @@ example 3:
 
 ```text
 ::: METADATA_END
-
-::: ASSAY_START
-Long table(s)
 ```
+
+```text
+::: ASSAY_START
+```
+Long table(s)
 
 The ASSAY block describes the measurement performed for a readout. It MUST contain the following fields for each applicable readout:
 
@@ -355,10 +363,12 @@ example 3:
 
 ```text
 ::: ASSAY_END
-
-::: ENTITIES_START
-Wide table(s)
 ```
+
+```text
+::: ENTITIES_START
+```
+Wide table(s)
 
 The ENTITIES block is OPTIONAL. When present, it SHOULD be used as the centralized location for describing entities referenced by the study, such as isolates, phages, small molecules, strains, media, reagents, or other experimental entities.
 
@@ -392,29 +402,31 @@ SM_MOL_1          	0001
 
 ```text
 ::: ENTITIES_END
-
-::: LAYOUT_SCHEMA_START
-(optional, used to validate LAYOUT data types and references at read-time)
 ```
+
+```text
+::: LAYOUT_SCHEMA_START
+```
+(optional, used to validate LAYOUT data types and references at read-time)
 
 The LAYOUT_SCHEMA block is OPTIONAL. When present, it defines data types, constants, entity references, and row-type constraints for the LAYOUT block.
 
 The following layout value data types are recognized:
 ```text
-	- string
-	- integer
-	- float
-	- numeric
-	- boolean
-	- CATEGORICAL({comma separated values})
-	- CONSTANT("value")
-	- ENTITY_REF({table_name}.{pk_column})
+- string
+- integer
+- float
+- numeric
+- boolean
+- CATEGORICAL({comma separated values})
+- CONSTANT("value")
+- ENTITY_REF({table_name}.{pk_column})
 ```
 
 ```text
 %%% TYPE_DEFINITIONS_START
-Long table
 ```
+Long table
 
 TYPE_DEFINITIONS is a REQUIRED field when LAYOUT_SCHEMA is present. It MUST be encoded as a long table.
 
@@ -461,11 +473,13 @@ MOI      	float
 
 ```text
 %%% TYPE_DEFINITIONS_END
+```
 
+```text
 %%% TYPE_CONSTRAINTS_START
+```
 (optional)
 Wide table
-```
 
 TYPE_CONSTRAINTS is OPTIONAL. When present, it MUST be encoded as a wide table with the following mandatory columns: type, REQUIRED_COLUMNS, and OPTIONAL_COLUMNS.
 
@@ -500,23 +514,24 @@ Blank
 ```
 
 example 3:
-Empty TYPE_CONSTRAINTS table
-Same as not defining it
+Empty TYPE_CONSTRAINTS table, same as not defining it
 No LAYOUT required/optional column validation
 
 ```text
 type 	REQUIRED_COLUMNS 	OPTIONAL_COLUMNS
 			
 ```
-
 ```text
 %%% TYPE_CONSTRAINTS_END
-
-::: LAYOUT_SCHEMA_END
-
-::: LAYOUT_START
-Wide table
 ```
+```text
+::: LAYOUT_SCHEMA_END
+```
+
+```text
+::: LAYOUT_START
+```
+Wide table
 
 The LAYOUT block is REQUIRED unless all required layout payloads are supplied through permitted external links. It MUST be encoded as a wide table when provided in-file.
 
@@ -567,10 +582,12 @@ example 3:
 
 ```text
 ::: LAYOUT_END
-
-::: DATA_START
-tab separated wide table
 ```
+
+```text
+::: DATA_START
+```
+tab separated wide table
 
 The DATA block is REQUIRED unless all required readout payloads are supplied through permitted external links. DATA MUST be encoded as a TAB-separated wide table when provided in-file.
 
@@ -679,17 +696,21 @@ All dates and datetimes MUST follow ISO 8601 format. Supported forms include:
 A single TAB separates fields and table row cells. Additional TAB characters MUST NOT be used for visual alignment. Leading and trailing spaces around keys and values are ignored. Spaces MAY be used for visual alignment only after field content, not as field delimiters.
 
 ```text
-{longfield_name}	{value_1}
-{field_name}	{value_2}
-{longer_field_name}	{value_3}
+%%% LONGTABLE_START
+longfield_name	value_1
+field_name	value_2
+longer_field_name	value_3
+%%% LONGTABLE_END
 ```
 
 and 
 
 ```text
-{  long_field_name   }	{value_1}
-{  field_name        }	{value_2}
-{  longer_field_name }	{value_3}
+%%% LONGTABLE_START
+   long_field_name   	value_1
+   field_name        	value_2
+   longer_field_name 	value_3
+%%% LONGTABLE_END
 ```
 
 will be parsed the same.
@@ -769,3 +790,6 @@ Time 	A1   	A2
 %%% READOUT_END
 ```
 
+## Examples
+
+See [examples](examples/) for sample ATST files and linked data layouts.
