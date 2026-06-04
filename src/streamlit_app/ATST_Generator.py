@@ -49,6 +49,9 @@ ASSAY_SELECT_OPTIONS = {
     "time_unit": TIME_UNIT_OPTIONS,
     "plate_format": PLATE_FORMAT_OPTIONS,
 }
+ASSAY_SELECT_DEFAULTS = {
+    "plate_format": "96_well",
+}
 INTEGER_RE = re.compile(r"^[+-]?\d+$")
 CATEGORICAL_RE = re.compile(r"^CATEGORICAL\((.*)\)$", re.IGNORECASE)
 WELL_LOC_RE = re.compile(r"^([A-Za-z]+)(\d+)$")
@@ -56,16 +59,17 @@ TAG_BACKGROUND_COLOR = "#eef9ef"
 TAG_TEXT_COLOR = "#1f3b22"
 TAG_BORDER_COLOR = "#cdeecd"
 PLATE_FORMAT_DIMENSIONS = {
-    "6_well": (["A", "B"], 3),
-    "12_well": (["A", "B", "C"], 4),
-    "24_well": ([chr(code) for code in range(ord("A"), ord("D") + 1)], 6),
-    "48_well": ([chr(code) for code in range(ord("A"), ord("F") + 1)], 8),
-    "96_well": ([chr(code) for code in range(ord("A"), ord("H") + 1)], 12),
-    "384_well": ([chr(code) for code in range(ord("A"), ord("P") + 1)], 24),
+    "6_well": (["A", "B"], 3, 70),
+    "12_well": (["A", "B", "C"], 4, 50),
+    "24_well": ([chr(code) for code in range(ord("A"), ord("D") + 1)], 6, 50),
+    "48_well": ([chr(code) for code in range(ord("A"), ord("F") + 1)], 8, 50),
+    "96_well": ([chr(code) for code in range(ord("A"), ord("H") + 1)], 12, 45),
+    "384_well": ([chr(code) for code in range(ord("A"), ord("P") + 1)], 24, 30),
     "1536_well": (
         [chr(code) for code in range(ord("A"), ord("Z") + 1)]
         + [f"A{chr(code)}" for code in range(ord("A"), ord("F") + 1)],
         48,
+        20,
     ),
 }
 LAYOUT_TYPE_COLORS = [
@@ -313,6 +317,8 @@ def _assay_default_field_editor() -> pd.DataFrame:
     for field, options in ASSAY_SELECT_OPTIONS.items():
         widget_key = f"assay_{field}"
         value = _normalize_assay_select_value(field, values.get(field, ""))
+        if not value:
+            value = ASSAY_SELECT_DEFAULTS.get(field, "")
         if (
             widget_key not in st.session_state
             or st.session_state[widget_key] not in options
@@ -746,7 +752,7 @@ def _selected_plate_format(assay_table: pd.DataFrame) -> str:
 def _plate_dimensions_for_preview(
     layout_df: pd.DataFrame,
     plate_format: str,
-) -> tuple[list[str], int]:
+) -> tuple[list[str], int, int]:
     if plate_format in PLATE_FORMAT_DIMENSIONS:
         return PLATE_FORMAT_DIMENSIONS[plate_format]
 
@@ -762,9 +768,9 @@ def _plate_dimensions_for_preview(
             columns.append(column_number)
 
     if not rows or not columns:
-        return [], 0
+        return [], 0, 1
 
-    return _unique_values(rows), max(columns)
+    return _unique_values(rows), max(columns), 24
 
 
 def _parse_well_loc(value: object) -> tuple[str, int] | None:
@@ -808,7 +814,9 @@ def _layout_preview_html(
 
     value_colors = _value_color_map(df, groupby_column)
     plate_format = _selected_plate_format(assay_table)
-    row_labels, column_count = _plate_dimensions_for_preview(df, plate_format)
+    row_labels, column_count, cell_size = _plate_dimensions_for_preview(
+        df, plate_format
+    )
     if not row_labels or column_count == 0:
         return None
 
@@ -864,14 +872,15 @@ def _layout_preview_html(
             f"<span>{escape(group_value)}</span>"
             "</span>"
         )
-    if has_blank_wells:
-        legend_items.append(
-            '<span class="layout-preview-legend-item">'
-            '<span class="layout-preview-dot" '
-            'style="background-color: #d9dde3;"></span>'
-            "<span>blank</span>"
-            "</span>"
-        )
+    print(len(row_labels), plate_format)
+    # if has_blank_wells:
+    #     legend_items.append(
+    #         '<span class="layout-preview-legend-item">'
+    #         '<span class="layout-preview-dot" '
+    #         'style="background-color: #d9dde3;"></span>'
+    #         "<span>blank</span>"
+    #         "</span>"
+    #     )
     legend_html = (
         '<div class="layout-preview-legend">' + "".join(legend_items) + "</div>"
         if legend_items
@@ -881,12 +890,13 @@ def _layout_preview_html(
     return f"""
 <style>
 .layout-preview-wrap {{
+    --layout-preview-cell-size: {cell_size}px;
     margin-block-end: 1rem;
     display: flex;
     gap: 1rem;
     overflow-x: auto;
     background: #ffffff;
-    max-height: {24 * (5 + len(row_labels))}px;
+    height: calc(var(--layout-preview-cell-size, 24px) * {1.1 + len(row_labels)});
 }}
 .layout-preview-table {{
     border-collapse: collapse;
@@ -896,16 +906,18 @@ def _layout_preview_html(
 }}
 .layout-preview-table th,
 .layout-preview-table td {{
-    width: 24px;
-    height: 24px;
-    min-width: 24px;
-    padding: 2px;
+    width: var(--layout-preview-cell-size, 24px);
+    height: var(--layout-preview-cell-size, 24px);
+    min-width: var(--layout-preview-cell-size, 24px);
     text-align: center;
-    vertical-align: middle;
+    padding: 0px;
+}}
+.layout-preview-table td {{
+    font-size: 0px;
 }}
 .layout-preview-table th {{
     color: #4b5563;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 600;
 }}
 .layout-preview-row {{
@@ -916,11 +928,12 @@ def _layout_preview_html(
 }}
 .layout-preview-dot {{
     display: inline-block;
-    width: 14px;
-    height: 14px;
+    width:  calc(var(--layout-preview-cell-size, 24px) / 1.7);
+    height: calc(var(--layout-preview-cell-size, 24px) / 1.7);
     border: 1px solid rgba(31, 41, 55, 0.25);
     border-radius: 50%;
     box-sizing: border-box;
+    vertical-align: middle;
 }}
 .layout-preview-legend {{
     display: flex;
@@ -949,10 +962,12 @@ def _layout_preview_html(
 
 
 def _layout_preview(layout_df: pd.DataFrame, assay_table: pd.DataFrame) -> None:
-
+    if layout_df is None or assay_table is None:
+        return
+    
     groupby_options = _layout_preview_groupby_options(layout_df)
     if not groupby_options:
-        st.caption("Add a layout column other than well_loc to preview groups.")
+        # st.caption("Add a layout column other than well_loc to preview groups.")
         return
 
     groupby_key = "layout_preview_groupby"
@@ -965,7 +980,7 @@ def _layout_preview(layout_df: pd.DataFrame, assay_table: pd.DataFrame) -> None:
             st.markdown("*Group by:*")
 
             groupby_column = st.selectbox(
-                "",
+                "Plate preview",
                 groupby_options,
                 key=groupby_key,
                 width=120,
@@ -974,10 +989,10 @@ def _layout_preview(layout_df: pd.DataFrame, assay_table: pd.DataFrame) -> None:
 
         preview_html = _layout_preview_html(layout_df, assay_table, groupby_column)
         if preview_html is None:
-            st.caption(
-                "Add valid well_loc values and select a plate_format to preview."
-            )
-            return
+            # st.caption(
+            #     "Add valid well_loc values and select a plate_format to preview."
+            # )
+            return None
         st.markdown(preview_html, unsafe_allow_html=True)
 
 
@@ -1076,6 +1091,19 @@ def _prepare_wide_table(df: pd.DataFrame, *, block_name: str) -> pd.DataFrame:
 
 def _download_bytes(text: str) -> bytes:
     return text.encode("utf-8")
+
+
+def _dataframe_download_bytes(df: pd.DataFrame, *, sep: str = "\t") -> bytes:
+    return df.to_csv(index=False, sep=sep).encode("utf-8")
+
+
+def _layout_download_file_name(file_name: str) -> str:
+    name = Path(file_name).name
+    for suffix in (".atst.txt", ".txt", ".tsv", ".csv"):
+        if name.endswith(suffix):
+            name = name[: -len(suffix)]
+            break
+    return f"{name or 'layout'}_layout.tsv"
 
 
 def _make_atst(
@@ -1326,6 +1354,7 @@ def main() -> None:
             st.session_state.layout_message = "Loaded layout."
             st.rerun()
 
+        
         addcol_l, addcol_r = st.columns([4, 1], vertical_alignment="bottom")
         with addcol_l:
             col_name = st.text_input("Add layout column", key="layout_new_column")
@@ -1341,6 +1370,8 @@ def main() -> None:
                     _clear_layout_editor_widget_state()
                     st.rerun()
 
+        layout_preview_slot = st.empty()
+
         current_layout_table = st.data_editor(
             _editor_df(st.session_state.layout_table),
             key="layout_editor",
@@ -1348,8 +1379,19 @@ def main() -> None:
             num_rows="dynamic",
             width="stretch",
         ).fillna("")
+        # st.session_state.layout_table = current_layout_table
 
-        _layout_preview(current_layout_table, assay_default_table)
+        with layout_preview_slot.container():
+            _layout_preview(current_layout_table, assay_default_table)
+
+        st.download_button(
+            "Download layout",
+            data=_dataframe_download_bytes(current_layout_table),
+            file_name=_layout_download_file_name(file_name),
+            mime="text/tab-separated-values",
+            use_container_width=True,
+        )
+        
 
     with st.expander("ENTITIES"):
         entity_uploads = st.file_uploader(

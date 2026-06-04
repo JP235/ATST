@@ -14,7 +14,7 @@ DEFAULT_ASSAY_ROWS = [
     {"field": "readout_type", "value": ""},
     {"field": "readout_unit", "value": ""},
     {"field": "time_unit", "value": ""},
-    {"field": "plate_format", "value": ""},
+    {"field": "plate_format", "value": "96_well"},
 ]
 
 DEFAULT_LAYOUT_ROWS = [
