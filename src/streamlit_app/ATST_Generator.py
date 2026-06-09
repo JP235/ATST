@@ -3,6 +3,7 @@ from __future__ import annotations
 from copy import deepcopy
 from datetime import date
 from html import escape
+import os
 from io import StringIO
 from pathlib import Path
 import re
@@ -835,14 +836,14 @@ def _layout_preview_html(
         for column_number in range(1, column_count + 1)
     )
     body_rows = []
-    has_blank_wells = False
+    # has_blank_wells = False
     for row_label in row_labels:
         cells = []
         for column_number in range(1, column_count + 1):
             well_loc = f"{row_label}{column_number}"
             group_value = wells_by_location.get((row_label, column_number), "")
-            if not group_value:
-                has_blank_wells = True
+            # if not group_value:
+            #     has_blank_wells = True
             color = value_colors.get(group_value, "#d9dde3")
             title = (
                 f"{well_loc} {groupby_column}: {group_value}"
@@ -1040,11 +1041,11 @@ def _load_template(uploaded_file) -> str:
     st.session_state.data_table = pd.DataFrame()
     st.session_state.entity_tables = {
         table_name: entity_table.data.copy()
-        for table_name, entity_table in atst.entities.tables.items()
+        for table_name, entity_table in atst.entities.tables.items() # type: ignore
     }
 
     type_definition_rows = []
-    if atst.layout_schema.type_definitions is not None:
+    if atst.layout_schema is not None and atst.layout_schema.type_definitions is not None:
         for field, value in atst.layout_schema.type_definitions.data.items():
             if field == "well_loc":
                 continue
@@ -1058,7 +1059,7 @@ def _load_template(uploaded_file) -> str:
     st.session_state.layout_schema_inferred_values = {}
     _clear_layout_schema_widget_state()
 
-    if atst.layout_schema.type_constraints is not None:
+    if atst.layout_schema is not None and atst.layout_schema.type_constraints is not None:
         st.session_state.layout_schema_constraints_table = (
             atst.layout_schema.type_constraints.data.copy()
         )
@@ -1499,10 +1500,13 @@ def main() -> None:
                 ),
             )
 
-            output_path = Path("data_exporter") / path.name
+            temp_dir = Path("__temp_data_exporter")
+            output_path =  temp_dir / path.name
             write_atst(atst, output_path, human_readable=True)
             text = output_path.read_text(encoding="utf-8")
-
+            os.remove(output_path)
+            os.rmdir(temp_dir)
+            
         except Exception as exc:
             st.error(f"Could not generate ATST file: {exc}")
             return
