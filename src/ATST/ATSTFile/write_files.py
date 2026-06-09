@@ -139,7 +139,12 @@ def write_field(
     lines.append("")
 
 
-def entity_payload(entities: Entities, *, human_readable: bool = False) -> list[str]:
+def entity_payload(
+    entities: Entities | None, *, human_readable: bool = False
+) -> list[str]:
+    if entities is None:
+        return []
+
     lines: list[str] = []
     for table in entities.tables.values():
         write_field(
@@ -152,10 +157,13 @@ def entity_payload(entities: Entities, *, human_readable: bool = False) -> list[
 
 
 def layout_schema_payload(
-    layout_schema: LayoutSchema,
+    layout_schema: LayoutSchema | None,
     *,
     human_readable: bool = False,
 ) -> list[str]:
+    if layout_schema is None:
+        return []
+
     lines: list[str] = []
     if layout_schema.type_definitions is not None:
         write_field(
@@ -181,7 +189,7 @@ def layout_schema_payload(
 
 
 def write_atst(
-    atst: ATSTFile, path: str | Path, *, human_readable: bool = False
+    atst: ATSTFile, path: str | Path, *, human_readable: bool = True
 ) -> Path:
     """Write a standalone single-readout ATST file."""
 
