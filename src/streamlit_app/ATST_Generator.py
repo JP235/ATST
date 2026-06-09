@@ -835,14 +835,14 @@ def _layout_preview_html(
         for column_number in range(1, column_count + 1)
     )
     body_rows = []
-    has_blank_wells = False
+    # has_blank_wells = False
     for row_label in row_labels:
         cells = []
         for column_number in range(1, column_count + 1):
             well_loc = f"{row_label}{column_number}"
             group_value = wells_by_location.get((row_label, column_number), "")
-            if not group_value:
-                has_blank_wells = True
+            # if not group_value:
+            # has_blank_wells = True
             color = value_colors.get(group_value, "#d9dde3")
             title = (
                 f"{well_loc} {groupby_column}: {group_value}"
@@ -964,7 +964,7 @@ def _layout_preview_html(
 def _layout_preview(layout_df: pd.DataFrame, assay_table: pd.DataFrame) -> None:
     if layout_df is None or assay_table is None:
         return
-    
+
     groupby_options = _layout_preview_groupby_options(layout_df)
     if not groupby_options:
         # st.caption("Add a layout column other than well_loc to preview groups.")
@@ -1354,22 +1354,6 @@ def main() -> None:
             st.session_state.layout_message = "Loaded layout."
             st.rerun()
 
-        
-        addcol_l, addcol_r = st.columns([4, 1], vertical_alignment="bottom")
-        with addcol_l:
-            col_name = st.text_input("Add layout column", key="layout_new_column")
-        with addcol_r:
-            if st.button("Add to layout", use_container_width=True):
-                col_name = col_name.strip()
-                if not col_name:
-                    st.warning("Enter a column name first.")
-                elif col_name in st.session_state.layout_table.columns:
-                    st.warning(f"Column {col_name!r} already exists.")
-                else:
-                    st.session_state.layout_table[col_name] = ""
-                    _clear_layout_editor_widget_state()
-                    st.rerun()
-
         layout_preview_slot = st.empty()
 
         current_layout_table = st.data_editor(
@@ -1384,6 +1368,49 @@ def main() -> None:
         with layout_preview_slot.container():
             _layout_preview(current_layout_table, assay_default_table)
 
+        addcol_l, addcol_r = st.columns([4, 1], vertical_alignment="bottom")
+        with addcol_l:
+            col_name = st.text_input("Add layout column", key="layout_new_column")
+        with addcol_r:
+            if st.button("Add to layout", use_container_width=True):
+                col_name = col_name.strip()
+                if not col_name:
+                    st.warning("Enter a column name first.")
+                elif col_name in current_layout_table.columns:
+                    st.warning(f"Column {col_name!r} already exists.")
+                else:
+                    updated_layout_table = current_layout_table.copy()
+                    updated_layout_table[col_name] = ""
+                    st.session_state.layout_table = updated_layout_table
+                    _clear_layout_editor_widget_state()
+                    st.rerun()
+
+        removable_layout_columns = [
+            column for column in current_layout_table.columns if column != "well_loc"
+        ]
+        removecol_l, removecol_r = st.columns([4, 1], vertical_alignment="bottom")
+        with removecol_l:
+            remove_col_name = st.selectbox(
+                "Remove layout column",
+                options=removable_layout_columns,
+                key="layout_remove_column",
+                disabled=not removable_layout_columns,
+            )
+        with removecol_r:
+            if st.button(
+                "Remove from layout",
+                use_container_width=True,
+                disabled=not removable_layout_columns,
+            ):
+                if not remove_col_name:
+                    st.warning("Select a column first.")
+                else:
+                    st.session_state.layout_table = current_layout_table.drop(
+                        columns=[remove_col_name],
+                    )
+                    _clear_layout_editor_widget_state()
+                    st.rerun()
+
         st.download_button(
             "Download layout",
             data=_dataframe_download_bytes(current_layout_table),
@@ -1391,7 +1418,6 @@ def main() -> None:
             mime="text/tab-separated-values",
             use_container_width=True,
         )
-        
 
     with st.expander("ENTITIES"):
         entity_uploads = st.file_uploader(
