@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import Any
+from typing import Any, Literal, overload
 
 from ATST.ATSTFile.ATST import ATSTFile, MultiReadoutATST
 from ATST.blocks import (
@@ -35,7 +35,15 @@ from ATST.parser.parser import parse_file
 import pandas as pd
 
 
-def read_atst(path: str | Path) -> ATSTFile | MultiReadoutATST:
+@overload
+def read_atst(path: str | Path, allow_multi: Literal[False] = False) -> ATSTFile: ...
+@overload
+def read_atst(
+    path: str | Path, allow_multi: Literal[True] = True
+) -> ATSTFile | MultiReadoutATST: ...
+def read_atst(
+    path: str | Path, allow_multi: bool = False
+) -> ATSTFile | MultiReadoutATST:
     """Read an ATST file into the ATST dataclass model.
 
     Linked payload files are recognized during parsing but are not loaded by this
@@ -125,6 +133,11 @@ def read_atst(path: str | Path) -> ATSTFile | MultiReadoutATST:
     if len(readout_ids) != len(set(readout_ids)):
         raise ATSTValidationError(
             f"READOUT_MANIFEST contains duplicate readout_id values: {', '.join(readout_ids)}"
+        )
+
+    if not allow_multi and len(readout_ids) > 1:
+        raise ATSTValidationError(
+            f"READOUT_MANIFEST contains more than one readout_id value: {', '.join(readout_ids)}"
         )
 
     metadata_by_id = _block_by_readout(
