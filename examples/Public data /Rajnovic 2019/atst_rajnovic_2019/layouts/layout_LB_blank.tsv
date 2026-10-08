@@ -1,0 +1,4 @@
+curve_id	type	isolate_id	phage_id	bacteria_cfu_ml	pfu_ml	replicate
+curve_A	blank			0	0	1
+curve_B	blank			0	0	2
+curve_C	blank			0	0	3

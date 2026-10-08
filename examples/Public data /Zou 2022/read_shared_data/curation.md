@@ -1,0 +1,13 @@
+# Zou 2022 longitudinal absorbance curation
+
+Sources: [paper](https://doi.org/10.1038/s41467-022-31934-9) and [source-data workbook](sources/41467_2022_31934_MOESM7_ESM.xlsx). Original folder name `Zou 2021` conflicted with the publication year; the example uses 2022. The linked ATST contains longitudinal OD600 and OD445 readings.
+
+One OD600 readout is built per selected worksheet: `Fig. 1b-1c ` combines uninfected Figure 1b and seven phage Figure 1c blocks; `Fig. 3a-c` combines MOI series and uninfected/cocktail comparisons; `SFig. 3` is uninfected strain growth; `SFig. 6` contains fifteen supplemental phage panels; and `Fig. 4e`, `Fig. 4f`, `Fig. 4g` contain fed-batch cell-density series. Figures 4e/f additionally yield separate `OD445` readouts from the DAAO reaction `Absorption (445nm)` column C. These are reaction-mixture absorbance, not bacterial cell-density OD600. Figure 4g's protein-content column is not treated as 445-nm absorbance.
+
+Different panel blocks on one worksheet can have different time grids. Each readout uses the sorted union of its source time values; READINGS cells are empty where a curve was not sampled at a particular time. METADATA records the source sheet and block rows.  Normalized `isolate_id`, `phage_id`, MOI, and `assay_mode` support cross-curve access; Figure 3c phage cocktail is a local mixture entity whose components are listed in PHAGES.
+
+Paper Methods distinguish microplate infection growth curves (Multiskan GO, 200 µL in 96-well plates, 37 °C, agitation, 30-minute intervals), shake-flask growth (50 mL in 250 mL flasks, Ultrospec 3000, 2-hour intervals), and 5 L fed-batch bioreactor profiles. Figure 3 combines microplate and shake-flask series in one worksheet/readout; per-curve `assay_mode` preserves that difference. The source workbook reports OD600 and 445-nm absorption. The paper's analytical procedure uses 445-nm absorbance of a DAAO reaction mixture to determine pyruvic acid concentration; no OD600 meaning is assigned to that channel.
+
+Figure 1c T1 source rows 35-59 use `A` for time, `B:D`/`E:G`/`H:J` for PT- at MOI 0.05/0.5/5, and `K:M`/`N:P`/`Q:S` for PT+ at those MOIs. Figure 1 caption identifies the empty-vector pSK+ PT- comparator and pWHU3640 SspBCDE PT+ strain, LB reference, and ampicillin maintenance. Both reading notebooks use this same plot subset and calculate median/min-max from source triplicates.
+
+The Figure 4g worksheet calls its cell-density column “DAAO cell density OD600” even though the surrounding heading and paper Figure 4g identify an nsp8 production experiment. The OD600 values are retained as cell density; the conflicting source label is not used to infer DAAO production for that readout.

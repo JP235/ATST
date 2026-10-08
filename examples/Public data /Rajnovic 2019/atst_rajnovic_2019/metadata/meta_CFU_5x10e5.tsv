@@ -1,0 +1,7 @@
+source_file	read_shared_data/sources/pone.0216292.s002.xlsx
+source_time_column	A
+source_data_rows	3:69
+source_condition_columns	B:D, E:G, H:J, K:M, N:P, Q:S, T:V, W:Y, Z:AB
+source_starred_cells	N26, O26, P26, Q26, R26, S26, T20, T26, U20, U26, V20, V26, W26, X26, Y26, Z23, Z26, AA23, AA26, AB23, AB26
+source_missing_cells	B4, C4, D4, E4, F4, G4, H4, I4, J4, K4, L4, M4, N4, O4, P4, Q4, R4, S4, T4, U4, V4, W4, X4, Y4, Z4, AA4, AB4
+conversion	Asterisk-suffixed decimal-comma text parsed as numeric OD600; source blanks retained as missing readings

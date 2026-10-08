@@ -1,0 +1,64 @@
+curve_id	type	isolate_id	phage_id	moi	replicate
+curve_A	uninfected_control	PAO1		0	1
+curve_B	uninfected_control	PAO1		0	2
+curve_C	uninfected_control	PAO1		0	3
+curve_D	phage_exposed	PAO1	Pa2	10	1
+curve_E	phage_exposed	PAO1	Pa2	10	2
+curve_F	phage_exposed	PAO1	Pa2	10	3
+curve_G	phage_exposed	PAO1	Pa3	10	1
+curve_H	phage_exposed	PAO1	Pa3	10	2
+curve_I	phage_exposed	PAO1	Pa3	10	3
+curve_J	phage_exposed	PAO1	Pa6	10	1
+curve_K	phage_exposed	PAO1	Pa6	10	2
+curve_L	phage_exposed	PAO1	Pa6	10	3
+curve_M	phage_exposed	PAO1	Pa10	10	1
+curve_N	phage_exposed	PAO1	Pa10	10	2
+curve_O	phage_exposed	PAO1	Pa10	10	3
+curve_P	phage_exposed	PAO1	Pa12	10	1
+curve_Q	phage_exposed	PAO1	Pa12	10	2
+curve_R	phage_exposed	PAO1	Pa12	10	3
+curve_S	phage_exposed	PAO1	Pa18	10	1
+curve_T	phage_exposed	PAO1	Pa18	10	2
+curve_U	phage_exposed	PAO1	Pa18	10	3
+curve_V	phage_exposed	PAO1	Pa21	10	1
+curve_W	phage_exposed	PAO1	Pa21	10	2
+curve_X	phage_exposed	PAO1	Pa21	10	3
+curve_Y	phage_exposed	PAO1	Pa22	10	1
+curve_Z	phage_exposed	PAO1	Pa22	10	2
+curve_AA	phage_exposed	PAO1	Pa22	10	3
+curve_AB	phage_exposed	PAO1	Pa24	10	1
+curve_AC	phage_exposed	PAO1	Pa24	10	2
+curve_AD	phage_exposed	PAO1	Pa24	10	3
+curve_AE	phage_exposed	PAO1	Pa25	10	1
+curve_AF	phage_exposed	PAO1	Pa25	10	2
+curve_AG	phage_exposed	PAO1	Pa25	10	3
+curve_AH	phage_exposed	PAO1	Pa29	10	1
+curve_AI	phage_exposed	PAO1	Pa29	10	2
+curve_AJ	phage_exposed	PAO1	Pa29	10	3
+curve_AK	phage_exposed	PAO1	Pa33	10	1
+curve_AL	phage_exposed	PAO1	Pa33	10	2
+curve_AM	phage_exposed	PAO1	Pa33	10	3
+curve_AN	phage_exposed	PAO1	Pa34	10	1
+curve_AO	phage_exposed	PAO1	Pa34	10	2
+curve_AP	phage_exposed	PAO1	Pa34	10	3
+curve_AQ	phage_exposed	PAO1	Pa35	10	1
+curve_AR	phage_exposed	PAO1	Pa35	10	2
+curve_AS	phage_exposed	PAO1	Pa35	10	3
+curve_AT	phage_exposed	PAO1	Pa36	10	1
+curve_AU	phage_exposed	PAO1	Pa36	10	2
+curve_AV	phage_exposed	PAO1	Pa36	10	3
+curve_AW	phage_exposed	PAO1	Pa28	10	1
+curve_AX	phage_exposed	PAO1	Pa28	10	2
+curve_AY	phage_exposed	PAO1	Pa28	10	3
+curve_AZ	uninfected_control	PAO1		0	1
+curve_BA	uninfected_control	PAO1		0	2
+curve_BB	uninfected_control	PAO1		0	3
+curve_BC	phage_exposed	PAO1	Pa53	10	1
+curve_BD	phage_exposed	PAO1	Pa53	10	2
+curve_BE	phage_exposed	PAO1	Pa53	10	3
+curve_BF	uninfected_control	PAO1		0	1
+curve_BG	uninfected_control	PAO1		0	2
+curve_BH	uninfected_control	PAO1		0	3
+curve_BI	phage_exposed	PAO1	PP7	10	1
+curve_BJ	phage_exposed	PAO1	PP7	10	2
+curve_BK	phage_exposed	PAO1	PP7	10	3

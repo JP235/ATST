@@ -1,0 +1,6 @@
+source_file	read_shared_data/sources/TableS6_growth curve from plaque.csv
+source_header_rows	1-2
+source_data_rows	3:147
+source_columns	A:Z
+source_exclusion	S6 source column Q (T6 replicate 1) marked excluded from downstream analysis
+source_alignment_repair	none

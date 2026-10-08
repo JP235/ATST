@@ -1,0 +1,25 @@
+curve_id	type	isolate_id	phage_id	moi	replicate
+curve_A	uninfected_control	PA14		0	1
+curve_B	uninfected_control	PA14		0	2
+curve_C	uninfected_control	PA14		0	3
+curve_D	uninfected_control	PA14		0	4
+curve_E	uninfected_control	PA14		0	5
+curve_F	uninfected_control	PA14		0	6
+curve_G	uninfected_control	PA14		0	7
+curve_H	uninfected_control	PA14		0	8
+curve_I	phage_exposed	PA14	VAC1	0.01	1
+curve_J	phage_exposed	PA14	VAC1	0.01	2
+curve_K	phage_exposed	PA14	VAC1	0.01	3
+curve_L	phage_exposed	PA14	VAC1	0.01	4
+curve_M	phage_exposed	PA14	VAC1	0.01	5
+curve_N	phage_exposed	PA14	VAC1	0.01	6
+curve_O	phage_exposed	PA14	VAC1	0.01	7
+curve_P	phage_exposed	PA14	VAC1	0.01	8
+curve_Q	phage_exposed	PA14	VAC3	0.01	1
+curve_R	phage_exposed	PA14	VAC3	0.01	2
+curve_S	phage_exposed	PA14	VAC3	0.01	3
+curve_T	phage_exposed	PA14	VAC3	0.01	4
+curve_U	phage_exposed	PA14	VAC3	0.01	5
+curve_V	phage_exposed	PA14	VAC3	0.01	6
+curve_W	phage_exposed	PA14	VAC3	0.01	7
+curve_X	phage_exposed	PA14	VAC3	0.01	8

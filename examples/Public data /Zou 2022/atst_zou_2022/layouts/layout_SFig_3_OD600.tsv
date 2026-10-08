@@ -1,0 +1,13 @@
+curve_id	type	isolate_id	phage_id	moi	replicate	assay_mode
+curve_A	uninfected_control	MG1655_pSK_empty			1	microplate
+curve_B	uninfected_control	MG1655_pSK_empty			2	microplate
+curve_C	uninfected_control	MG1655_pSK_empty			3	microplate
+curve_D	uninfected_control	MG1655_pWHU3640			1	microplate
+curve_E	uninfected_control	MG1655_pWHU3640			2	microplate
+curve_F	uninfected_control	MG1655_pWHU3640			3	microplate
+curve_G	uninfected_control	MG1655_WT			1	microplate
+curve_H	uninfected_control	MG1655_WT			2	microplate
+curve_I	uninfected_control	MG1655_WT			3	microplate
+curve_J	uninfected_control	MG1655_PT			1	microplate
+curve_K	uninfected_control	MG1655_PT			2	microplate
+curve_L	uninfected_control	MG1655_PT			3	microplate

@@ -1,0 +1,6 @@
+source_file	read_shared_data/sources/TableS7_growth curve from sewage.csv
+source_header_rows	1-2
+source_data_rows	3:147
+source_columns	A:AA
+source_exclusion	S7 source columns C, Q, V (isolate 2, 16, 21) marked excluded from downstream analysis
+source_alignment_repair	none

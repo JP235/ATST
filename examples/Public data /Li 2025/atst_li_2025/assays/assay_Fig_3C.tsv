@@ -1,0 +1,13 @@
+readout_type	absorbance
+readout_unit	od600
+time_unit	h
+temperature_c	37
+medium_id	LB
+phage_inoculum_moi	0.01
+culture_density	high density
+experiment_context	QS mutants
+readout_description	OD600 trajectory
+measurement_method	spectrophotometry
+instrument	SP-UV 200
+replicates_per_condition	3
+source_reference	Paper Fig. 3C, caption; Methods, Phage-host interaction in liquid medium

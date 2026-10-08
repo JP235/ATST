@@ -1,0 +1,4 @@
+ISOLATE_ID	species	strain	derivation
+PAO1	Pseudomonas aeruginosa	PAO1	wild type
+PAO1_del_retS	Pseudomonas aeruginosa	PAO1 ΔretS	retS deletion mutant
+CHA	Pseudomonas aeruginosa	CHA	clinical strain

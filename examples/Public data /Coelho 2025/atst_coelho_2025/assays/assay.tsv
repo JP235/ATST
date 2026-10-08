@@ -1,0 +1,14 @@
+readout_type	absorbance
+readout_unit	od600
+time_unit	h
+temperature_c	37
+shaking_speed_rpm	120
+vessel	5 mL LB liquid culture
+medium_id	LB
+phage_moi	0.01 for VAC1/VAC3; 0 for control
+inoculum	100 uL PA14 suspension at 2x10^8 cells/mL in sterile 0.9% NaCl, added to 5 mL LB
+measurement_method	spectrophotometry at 600 nm
+sampling_times_h	0, 1, 2, 17, 19, 21, 24, 26, 40 (workbook)
+source_curves_per_condition	8
+reported_replicates	Figure 1 caption says experiments performed in three replicates; workbook contains eight columns per condition
+source_reference	doi:10.1038/s42003-024-07269-0

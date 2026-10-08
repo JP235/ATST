@@ -1,0 +1,19 @@
+curve_id	type	isolate_id	phage_id	moi	replicate
+curve_A	uninfected_control	PAO1_TerY_P		0	1
+curve_B	uninfected_control	PAO1_TerY_P		0	2
+curve_C	uninfected_control	PAO1_TerY_P		0	3
+curve_D	phage_exposed	PAO1_TerY_P	Pa3	10	1
+curve_E	phage_exposed	PAO1_TerY_P	Pa3	10	2
+curve_F	phage_exposed	PAO1_TerY_P	Pa3	10	3
+curve_G	phage_exposed	PAO1_TerY_P	Pa6	10	1
+curve_H	phage_exposed	PAO1_TerY_P	Pa6	10	2
+curve_I	phage_exposed	PAO1_TerY_P	Pa6	10	3
+curve_J	phage_exposed	PAO1_TerY_P	Pa18	10	1
+curve_K	phage_exposed	PAO1_TerY_P	Pa18	10	2
+curve_L	phage_exposed	PAO1_TerY_P	Pa18	10	3
+curve_M	phage_exposed	PAO1_TerY_P	Pa22	10	1
+curve_N	phage_exposed	PAO1_TerY_P	Pa22	10	2
+curve_O	phage_exposed	PAO1_TerY_P	Pa22	10	3
+curve_P	phage_exposed	PAO1_TerY_P	Pa25	10	1
+curve_Q	phage_exposed	PAO1_TerY_P	Pa25	10	2
+curve_R	phage_exposed	PAO1_TerY_P	Pa25	10	3

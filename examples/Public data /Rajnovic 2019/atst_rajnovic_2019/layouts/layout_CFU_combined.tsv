@@ -1,0 +1,82 @@
+curve_id	type	isolate_id	phage_id	bacteria_cfu_ml	pfu_ml	replicate
+curve_A	phage_exposed	E_coli_DSMZ_613	T4	5x10^8	5x10^8	1
+curve_B	phage_exposed	E_coli_DSMZ_613	T4	5x10^8	5x10^8	2
+curve_C	phage_exposed	E_coli_DSMZ_613	T4	5x10^8	5x10^8	3
+curve_D	phage_exposed	E_coli_DSMZ_613	T4	5x10^8	5x10^7	1
+curve_E	phage_exposed	E_coli_DSMZ_613	T4	5x10^8	5x10^7	2
+curve_F	phage_exposed	E_coli_DSMZ_613	T4	5x10^8	5x10^7	3
+curve_G	phage_exposed	E_coli_DSMZ_613	T4	5x10^8	5x10^6	1
+curve_H	phage_exposed	E_coli_DSMZ_613	T4	5x10^8	5x10^6	2
+curve_I	phage_exposed	E_coli_DSMZ_613	T4	5x10^8	5x10^6	3
+curve_J	phage_exposed	E_coli_DSMZ_613	T4	5x10^8	5x10^5	1
+curve_K	phage_exposed	E_coli_DSMZ_613	T4	5x10^8	5x10^5	2
+curve_L	phage_exposed	E_coli_DSMZ_613	T4	5x10^8	5x10^5	3
+curve_M	phage_exposed	E_coli_DSMZ_613	T4	5x10^8	5x10^4	1
+curve_N	phage_exposed	E_coli_DSMZ_613	T4	5x10^8	5x10^4	2
+curve_O	phage_exposed	E_coli_DSMZ_613	T4	5x10^8	5x10^4	3
+curve_P	phage_exposed	E_coli_DSMZ_613	T4	5x10^8	5x10^3	1
+curve_Q	phage_exposed	E_coli_DSMZ_613	T4	5x10^8	5x10^3	2
+curve_R	phage_exposed	E_coli_DSMZ_613	T4	5x10^8	5x10^3	3
+curve_S	phage_exposed	E_coli_DSMZ_613	T4	5x10^8	5x10^2	1
+curve_T	phage_exposed	E_coli_DSMZ_613	T4	5x10^8	5x10^2	2
+curve_U	phage_exposed	E_coli_DSMZ_613	T4	5x10^8	5x10^2	3
+curve_V	phage_exposed	E_coli_DSMZ_613	T4	5x10^8	5x10^1	1
+curve_W	phage_exposed	E_coli_DSMZ_613	T4	5x10^8	5x10^1	2
+curve_X	phage_exposed	E_coli_DSMZ_613	T4	5x10^8	5x10^1	3
+curve_Y	uninfected_control	E_coli_DSMZ_613		5x10^8	0	1
+curve_Z	uninfected_control	E_coli_DSMZ_613		5x10^8	0	2
+curve_AA	uninfected_control	E_coli_DSMZ_613		5x10^8	0	3
+curve_AB	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^8	5x10^8	1
+curve_AC	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^8	5x10^8	2
+curve_AD	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^8	5x10^8	3
+curve_AE	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^8	5x10^7	1
+curve_AF	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^8	5x10^7	2
+curve_AG	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^8	5x10^7	3
+curve_AH	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^8	5x10^6	1
+curve_AI	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^8	5x10^6	2
+curve_AJ	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^8	5x10^6	3
+curve_AK	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^8	5x10^5	1
+curve_AL	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^8	5x10^5	2
+curve_AM	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^8	5x10^5	3
+curve_AN	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^8	5x10^4	1
+curve_AO	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^8	5x10^4	2
+curve_AP	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^8	5x10^4	3
+curve_AQ	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^8	5x10^3	1
+curve_AR	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^8	5x10^3	2
+curve_AS	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^8	5x10^3	3
+curve_AT	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^8	5x10^2	1
+curve_AU	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^8	5x10^2	2
+curve_AV	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^8	5x10^2	3
+curve_AW	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^8	5x10^1	1
+curve_AX	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^8	5x10^1	2
+curve_AY	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^8	5x10^1	3
+curve_AZ	uninfected_control	E_coli_DSMZ_613		2.5x10^8	0	1
+curve_BA	uninfected_control	E_coli_DSMZ_613		2.5x10^8	0	2
+curve_BB	uninfected_control	E_coli_DSMZ_613		2.5x10^8	0	3
+curve_BC	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^7	5x10^8	1
+curve_BD	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^7	5x10^8	2
+curve_BE	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^7	5x10^8	3
+curve_BF	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^7	5x10^7	1
+curve_BG	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^7	5x10^7	2
+curve_BH	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^7	5x10^7	3
+curve_BI	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^7	5x10^6	1
+curve_BJ	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^7	5x10^6	2
+curve_BK	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^7	5x10^6	3
+curve_BL	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^7	5x10^5	1
+curve_BM	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^7	5x10^5	2
+curve_BN	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^7	5x10^5	3
+curve_BO	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^7	5x10^4	1
+curve_BP	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^7	5x10^4	2
+curve_BQ	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^7	5x10^4	3
+curve_BR	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^7	5x10^3	1
+curve_BS	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^7	5x10^3	2
+curve_BT	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^7	5x10^3	3
+curve_BU	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^7	5x10^2	1
+curve_BV	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^7	5x10^2	2
+curve_BW	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^7	5x10^2	3
+curve_BX	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^7	5x10^1	1
+curve_BY	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^7	5x10^1	2
+curve_BZ	phage_exposed	E_coli_DSMZ_613	T4	2.5x10^7	5x10^1	3
+curve_CA	uninfected_control	E_coli_DSMZ_613		2.5x10^7	0	1
+curve_CB	uninfected_control	E_coli_DSMZ_613		2.5x10^7	0	2
+curve_CC	uninfected_control	E_coli_DSMZ_613		2.5x10^7	0	3

@@ -1,0 +1,11 @@
+ISOLATE_ID	source_sheet	species	defense_system	plasmid_name	plasmid_code	vector	insert_description	donor_strain	resistance_marker	identity_note
+PAO1	PAO1	Pseudomonas aeruginosa	none added	pEmpty	pTU646	pUCP20	-		AmpR	PAO1 worksheet interpreted as empty-vector comparator from Fig. S8 caption and p. 9 methods; workbook does not name plasmid
+PAO1_AVAST_Type_V	AVAST Type V	Pseudomonas aeruginosa	AVAST Type V	pAVAST_V	pTU652	pUCP20	AVAST Type V from P. aeruginosa L0213	L0213	AmpR	Worksheet names defense system; host and construct resolved from paper and Table S8
+PAO1_CBASS_Type_II_A	CBASS Type II-A	Pseudomonas aeruginosa	CBASS Type II-A	pCBASS_IIA	pTU651	pUCP20	CBASS Type II-A from P. aeruginosa L1361	L1361	AmpR	Worksheet names defense system; host and construct resolved from paper and Table S8
+PAO1_CBASS_Type_II_C	CBASS Type II-C	Pseudomonas aeruginosa	CBASS Type II-C	pCBASS_IIC	pTU649	pUCP20	CBASS Type II-C from P. aeruginosa L1347	L1347	AmpR	Worksheet names defense system; host and construct resolved from paper and Table S8
+PAO1_CBASS_Type_III	CBASS Type III	Pseudomonas aeruginosa	CBASS Type III-C	pCBASS_III	pTU650	pUCP20	CBASS Type III from P. aeruginosa L1361	L1361	AmpR	Workbook/Table S8 label Type III corresponds to Type III-C in Fig. S8 and main text
+PAO1_Druantia_Type_III	Druantia Type III	Pseudomonas aeruginosa	Druantia Type III	pDruantia_III	pTU619	pUCP20	Druantia type III from P. aeruginosa L0872	L0872	AmpR	Worksheet names defense system; host and construct resolved from paper and Table S8
+PAO1_QatABCD	QatABCD	Pseudomonas aeruginosa	QatABCD	pQatABCD	pTU623	pUCP20	QatABCD from P. aeruginosa K6156	K6156	AmpR	Worksheet names defense system; host and construct resolved from paper and Table S8
+PAO1_RADAR	RADAR	Pseudomonas aeruginosa	RADAR	pRADAR	pTU626	pUCP20	RADAR from P. aeruginosa L0872	L0872	AmpR	Worksheet names defense system; host and construct resolved from paper and Table S8
+PAO1_TerY_P	TerY-P	Pseudomonas aeruginosa	TerY-P	pTerY-P	pTU622	pUCP20	TerY-P from P. aeruginosa L1171	L1171	AmpR	Worksheet names defense system; host and construct resolved from paper and Table S8
+PAO1_Zorya_Type_I	Zorya Type I	Pseudomonas aeruginosa	Zorya Type I	pZorya_I	pTU620	pUCP20	Zorya Type I from P. aeruginosa K6024	K6024	AmpR	Worksheet names defense system; host and construct resolved from paper and Table S8

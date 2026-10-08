@@ -1,0 +1,10 @@
+readout_type	absorbance
+readout_unit	od600
+time_unit	h
+medium_id	LB
+culture_type	planktonic
+conditions	PAO1 planktonic; sequential JG024 precedes JG005 by 2 h at 1e7 PFU/mL each (paper Methods and Fig. 6)
+temperature_c	37
+atmosphere	5% CO2
+starting_od600	approximately 0.01 reported for general planktonic assay
+source_reference	Paper Methods, P. aeruginosa-phage interaction; paper figure captions; source workbook panel heading

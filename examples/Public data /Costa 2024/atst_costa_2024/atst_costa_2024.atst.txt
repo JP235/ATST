@@ -1,0 +1,55 @@
+===FILE_START
+:::FILE_INFO_START
+   file_name       	atst_costa_2024.atst.txt
+   format          	ATST
+   format_version  	0.1
+   created_on      	2026-10-08
+   field_delimiter 	TAB
+   encoding        	UTF-8
+:::FILE_INFO_END
+
+:::STUDY_START
+   title               	Accumulation of defense systems in phage-resistant strains of Pseudomonas aeruginosa
+   study_id            	doi:10.1126/sciadv.adj0341
+   authors             	Ana Rita Costa; Daan F. van den Berg; Jelger Q. Esser; Aswin Muralidharan; Halewijn van den Bossche; Boris Estrada Bonilla; Baltus A. van der Steen; Anna C. Haagsma; Ad C. Fluit; Franklin L. Nobrega; Pieter-Jan Haas; Stan J. J. Brouns
+   publication_date    	2024-02-23
+   publication_doi     	10.1126/sciadv.adj0341
+   dataset_doi         	10.5281/zenodo.8405451
+   dataset_version     	v1.0
+   bioproject          	PRJNA817167
+   description         	Liquid culture collapse assays of PAO1 carrying individual defense systems and an empty-vector comparator; both shared plate-reader workbooks.
+   original_repository 	https://github.com/BrounsLab-TUDelft/Pseudomonas_Defence_Systems/tree/v1.0
+:::STUDY_END
+
+:::READOUT_IDS_START
+readout_id
+raw_all
+moi10_all
+:::READOUT_IDS_END
+
+:::METADATA_START
+<<<METADATA_READOUT readout_id=raw_all file=metadata/meta_raw_all.tsv
+<<<METADATA_READOUT readout_id=moi10_all file=metadata/meta_moi10_all.tsv
+:::METADATA_END
+
+:::ASSAY_START
+<<<ASSAY_READOUT readout_id=raw_all file=assays/assay.tsv
+<<<ASSAY_READOUT readout_id=moi10_all file=assays/assay.tsv
+:::ASSAY_END
+
+:::ENTITIES_START
+<<<TABLE name=ISOLATES pk=ISOLATE_ID file=entities/isolates.tsv
+<<<TABLE name=PHAGES pk=PHAGE_ID file=entities/phages.tsv
+<<<TABLE name=MEDIA pk=MEDIUM_ID file=entities/media.tsv
+:::ENTITIES_END
+
+:::LAYOUT_START
+<<<LAYOUT_READOUT readout_id=raw_all file=layouts/layout_raw_all.tsv
+<<<LAYOUT_READOUT readout_id=moi10_all file=layouts/layout_moi10_all.tsv
+:::LAYOUT_END
+
+:::READINGS_START
+<<<READOUT readout_id=raw_all file=readings/readings_raw_all.tsv
+<<<READOUT readout_id=moi10_all file=readings/readings_moi10_all.tsv
+:::READINGS_END
+===FILE_END

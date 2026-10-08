@@ -1,0 +1,316 @@
+curve_id	type	isolate_id	phage_id	moi	replicate	assay_mode
+curve_A	phage_exposed	MG1655DE3_EPR	EEP	0.5	1	microplate
+curve_B	phage_exposed	MG1655DE3_EPR	EEP	0.5	2	microplate
+curve_C	phage_exposed	MG1655DE3_EPR	EEP	0.5	3	microplate
+curve_D	phage_exposed	MG1655DE3_EPR	EEP	1	1	microplate
+curve_E	phage_exposed	MG1655DE3_EPR	EEP	1	2	microplate
+curve_F	phage_exposed	MG1655DE3_EPR	EEP	1	3	microplate
+curve_G	phage_exposed	MG1655DE3_EPR	EEP	5	1	microplate
+curve_H	phage_exposed	MG1655DE3_EPR	EEP	5	2	microplate
+curve_I	phage_exposed	MG1655DE3_EPR	EEP	5	3	microplate
+curve_J	phage_exposed	MG1655DE3_EPR	EEP	10	1	microplate
+curve_K	phage_exposed	MG1655DE3_EPR	EEP	10	2	microplate
+curve_L	phage_exposed	MG1655DE3_EPR	EEP	10	3	microplate
+curve_M	uninfected_control	MG1655DE3_WT			1	microplate
+curve_N	uninfected_control	MG1655DE3_WT			2	microplate
+curve_O	uninfected_control	MG1655DE3_WT			3	microplate
+curve_P	uninfected_control	MG1655DE3_EPR			1	microplate
+curve_Q	uninfected_control	MG1655DE3_EPR			2	microplate
+curve_R	uninfected_control	MG1655DE3_EPR			3	microplate
+curve_S	phage_exposed	MG1655_WT	EEP	0.01	1	microplate
+curve_T	phage_exposed	MG1655_WT	EEP	0.01	2	microplate
+curve_U	phage_exposed	MG1655_WT	EEP	0.01	3	microplate
+curve_V	phage_exposed	MG1655DE3_EPR	T1	0.5	1	microplate
+curve_W	phage_exposed	MG1655DE3_EPR	T1	0.5	2	microplate
+curve_X	phage_exposed	MG1655DE3_EPR	T1	0.5	3	microplate
+curve_Y	phage_exposed	MG1655DE3_EPR	T1	1	1	microplate
+curve_Z	phage_exposed	MG1655DE3_EPR	T1	1	2	microplate
+curve_AA	phage_exposed	MG1655DE3_EPR	T1	1	3	microplate
+curve_AB	phage_exposed	MG1655DE3_EPR	T1	5	1	microplate
+curve_AC	phage_exposed	MG1655DE3_EPR	T1	5	2	microplate
+curve_AD	phage_exposed	MG1655DE3_EPR	T1	5	3	microplate
+curve_AE	phage_exposed	MG1655DE3_EPR	T1	10	1	microplate
+curve_AF	phage_exposed	MG1655DE3_EPR	T1	10	2	microplate
+curve_AG	phage_exposed	MG1655DE3_EPR	T1	10	3	microplate
+curve_AH	uninfected_control	MG1655DE3_WT			1	microplate
+curve_AI	uninfected_control	MG1655DE3_WT			2	microplate
+curve_AJ	uninfected_control	MG1655DE3_WT			3	microplate
+curve_AK	uninfected_control	MG1655DE3_EPR			1	microplate
+curve_AL	uninfected_control	MG1655DE3_EPR			2	microplate
+curve_AM	uninfected_control	MG1655DE3_EPR			3	microplate
+curve_AN	phage_exposed	MG1655DE3_WT	T1	0.01	1	microplate
+curve_AO	phage_exposed	MG1655DE3_WT	T1	0.01	2	microplate
+curve_AP	phage_exposed	MG1655DE3_WT	T1	0.01	3	microplate
+curve_AQ	phage_exposed	MG1655DE3_EPR	T5	0.5	1	microplate
+curve_AR	phage_exposed	MG1655DE3_EPR	T5	0.5	2	microplate
+curve_AS	phage_exposed	MG1655DE3_EPR	T5	0.5	3	microplate
+curve_AT	phage_exposed	MG1655DE3_EPR	T5	1	1	microplate
+curve_AU	phage_exposed	MG1655DE3_EPR	T5	1	2	microplate
+curve_AV	phage_exposed	MG1655DE3_EPR	T5	1	3	microplate
+curve_AW	phage_exposed	MG1655DE3_EPR	T5	5	1	microplate
+curve_AX	phage_exposed	MG1655DE3_EPR	T5	5	2	microplate
+curve_AY	phage_exposed	MG1655DE3_EPR	T5	5	3	microplate
+curve_AZ	phage_exposed	MG1655DE3_EPR	T5	10	1	microplate
+curve_BA	phage_exposed	MG1655DE3_EPR	T5	10	2	microplate
+curve_BB	phage_exposed	MG1655DE3_EPR	T5	10	3	microplate
+curve_BC	uninfected_control	MG1655DE3_WT			1	microplate
+curve_BD	uninfected_control	MG1655DE3_WT			2	microplate
+curve_BE	uninfected_control	MG1655DE3_WT			3	microplate
+curve_BF	uninfected_control	MG1655DE3_EPR			1	microplate
+curve_BG	uninfected_control	MG1655DE3_EPR			2	microplate
+curve_BH	uninfected_control	MG1655DE3_EPR			3	microplate
+curve_BI	phage_exposed	MG1655DE3_WT	T5	0.01	1	microplate
+curve_BJ	phage_exposed	MG1655DE3_WT	T5	0.01	2	microplate
+curve_BK	phage_exposed	MG1655DE3_WT	T5	0.01	3	microplate
+curve_BL	phage_exposed	MG1655DE3_EPR	JMPW2	0.5	1	microplate
+curve_BM	phage_exposed	MG1655DE3_EPR	JMPW2	0.5	2	microplate
+curve_BN	phage_exposed	MG1655DE3_EPR	JMPW2	0.5	3	microplate
+curve_BO	phage_exposed	MG1655DE3_EPR	JMPW2	1	1	microplate
+curve_BP	phage_exposed	MG1655DE3_EPR	JMPW2	1	2	microplate
+curve_BQ	phage_exposed	MG1655DE3_EPR	JMPW2	1	3	microplate
+curve_BR	phage_exposed	MG1655DE3_EPR	JMPW2	5	1	microplate
+curve_BS	phage_exposed	MG1655DE3_EPR	JMPW2	5	2	microplate
+curve_BT	phage_exposed	MG1655DE3_EPR	JMPW2	5	3	microplate
+curve_BU	phage_exposed	MG1655DE3_EPR	JMPW2	10	1	microplate
+curve_BV	phage_exposed	MG1655DE3_EPR	JMPW2	10	2	microplate
+curve_BW	phage_exposed	MG1655DE3_EPR	JMPW2	10	3	microplate
+curve_BX	uninfected_control	MG1655DE3_WT			1	microplate
+curve_BY	uninfected_control	MG1655DE3_WT			2	microplate
+curve_BZ	uninfected_control	MG1655DE3_WT			3	microplate
+curve_CA	uninfected_control	MG1655DE3_EPR			1	microplate
+curve_CB	uninfected_control	MG1655DE3_EPR			2	microplate
+curve_CC	uninfected_control	MG1655DE3_EPR			3	microplate
+curve_CD	phage_exposed	MG1655DE3_WT	JMPW2	0.01	1	microplate
+curve_CE	phage_exposed	MG1655DE3_WT	JMPW2	0.01	2	microplate
+curve_CF	phage_exposed	MG1655DE3_WT	JMPW2	0.01	3	microplate
+curve_CG	phage_exposed	MG1655DE3_EPR	T7	0.1	1	microplate
+curve_CH	phage_exposed	MG1655DE3_EPR	T7	0.1	2	microplate
+curve_CI	phage_exposed	MG1655DE3_EPR	T7	0.1	3	microplate
+curve_CJ	phage_exposed	MG1655DE3_EPR	T7	0.25	1	microplate
+curve_CK	phage_exposed	MG1655DE3_EPR	T7	0.25	2	microplate
+curve_CL	phage_exposed	MG1655DE3_EPR	T7	0.25	3	microplate
+curve_CM	phage_exposed	MG1655DE3_EPR	T7	0.5	1	microplate
+curve_CN	phage_exposed	MG1655DE3_EPR	T7	0.5	2	microplate
+curve_CO	phage_exposed	MG1655DE3_EPR	T7	0.5	3	microplate
+curve_CP	phage_exposed	MG1655DE3_EPR	T7	1	1	microplate
+curve_CQ	phage_exposed	MG1655DE3_EPR	T7	1	2	microplate
+curve_CR	phage_exposed	MG1655DE3_EPR	T7	1	3	microplate
+curve_CS	uninfected_control	MG1655DE3_WT			1	microplate
+curve_CT	uninfected_control	MG1655DE3_WT			2	microplate
+curve_CU	uninfected_control	MG1655DE3_WT			3	microplate
+curve_CV	uninfected_control	MG1655DE3_EPR			1	microplate
+curve_CW	uninfected_control	MG1655DE3_EPR			2	microplate
+curve_CX	uninfected_control	MG1655DE3_EPR			3	microplate
+curve_CY	phage_exposed	MG1655DE3_WT	T7	0.01	1	microplate
+curve_CZ	phage_exposed	MG1655DE3_WT	T7	0.01	2	microplate
+curve_DA	phage_exposed	MG1655DE3_WT	T7	0.01	3	microplate
+curve_DB	phage_exposed	MG1655DE3_EPR	T4	0.1	1	microplate
+curve_DC	phage_exposed	MG1655DE3_EPR	T4	0.1	2	microplate
+curve_DD	phage_exposed	MG1655DE3_EPR	T4	0.1	3	microplate
+curve_DE	phage_exposed	MG1655DE3_EPR	T4	0.25	1	microplate
+curve_DF	phage_exposed	MG1655DE3_EPR	T4	0.25	2	microplate
+curve_DG	phage_exposed	MG1655DE3_EPR	T4	0.25	3	microplate
+curve_DH	phage_exposed	MG1655DE3_EPR	T4	0.5	1	microplate
+curve_DI	phage_exposed	MG1655DE3_EPR	T4	0.5	2	microplate
+curve_DJ	phage_exposed	MG1655DE3_EPR	T4	0.5	3	microplate
+curve_DK	phage_exposed	MG1655DE3_EPR	T4	1	1	microplate
+curve_DL	phage_exposed	MG1655DE3_EPR	T4	1	2	microplate
+curve_DM	phage_exposed	MG1655DE3_EPR	T4	1	3	microplate
+curve_DN	uninfected_control	MG1655DE3_WT			1	microplate
+curve_DO	uninfected_control	MG1655DE3_WT			2	microplate
+curve_DP	uninfected_control	MG1655DE3_WT			3	microplate
+curve_DQ	uninfected_control	MG1655DE3_EPR			1	microplate
+curve_DR	uninfected_control	MG1655DE3_EPR			2	microplate
+curve_DS	uninfected_control	MG1655DE3_EPR			3	microplate
+curve_DT	phage_exposed	MG1655DE3_WT	T4	0.01	1	microplate
+curve_DU	phage_exposed	MG1655DE3_WT	T4	0.01	2	microplate
+curve_DV	phage_exposed	MG1655DE3_WT	T4	0.01	3	microplate
+curve_DW	phage_exposed	W3110_EPR	EEP	0.5	1	microplate
+curve_DX	phage_exposed	W3110_EPR	EEP	0.5	2	microplate
+curve_DY	phage_exposed	W3110_EPR	EEP	0.5	3	microplate
+curve_DZ	phage_exposed	W3110_EPR	EEP	1	1	microplate
+curve_EA	phage_exposed	W3110_EPR	EEP	1	2	microplate
+curve_EB	phage_exposed	W3110_EPR	EEP	1	3	microplate
+curve_EC	phage_exposed	W3110_EPR	EEP	5	1	microplate
+curve_ED	phage_exposed	W3110_EPR	EEP	5	2	microplate
+curve_EE	phage_exposed	W3110_EPR	EEP	5	3	microplate
+curve_EF	phage_exposed	W3110_EPR	EEP	10	1	microplate
+curve_EG	phage_exposed	W3110_EPR	EEP	10	2	microplate
+curve_EH	phage_exposed	W3110_EPR	EEP	10	3	microplate
+curve_EI	uninfected_control	W3110_WT			1	microplate
+curve_EJ	uninfected_control	W3110_WT			2	microplate
+curve_EK	uninfected_control	W3110_WT			3	microplate
+curve_EL	uninfected_control	W3110_EPR			1	microplate
+curve_EM	uninfected_control	W3110_EPR			2	microplate
+curve_EN	uninfected_control	W3110_EPR			3	microplate
+curve_EO	phage_exposed	W3110_WT	EEP	0.01	1	microplate
+curve_EP	phage_exposed	W3110_WT	EEP	0.01	2	microplate
+curve_EQ	phage_exposed	W3110_WT	EEP	0.01	3	microplate
+curve_ER	phage_exposed	W3110_EPR	T1	0.5	1	microplate
+curve_ES	phage_exposed	W3110_EPR	T1	0.5	2	microplate
+curve_ET	phage_exposed	W3110_EPR	T1	0.5	3	microplate
+curve_EU	phage_exposed	W3110_EPR	T1	1	1	microplate
+curve_EV	phage_exposed	W3110_EPR	T1	1	2	microplate
+curve_EW	phage_exposed	W3110_EPR	T1	1	3	microplate
+curve_EX	phage_exposed	W3110_EPR	T1	5	1	microplate
+curve_EY	phage_exposed	W3110_EPR	T1	5	2	microplate
+curve_EZ	phage_exposed	W3110_EPR	T1	5	3	microplate
+curve_FA	phage_exposed	W3110_EPR	T1	10	1	microplate
+curve_FB	phage_exposed	W3110_EPR	T1	10	2	microplate
+curve_FC	phage_exposed	W3110_EPR	T1	10	3	microplate
+curve_FD	uninfected_control	W3110_WT			1	microplate
+curve_FE	uninfected_control	W3110_WT			2	microplate
+curve_FF	uninfected_control	W3110_WT			3	microplate
+curve_FG	uninfected_control	W3110_EPR			1	microplate
+curve_FH	uninfected_control	W3110_EPR			2	microplate
+curve_FI	uninfected_control	W3110_EPR			3	microplate
+curve_FJ	phage_exposed	W3110_WT	T1	0.01	1	microplate
+curve_FK	phage_exposed	W3110_WT	T1	0.01	2	microplate
+curve_FL	phage_exposed	W3110_WT	T1	0.01	3	microplate
+curve_FM	phage_exposed	W3110_EPR	T5	0.5	1	microplate
+curve_FN	phage_exposed	W3110_EPR	T5	0.5	2	microplate
+curve_FO	phage_exposed	W3110_EPR	T5	0.5	3	microplate
+curve_FP	phage_exposed	W3110_EPR	T5	1	1	microplate
+curve_FQ	phage_exposed	W3110_EPR	T5	1	2	microplate
+curve_FR	phage_exposed	W3110_EPR	T5	1	3	microplate
+curve_FS	phage_exposed	W3110_EPR	T5	5	1	microplate
+curve_FT	phage_exposed	W3110_EPR	T5	5	2	microplate
+curve_FU	phage_exposed	W3110_EPR	T5	5	3	microplate
+curve_FV	phage_exposed	W3110_EPR	T5	10	1	microplate
+curve_FW	phage_exposed	W3110_EPR	T5	10	2	microplate
+curve_FX	phage_exposed	W3110_EPR	T5	10	3	microplate
+curve_FY	uninfected_control	W3110_WT			1	microplate
+curve_FZ	uninfected_control	W3110_WT			2	microplate
+curve_GA	uninfected_control	W3110_WT			3	microplate
+curve_GB	uninfected_control	W3110_EPR			1	microplate
+curve_GC	uninfected_control	W3110_EPR			2	microplate
+curve_GD	uninfected_control	W3110_EPR			3	microplate
+curve_GE	phage_exposed	W3110_WT	T5	0.01	1	microplate
+curve_GF	phage_exposed	W3110_WT	T5	0.01	2	microplate
+curve_GG	phage_exposed	W3110_WT	T5	0.01	3	microplate
+curve_GH	phage_exposed	W3110_EPR	JMPW2	0.5	1	microplate
+curve_GI	phage_exposed	W3110_EPR	JMPW2	0.5	2	microplate
+curve_GJ	phage_exposed	W3110_EPR	JMPW2	0.5	3	microplate
+curve_GK	phage_exposed	W3110_EPR	JMPW2	1	1	microplate
+curve_GL	phage_exposed	W3110_EPR	JMPW2	1	2	microplate
+curve_GM	phage_exposed	W3110_EPR	JMPW2	1	3	microplate
+curve_GN	phage_exposed	W3110_EPR	JMPW2	5	1	microplate
+curve_GO	phage_exposed	W3110_EPR	JMPW2	5	2	microplate
+curve_GP	phage_exposed	W3110_EPR	JMPW2	5	3	microplate
+curve_GQ	phage_exposed	W3110_EPR	JMPW2	10	1	microplate
+curve_GR	phage_exposed	W3110_EPR	JMPW2	10	2	microplate
+curve_GS	phage_exposed	W3110_EPR	JMPW2	10	3	microplate
+curve_GT	uninfected_control	W3110_WT			1	microplate
+curve_GU	uninfected_control	W3110_WT			2	microplate
+curve_GV	uninfected_control	W3110_WT			3	microplate
+curve_GW	uninfected_control	W3110_EPR			1	microplate
+curve_GX	uninfected_control	W3110_EPR			2	microplate
+curve_GY	uninfected_control	W3110_EPR			3	microplate
+curve_GZ	phage_exposed	W3110_WT	JMPW2	0.01	1	microplate
+curve_HA	phage_exposed	W3110_WT	JMPW2	0.01	2	microplate
+curve_HB	phage_exposed	W3110_WT	JMPW2	0.01	3	microplate
+curve_HC	phage_exposed	W3110_EPR	T7	0.1	1	microplate
+curve_HD	phage_exposed	W3110_EPR	T7	0.1	2	microplate
+curve_HE	phage_exposed	W3110_EPR	T7	0.1	3	microplate
+curve_HF	phage_exposed	W3110_EPR	T7	0.25	1	microplate
+curve_HG	phage_exposed	W3110_EPR	T7	0.25	2	microplate
+curve_HH	phage_exposed	W3110_EPR	T7	0.25	3	microplate
+curve_HI	phage_exposed	W3110_EPR	T7	0.5	1	microplate
+curve_HJ	phage_exposed	W3110_EPR	T7	0.5	2	microplate
+curve_HK	phage_exposed	W3110_EPR	T7	0.5	3	microplate
+curve_HL	phage_exposed	W3110_EPR	T7	1	1	microplate
+curve_HM	phage_exposed	W3110_EPR	T7	1	2	microplate
+curve_HN	phage_exposed	W3110_EPR	T7	1	3	microplate
+curve_HO	uninfected_control	W3110_WT			1	microplate
+curve_HP	uninfected_control	W3110_WT			2	microplate
+curve_HQ	uninfected_control	W3110_WT			3	microplate
+curve_HR	uninfected_control	W3110_EPR			1	microplate
+curve_HS	uninfected_control	W3110_EPR			2	microplate
+curve_HT	uninfected_control	W3110_EPR			3	microplate
+curve_HU	phage_exposed	W3110_WT	T7	0.01	1	microplate
+curve_HV	phage_exposed	W3110_WT	T7	0.01	2	microplate
+curve_HW	phage_exposed	W3110_WT	T7	0.01	3	microplate
+curve_HX	phage_exposed	W3110_EPR	T4	0.1	1	microplate
+curve_HY	phage_exposed	W3110_EPR	T4	0.1	2	microplate
+curve_HZ	phage_exposed	W3110_EPR	T4	0.1	3	microplate
+curve_IA	phage_exposed	W3110_EPR	T4	0.25	1	microplate
+curve_IB	phage_exposed	W3110_EPR	T4	0.25	2	microplate
+curve_IC	phage_exposed	W3110_EPR	T4	0.25	3	microplate
+curve_ID_238	phage_exposed	W3110_EPR	T4	0.5	1	microplate
+curve_IE	phage_exposed	W3110_EPR	T4	0.5	2	microplate
+curve_IF	phage_exposed	W3110_EPR	T4	0.5	3	microplate
+curve_IG	phage_exposed	W3110_EPR	T4	1	1	microplate
+curve_IH	phage_exposed	W3110_EPR	T4	1	2	microplate
+curve_II	phage_exposed	W3110_EPR	T4	1	3	microplate
+curve_IJ	uninfected_control	W3110_WT			1	microplate
+curve_IK	uninfected_control	W3110_WT			2	microplate
+curve_IL	uninfected_control	W3110_WT			3	microplate
+curve_IM	uninfected_control	W3110_EPR			1	microplate
+curve_IN	uninfected_control	W3110_EPR			2	microplate
+curve_IO	uninfected_control	W3110_EPR			3	microplate
+curve_IP	phage_exposed	W3110_WT	T4	0.01	1	microplate
+curve_IQ	phage_exposed	W3110_WT	T4	0.01	2	microplate
+curve_IR	phage_exposed	W3110_WT	T4	0.01	3	microplate
+curve_IS	phage_exposed	MG1655_WT	lambda	0.01	1	microplate
+curve_IT	phage_exposed	MG1655_WT	lambda	0.01	2	microplate
+curve_IU	phage_exposed	MG1655_WT	lambda	0.01	3	microplate
+curve_IV	phage_exposed	MG1655_WT	lambda	0.05	1	microplate
+curve_IW	phage_exposed	MG1655_WT	lambda	0.05	2	microplate
+curve_IX	phage_exposed	MG1655_WT	lambda	0.05	3	microplate
+curve_IY	phage_exposed	MG1655_WT	lambda	0.1	1	microplate
+curve_IZ	phage_exposed	MG1655_WT	lambda	0.1	2	microplate
+curve_JA	phage_exposed	MG1655_WT	lambda	0.1	3	microplate
+curve_JB	phage_exposed	MG1655_WT	lambda	0.5	1	microplate
+curve_JC	phage_exposed	MG1655_WT	lambda	0.5	2	microplate
+curve_JD	phage_exposed	MG1655_WT	lambda	0.5	3	microplate
+curve_JE	uninfected_control	MG1655_WT			1	microplate
+curve_JF	uninfected_control	MG1655_WT			2	microplate
+curve_JG	uninfected_control	MG1655_WT			3	microplate
+curve_JH	uninfected_control	MG1655_WT			1	microplate
+curve_JI	uninfected_control	MG1655_WT			2	microplate
+curve_JJ	uninfected_control	MG1655_WT			3	microplate
+curve_JK	phage_exposed	MG1655_WT	lambda	0.01	1	microplate
+curve_JL	phage_exposed	MG1655_WT	lambda	0.01	2	microplate
+curve_JM	phage_exposed	MG1655_WT	lambda	0.01	3	microplate
+curve_JN	phage_exposed	MG1655DE3_EPR	lambda	0.01	1	microplate
+curve_JO	phage_exposed	MG1655DE3_EPR	lambda	0.01	2	microplate
+curve_JP	phage_exposed	MG1655DE3_EPR	lambda	0.01	3	microplate
+curve_JQ	phage_exposed	MG1655DE3_EPR	lambda	0.05	1	microplate
+curve_JR	phage_exposed	MG1655DE3_EPR	lambda	0.05	2	microplate
+curve_JS	phage_exposed	MG1655DE3_EPR	lambda	0.05	3	microplate
+curve_JT	phage_exposed	MG1655DE3_EPR	lambda	0.1	1	microplate
+curve_JU	phage_exposed	MG1655DE3_EPR	lambda	0.1	2	microplate
+curve_JV	phage_exposed	MG1655DE3_EPR	lambda	0.1	3	microplate
+curve_JW	phage_exposed	MG1655DE3_EPR	lambda	0.5	1	microplate
+curve_JX	phage_exposed	MG1655DE3_EPR	lambda	0.5	2	microplate
+curve_JY	phage_exposed	MG1655DE3_EPR	lambda	0.5	3	microplate
+curve_JZ	uninfected_control	MG1655DE3_WT			1	microplate
+curve_KA	uninfected_control	MG1655DE3_WT			2	microplate
+curve_KB	uninfected_control	MG1655DE3_WT			3	microplate
+curve_KC	uninfected_control	MG1655DE3_EPR			1	microplate
+curve_KD	uninfected_control	MG1655DE3_EPR			2	microplate
+curve_KE	uninfected_control	MG1655DE3_EPR			3	microplate
+curve_KF	phage_exposed	MG1655DE3_WT	lambda	0.01	1	microplate
+curve_KG	phage_exposed	MG1655DE3_WT	lambda	0.01	2	microplate
+curve_KH	phage_exposed	MG1655DE3_WT	lambda	0.01	3	microplate
+curve_KI	phage_exposed	W3110_EPR	lambda	0.01	1	microplate
+curve_KJ	phage_exposed	W3110_EPR	lambda	0.01	2	microplate
+curve_KK	phage_exposed	W3110_EPR	lambda	0.01	3	microplate
+curve_KL	phage_exposed	W3110_EPR	lambda	0.05	1	microplate
+curve_KM	phage_exposed	W3110_EPR	lambda	0.05	2	microplate
+curve_KN	phage_exposed	W3110_EPR	lambda	0.05	3	microplate
+curve_KO	phage_exposed	W3110_EPR	lambda	0.1	1	microplate
+curve_KP	phage_exposed	W3110_EPR	lambda	0.1	2	microplate
+curve_KQ	phage_exposed	W3110_EPR	lambda	0.1	3	microplate
+curve_KR	phage_exposed	W3110_EPR	lambda	0.5	1	microplate
+curve_KS	phage_exposed	W3110_EPR	lambda	0.5	2	microplate
+curve_KT	phage_exposed	W3110_EPR	lambda	0.5	3	microplate
+curve_KU	uninfected_control	W3110_WT			1	microplate
+curve_KV	uninfected_control	W3110_WT			2	microplate
+curve_KW	uninfected_control	W3110_WT			3	microplate
+curve_KX	uninfected_control	W3110_EPR			1	microplate
+curve_KY	uninfected_control	W3110_EPR			2	microplate
+curve_KZ	uninfected_control	W3110_EPR			3	microplate
+curve_LA	phage_exposed	W3110_WT	lambda	0.01	1	microplate
+curve_LB	phage_exposed	W3110_WT	lambda	0.01	2	microplate
+curve_LC	phage_exposed	W3110_WT	lambda	0.01	3	microplate

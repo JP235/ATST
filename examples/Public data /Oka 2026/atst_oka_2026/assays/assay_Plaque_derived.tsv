@@ -1,0 +1,11 @@
+readout_type	absorbance
+readout_unit	od600
+time_unit	s
+medium_id	LB
+culture_type	planktonic
+temperature_c	37
+instrument	Varioskan LUX microplate reader (Thermo Fisher Scientific)
+plate	96-well plate
+shaking	continuous orbital shaking, 600 rpm
+conditions	1 µL freshly collected plaque filtrate added to 99 µL bacterial culture without phage titer determination
+source_reference	doi:10.3390/v18010092

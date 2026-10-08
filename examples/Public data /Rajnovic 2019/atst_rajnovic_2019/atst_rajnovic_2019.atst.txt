@@ -1,0 +1,86 @@
+===FILE_START
+:::FILE_INFO_START
+   file_name       	atst_rajnovic_2019.atst.txt
+   format          	ATST
+   format_version  	0.1
+   created_on      	2026-10-08
+   field_delimiter 	TAB
+   encoding        	UTF-8
+:::FILE_INFO_END
+
+:::STUDY_START
+   title            	Fast phage detection and quantification: An optical density-based approach
+   study_id         	doi:10.1371/journal.pone.0216292
+   authors          	Denis Rajnovic; Xavier Muñoz-Berbel; Jordi Mas
+   publication_date 	2019-05-09
+   publication_doi  	10.1371/journal.pone.0216292
+   description      	Ten bacteria-by-phage concentration grids and an LB blank from S1 Dataset; OD600 only.
+:::STUDY_END
+
+:::READOUT_IDS_START
+readout_id
+CFU_combined
+CFU_10e8
+CFU_5x10e7
+CFU_10e7
+CFU_5x10e6
+CFU_10e6
+CFU_5x10e5
+CFU_10e5
+LB_blank
+:::READOUT_IDS_END
+
+:::METADATA_START
+<<<METADATA_READOUT readout_id=CFU_combined file=metadata/meta_CFU_combined.tsv
+<<<METADATA_READOUT readout_id=CFU_10e8 file=metadata/meta_CFU_10e8.tsv
+<<<METADATA_READOUT readout_id=CFU_5x10e7 file=metadata/meta_CFU_5x10e7.tsv
+<<<METADATA_READOUT readout_id=CFU_10e7 file=metadata/meta_CFU_10e7.tsv
+<<<METADATA_READOUT readout_id=CFU_5x10e6 file=metadata/meta_CFU_10e7.tsv
+<<<METADATA_READOUT readout_id=CFU_10e6 file=metadata/meta_CFU_10e6.tsv
+<<<METADATA_READOUT readout_id=CFU_5x10e5 file=metadata/meta_CFU_5x10e5.tsv
+<<<METADATA_READOUT readout_id=CFU_10e5 file=metadata/meta_CFU_10e5.tsv
+<<<METADATA_READOUT readout_id=LB_blank file=metadata/meta_LB_blank.tsv
+:::METADATA_END
+
+:::ASSAY_START
+<<<ASSAY_READOUT readout_id=CFU_combined file=assays/assay.tsv
+<<<ASSAY_READOUT readout_id=CFU_10e8 file=assays/assay.tsv
+<<<ASSAY_READOUT readout_id=CFU_5x10e7 file=assays/assay.tsv
+<<<ASSAY_READOUT readout_id=CFU_10e7 file=assays/assay.tsv
+<<<ASSAY_READOUT readout_id=CFU_5x10e6 file=assays/assay.tsv
+<<<ASSAY_READOUT readout_id=CFU_10e6 file=assays/assay.tsv
+<<<ASSAY_READOUT readout_id=CFU_5x10e5 file=assays/assay.tsv
+<<<ASSAY_READOUT readout_id=CFU_10e5 file=assays/assay.tsv
+<<<ASSAY_READOUT readout_id=LB_blank file=assays/assay.tsv
+:::ASSAY_END
+
+:::ENTITIES_START
+<<<TABLE name=ISOLATES pk=ISOLATE_ID file=entities/isolates.tsv
+<<<TABLE name=PHAGES pk=PHAGE_ID file=entities/phages.tsv
+<<<TABLE name=MEDIA pk=MEDIUM_ID file=entities/media.tsv
+:::ENTITIES_END
+
+:::LAYOUT_START
+<<<LAYOUT_READOUT readout_id=CFU_combined file=layouts/layout_CFU_combined.tsv
+<<<LAYOUT_READOUT readout_id=CFU_10e8 file=layouts/layout_CFU_10e8.tsv
+<<<LAYOUT_READOUT readout_id=CFU_5x10e7 file=layouts/layout_CFU_5x10e7.tsv
+<<<LAYOUT_READOUT readout_id=CFU_10e7 file=layouts/layout_CFU_10e7.tsv
+<<<LAYOUT_READOUT readout_id=CFU_5x10e6 file=layouts/layout_CFU_5x10e6.tsv
+<<<LAYOUT_READOUT readout_id=CFU_10e6 file=layouts/layout_CFU_10e6.tsv
+<<<LAYOUT_READOUT readout_id=CFU_5x10e5 file=layouts/layout_CFU_5x10e5.tsv
+<<<LAYOUT_READOUT readout_id=CFU_10e5 file=layouts/layout_CFU_10e5.tsv
+<<<LAYOUT_READOUT readout_id=LB_blank file=layouts/layout_LB_blank.tsv
+:::LAYOUT_END
+
+:::READINGS_START
+<<<READOUT readout_id=CFU_combined file=readings/readings_CFU_combined.tsv
+<<<READOUT readout_id=CFU_10e8 file=readings/readings_CFU_10e8.tsv
+<<<READOUT readout_id=CFU_5x10e7 file=readings/readings_CFU_5x10e7.tsv
+<<<READOUT readout_id=CFU_10e7 file=readings/readings_CFU_10e7.tsv
+<<<READOUT readout_id=CFU_5x10e6 file=readings/readings_CFU_5x10e6.tsv
+<<<READOUT readout_id=CFU_10e6 file=readings/readings_CFU_10e6.tsv
+<<<READOUT readout_id=CFU_5x10e5 file=readings/readings_CFU_5x10e5.tsv
+<<<READOUT readout_id=CFU_10e5 file=readings/readings_CFU_10e5.tsv
+<<<READOUT readout_id=LB_blank file=readings/readings_LB_blank.tsv
+:::READINGS_END
+===FILE_END

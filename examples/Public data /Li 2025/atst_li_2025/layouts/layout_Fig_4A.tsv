@@ -1,0 +1,13 @@
+curve_id	type	isolate_id	phage_id	moi	signaling_molecules	baicalein	replicate
+curve_A	uninfected_control	ZS_PA_35		0			1
+curve_B	uninfected_control	ZS_PA_35		0			2
+curve_C	uninfected_control	ZS_PA_35		0			3
+curve_D	uninfected_control	ZS_PA_35		0		100 uM	1
+curve_E	uninfected_control	ZS_PA_35		0		100 uM	2
+curve_F	uninfected_control	ZS_PA_35		0		100 uM	3
+curve_G	phage_exposed	ZS_PA_35	phiPA2	0.01			1
+curve_H	phage_exposed	ZS_PA_35	phiPA2	0.01			2
+curve_I	phage_exposed	ZS_PA_35	phiPA2	0.01			3
+curve_J	phage_exposed	ZS_PA_35	phiPA2	0.01		100 uM	1
+curve_K	phage_exposed	ZS_PA_35	phiPA2	0.01		100 uM	2
+curve_L	phage_exposed	ZS_PA_35	phiPA2	0.01		100 uM	3

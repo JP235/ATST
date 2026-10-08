@@ -1,0 +1,3 @@
+source_file	read_shared_data/sources/41467_2022_31934_MOESM7_ESM.xlsx
+source_blocks	Figure 1b: A5:A29; labels row 3; 2 groups | Figure 1c: A35:A59; labels row 33; 6 groups | Figure 1c: A64:A88; labels row 62; 6 groups | Figure 1c: A93:A117; labels row 91; 6 groups | Figure 1c: A122:A146; labels row 120; 6 groups | Figure 1c: A151:A175; labels row 149; 6 groups | Figure 1c: A180:A204; labels row 178; 6 groups | Figure 1c: A209:A233; labels row 207; 6 groups
+conversion	Source numeric readings and time values retained; distinct source panels aligned by union of times with empty cells where a curve has no measurement

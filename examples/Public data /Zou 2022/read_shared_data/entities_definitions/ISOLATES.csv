@@ -1,0 +1,10 @@
+ISOLATE_ID,species,strain,modification
+MG1655_WT,Escherichia coli,MG1655,parental
+MG1655_pSK_empty,Escherichia coli,MG1655,pSK+ empty vector PT-
+MG1655_pWHU3640,Escherichia coli,MG1655,pWHU3640 expressing SspBCDE PT+
+MG1655_PT,Escherichia coli,MG1655,integrated SspBCDE PT strain
+MG1655_EPR,Escherichia coli,MG1655,engineered phage resistant
+MG1655DE3_WT,Escherichia coli,MG1655(DE3),parental
+MG1655DE3_EPR,Escherichia coli,MG1655(DE3),engineered phage resistant
+W3110_WT,Escherichia coli,W3110,parental
+W3110_EPR,Escherichia coli,W3110,engineered phage resistant

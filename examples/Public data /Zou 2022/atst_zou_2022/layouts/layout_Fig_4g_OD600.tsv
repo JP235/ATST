@@ -1,0 +1,9 @@
+curve_id	type	isolate_id	phage_id	moi	replicate	assay_mode
+curve_A	uninfected_control	MG1655DE3_WT			1	fed_batch
+curve_B	uninfected_control	MG1655DE3_WT			2	fed_batch
+curve_C	phage_exposed	MG1655DE3_WT	phage_cocktail		1	fed_batch
+curve_D	phage_exposed	MG1655DE3_WT	phage_cocktail		2	fed_batch
+curve_E	uninfected_control	MG1655DE3_EPR			1	fed_batch
+curve_F	uninfected_control	MG1655DE3_EPR			2	fed_batch
+curve_G	phage_exposed	MG1655DE3_EPR	phage_cocktail		1	fed_batch
+curve_H	phage_exposed	MG1655DE3_EPR	phage_cocktail		2	fed_batch

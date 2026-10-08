@@ -1,0 +1,9 @@
+curve_id	type	isolate_id	phage_id	treatment	replicate
+curve_A	uninfected_control	CHA		untreated	1
+curve_B	uninfected_control	CHA		untreated	2
+curve_C	phage_exposed	CHA	JG005	JG005	1
+curve_D	phage_exposed	CHA	JG005	JG005	2
+curve_E	phage_exposed	CHA	JG024	JG024	1
+curve_F	phage_exposed	CHA	JG024	JG024	2
+curve_G	phage_exposed	CHA	JG005_JG024	JG005+JG024 combination	1
+curve_H	phage_exposed	CHA	JG005_JG024	JG005+JG024 combination	2

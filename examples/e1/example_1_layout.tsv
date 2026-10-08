@@ -1,0 +1,97 @@
+well_loc	type	isolate_id	moi	phage_id
+A1	treated	isolate_1	0.1	ph_1
+A2	treated	isolate_1	0.1	ph_1
+A3	treated	isolate_1	0.1	ph_1
+A4	blank			
+A5	treated	isolate_1	1	ph_1
+A6	treated	isolate_1	1	ph_1
+A7	treated	isolate_1	1	ph_1
+A8	blank			
+A9	phage_host_control	prop_host_1	0.1	ph_1
+A10	phage_host_control	prop_host_1	0.1	ph_1
+A11	phage_host_control	prop_host_1	0.1	ph_1
+A12	phage_host_control	prop_host_1	0	
+B1	treated	isolate_1	0.1	ph_2
+B2	treated	isolate_1	0.1	ph_2
+B3	treated	isolate_1	0.1	ph_2
+B4	blank			
+B5	treated	isolate_1	1	ph_2
+B6	treated	isolate_1	1	ph_2
+B7	treated	isolate_1	1	ph_2
+B8	blank			
+B9	phage_host_control	prop_host_1	0.1	ph_2
+B10	phage_host_control	prop_host_1	0.1	ph_2
+B11	phage_host_control	prop_host_1	0.1	ph_2
+B12	phage_host_control	prop_host_1	0	
+C1	treated	isolate_1	0.1	ph_3
+C2	treated	isolate_1	0.1	ph_3
+C3	treated	isolate_1	0.1	ph_3
+C4	blank			
+C5	treated	isolate_1	1	ph_3
+C6	treated	isolate_1	1	ph_3
+C7	treated	isolate_1	1	ph_3
+C8	blank			
+C9	phage_host_control	prop_host_1	0.1	ph_3
+C10	phage_host_control	prop_host_1	0.1	ph_3
+C11	phage_host_control	prop_host_1	0.1	ph_3
+C12	phage_host_control	prop_host_1	0	
+D1	treated	isolate_1	0.1	ph_4
+D2	treated	isolate_1	0.1	ph_4
+D3	treated	isolate_1	0.1	ph_4
+D4	blank			
+D5	treated	isolate_1	1	ph_4
+D6	treated	isolate_1	1	ph_4
+D7	treated	isolate_1	1	ph_4
+D8	blank			
+D9	phage_host_control	prop_host_2	0.1	ph_4
+D10	phage_host_control	prop_host_2	0.1	ph_4
+D11	phage_host_control	prop_host_2	0.1	ph_4
+D12	phage_host_control	prop_host_2	0	
+E1	treated	isolate_1	0.1	ph_5
+E2	treated	isolate_1	0.1	ph_5
+E3	treated	isolate_1	0.1	ph_5
+E4	blank			
+E5	treated	isolate_1	1	ph_5
+E6	treated	isolate_1	1	ph_5
+E7	treated	isolate_1	1	ph_5
+E8	blank			
+E9	phage_host_control	prop_host_2	0.1	ph_5
+E10	phage_host_control	prop_host_2	0.1	ph_5
+E11	phage_host_control	prop_host_2	0.1	ph_5
+E12	phage_host_control	prop_host_2	0	
+F1	treated	isolate_1	0.1	ph_6
+F2	treated	isolate_1	0.1	ph_6
+F3	treated	isolate_1	0.1	ph_6
+F4	blank			
+F5	treated	isolate_1	1	ph_6
+F6	treated	isolate_1	1	ph_6
+F7	treated	isolate_1	1	ph_6
+F8	blank			
+F9	phage_host_control	prop_host_3	0.1	ph_6
+F10	phage_host_control	prop_host_3	0.1	ph_6
+F11	phage_host_control	prop_host_3	0.1	ph_6
+F12	phage_host_control	prop_host_3	0	
+G1	treated	isolate_1	0.1	ph_7
+G2	treated	isolate_1	0.1	ph_7
+G3	treated	isolate_1	0.1	ph_7
+G4	blank			
+G5	treated	isolate_1	1	ph_7
+G6	treated	isolate_1	1	ph_7
+G7	treated	isolate_1	1	ph_7
+G8	blank			
+G9	phage_host_control	prop_host_3	0.1	ph_7
+G10	phage_host_control	prop_host_3	0.1	ph_7
+G11	phage_host_control	prop_host_3	0.1	ph_7
+G12	phage_host_control	prop_host_3	0	
+H1	isolate_control		0	
+H2	isolate_control		0	
+H3	isolate_control		0	
+H4	blank			
+H5	PAO1_control			
+H6	PAO1_control			
+H7	PAO1_control			
+H8	blank			
+H9	phage_host_control	prop_host_2	0	
+H10	blank			
+H11	blank			
+H12	phage_host_control	prop_host_3	0	

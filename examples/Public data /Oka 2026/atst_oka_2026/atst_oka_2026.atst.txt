@@ -1,0 +1,56 @@
+===FILE_START
+:::FILE_INFO_START
+   file_name       	atst_oka_2026.atst.txt
+   format          	ATST
+   format_version  	0.1
+   created_on      	2026-10-08
+   field_delimiter 	TAB
+   encoding        	UTF-8
+:::FILE_INFO_END
+
+:::STUDY_START
+   title            	Feature-Based Growth Curve Classification Enables Efficient Phage Discrimination
+   study_id         	doi:10.3390/v18010092
+   authors          	Yuma Oka; Keidai Miyakawa; Moe Yamazaki; Yuki Maruyama
+   publication_doi  	10.3390/v18010092
+   publication_date 	2026
+   description      	Three published OD600 source tables: controlled MOI, plaque-derived T-phages, and sewage phages.
+:::STUDY_END
+
+:::READOUT_IDS_START
+readout_id
+MOI_controlled
+Plaque_derived
+Sewage_isolates
+:::READOUT_IDS_END
+
+:::METADATA_START
+<<<METADATA_READOUT readout_id=MOI_controlled file=metadata/meta_MOI_controlled.tsv
+<<<METADATA_READOUT readout_id=Plaque_derived file=metadata/meta_Plaque_derived.tsv
+<<<METADATA_READOUT readout_id=Sewage_isolates file=metadata/meta_Sewage_isolates.tsv
+:::METADATA_END
+
+:::ASSAY_START
+<<<ASSAY_READOUT readout_id=MOI_controlled file=assays/assay_MOI_controlled.tsv
+<<<ASSAY_READOUT readout_id=Plaque_derived file=assays/assay_Plaque_derived.tsv
+<<<ASSAY_READOUT readout_id=Sewage_isolates file=assays/assay_Sewage_isolates.tsv
+:::ASSAY_END
+
+:::ENTITIES_START
+<<<TABLE name=ISOLATES pk=ISOLATE_ID file=entities/isolates.tsv
+<<<TABLE name=PHAGES pk=PHAGE_ID file=entities/phages.tsv
+<<<TABLE name=MEDIA pk=MEDIUM_ID file=entities/media.tsv
+:::ENTITIES_END
+
+:::LAYOUT_START
+<<<LAYOUT_READOUT readout_id=MOI_controlled file=layouts/layout_MOI_controlled.tsv
+<<<LAYOUT_READOUT readout_id=Plaque_derived file=layouts/layout_Plaque_derived.tsv
+<<<LAYOUT_READOUT readout_id=Sewage_isolates file=layouts/layout_Sewage_isolates.tsv
+:::LAYOUT_END
+
+:::READINGS_START
+<<<READOUT readout_id=MOI_controlled file=readings/readings_MOI_controlled.tsv
+<<<READOUT readout_id=Plaque_derived file=readings/readings_Plaque_derived.tsv
+<<<READOUT readout_id=Sewage_isolates file=readings/readings_Sewage_isolates.tsv
+:::READINGS_END
+===FILE_END

@@ -1,0 +1,57 @@
+===FILE_START
+:::FILE_INFO_START
+   file_name       	example_3.atst.txt
+   format          	ATST
+   format_version  	0.1
+   created_on      	2026-01-01
+   field_delimiter 	TAB
+   encoding        	UTF-8
+:::FILE_INFO_END
+
+:::STUDY_START
+   title       	Example 3 simulated shaking-speed series
+   study_id    	ATST_EXAMPLE_3
+   description 	Four fully linked OD600 readouts at 37C and different shaking speeds.
+:::STUDY_END
+
+:::READOUT_IDS_START
+readout_id
+OD600_1
+OD600_2
+OD600_3
+OD600_4
+:::READOUT_IDS_END
+
+:::METADATA_START
+<<<METADATA_READOUT readout_id=OD600_1 file=metadata/meta_OD600_1.tsv
+<<<METADATA_READOUT readout_id=OD600_2 file=metadata/meta_OD600_2.tsv
+<<<METADATA_READOUT readout_id=OD600_3 file=metadata/meta_OD600_3.tsv
+<<<METADATA_READOUT readout_id=OD600_4 file=metadata/meta_OD600_4.tsv
+:::METADATA_END
+
+:::ASSAY_START
+<<<ASSAY_READOUT readout_id=OD600_1 file=assays/assay_OD600_1.tsv
+<<<ASSAY_READOUT readout_id=OD600_2 file=assays/assay_OD600_2.tsv
+<<<ASSAY_READOUT readout_id=OD600_3 file=assays/assay_OD600_3.tsv
+<<<ASSAY_READOUT readout_id=OD600_4 file=assays/assay_OD600_4.tsv
+:::ASSAY_END
+
+:::ENTITIES_START
+<<<TABLE name=PHAGES pk=PHAGE_ID file=entities/phages.tsv
+<<<TABLE name=ISOLATES pk=ISOLATE_ID file=entities/isolates.tsv
+:::ENTITIES_END
+
+:::LAYOUT_START
+<<<LAYOUT_READOUT readout_id=OD600_1 file=layouts/layout_OD600_1.tsv
+<<<LAYOUT_READOUT readout_id=OD600_2 file=layouts/layout_OD600_2.tsv
+<<<LAYOUT_READOUT readout_id=OD600_3 file=layouts/layout_OD600_3.tsv
+<<<LAYOUT_READOUT readout_id=OD600_4 file=layouts/layout_OD600_4.tsv
+:::LAYOUT_END
+
+:::READINGS_START
+<<<READOUT readout_id=OD600_1 file=readings/readings_OD600_1.tsv
+<<<READOUT readout_id=OD600_2 file=readings/readings_OD600_2.tsv
+<<<READOUT readout_id=OD600_3 file=readings/readings_OD600_3.tsv
+<<<READOUT readout_id=OD600_4 file=readings/readings_OD600_4.tsv
+:::READINGS_END
+===FILE_END

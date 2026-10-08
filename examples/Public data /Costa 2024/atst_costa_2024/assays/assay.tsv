@@ -1,0 +1,16 @@
+readout_type	absorbance
+readout_unit	od600
+time_unit	h
+plate_format	96_well
+wavelength_nm	600
+temperature_c	37
+shaking_mode	double orbital
+measurement_interval_min	10
+duration_h	24
+medium_id	LB
+starting_od600	approximately 0.1
+inoculum_preparation	Overnight-grown bacteria diluted in LB before phage addition
+replicates_per_condition	3
+replicate_type	biological (paper default; replicate numbers are local source-column order)
+culture_selection	Carbenicillin 200 ug/mL for plasmid-bearing P. aeruginosa; final assay supplementation not explicitly restated
+source_reference	Paper p. 9, Liquid culture collapse assays; p. 10, Statistical analysis; p. 7, Bacterial strains (culture selection)

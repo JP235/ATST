@@ -1,0 +1,6 @@
+PHAGE_ID	entity_type	components	genome_accession
+JG005	phage	JG005	PP712940.1
+JG024	phage	JG024	NC_017674.1
+Bhz17	phage	Bhz17	
+JG005_JG024	mixture	JG005;JG024	
+JG005_JG024_Bhz17	mixture	JG005;JG024;Bhz17	

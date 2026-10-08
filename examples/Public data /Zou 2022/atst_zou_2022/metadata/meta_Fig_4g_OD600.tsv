@@ -1,0 +1,3 @@
+source_file	read_shared_data/sources/41467_2022_31934_MOESM7_ESM.xlsx
+source_blocks	WT-MG1655(DE3) (without phage cocktail): G7:I29 | WT-MG1655(DE3) (with phage cocktail): G37:I59 | EPR-MG1655(DE3) (without phage cocktail): G109:I131 | EPR-MG1655(DE3) (with phage cocktail): G139:I161
+conversion	Source numeric readings and time values retained; distinct source panels aligned by union of times with empty cells where a curve has no measurement

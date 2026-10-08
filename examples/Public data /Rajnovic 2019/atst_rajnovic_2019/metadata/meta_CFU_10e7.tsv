@@ -1,0 +1,7 @@
+source_file	read_shared_data/sources/pone.0216292.s002.xlsx
+source_time_column	A
+source_data_rows	3:30
+source_condition_columns	B:D, E:G, H:J, K:M, N:P, Q:S, T:V, W:Y, Z:AB
+source_starred_cells	
+source_missing_cells	
+conversion	Asterisk-suffixed decimal-comma text parsed as numeric OD600; source blanks retained as missing readings

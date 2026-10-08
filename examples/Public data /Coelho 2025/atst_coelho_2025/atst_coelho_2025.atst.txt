@@ -1,0 +1,46 @@
+===FILE_START
+:::FILE_INFO_START
+   file_name       	atst_coelho_2025.atst.txt
+   format          	ATST
+   format_version  	0.1
+   created_on      	2026-10-08
+   field_delimiter 	TAB
+   encoding        	UTF-8
+:::FILE_INFO_END
+
+:::STUDY_START
+   title            	Mucosal-adapted bacteriophages as a preventive strategy for a lethal Pseudomonas aeruginosa challenge in mice
+   study_id         	doi:10.1038/s42003-024-07269-0
+   authors          	Luiz Felipe Leomil Coelho et al.
+   publication_date 	2025
+   publication_doi  	10.1038/s42003-024-07269-0
+   description      	Figure 1A OD600 trajectories for PA14 with no phage, VAC1 or VAC3; eight workbook columns per condition.
+:::STUDY_END
+
+:::READOUT_IDS_START
+readout_id
+Fig_1A
+:::READOUT_IDS_END
+
+:::METADATA_START
+<<<METADATA_READOUT readout_id=Fig_1A file=metadata/meta.tsv
+:::METADATA_END
+
+:::ASSAY_START
+<<<ASSAY_READOUT readout_id=Fig_1A file=assays/assay.tsv
+:::ASSAY_END
+
+:::ENTITIES_START
+<<<TABLE name=ISOLATES pk=ISOLATE_ID file=entities/isolates.tsv
+<<<TABLE name=PHAGES pk=PHAGE_ID file=entities/phages.tsv
+<<<TABLE name=MEDIA pk=MEDIUM_ID file=entities/media.tsv
+:::ENTITIES_END
+
+:::LAYOUT_START
+<<<LAYOUT_READOUT readout_id=Fig_1A file=layouts/layout_Fig_1A.tsv
+:::LAYOUT_END
+
+:::READINGS_START
+<<<READOUT readout_id=Fig_1A file=readings/readings_Fig_1A.tsv
+:::READINGS_END
+===FILE_END

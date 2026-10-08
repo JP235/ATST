@@ -1,0 +1,6 @@
+source_file	read_shared_data/sources/TableS5_growth curve MOI controlled.csv
+source_header_rows	1
+source_data_rows	2:139
+source_columns	A:BP
+source_exclusion	None
+source_alignment_repair	S5 row 140 column BM (source field 65) 0.2358 assigned to missing blank at row 139 column BP (field 68), time 82199.99 s; inferred from sole orphan and adjacent blank readings

@@ -1,0 +1,22 @@
+curve_id	type	isolate_id	phage_id	moi	signaling_molecules	baicalein	replicate
+curve_A	phage_exposed	ZS_PA_35	phiPA2	0.01			1
+curve_B	phage_exposed	ZS_PA_35	phiPA2	0.01			2
+curve_C	phage_exposed	ZS_PA_35	phiPA2	0.01			3
+curve_D	phage_exposed	ZS_PA_35_del_lasR	phiPA2	0.01			1
+curve_E	phage_exposed	ZS_PA_35_del_lasR	phiPA2	0.01			2
+curve_F	phage_exposed	ZS_PA_35_del_lasR	phiPA2	0.01			3
+curve_G	phage_exposed	ZS_PA_35_del_rhlR	phiPA2	0.01			1
+curve_H	phage_exposed	ZS_PA_35_del_rhlR	phiPA2	0.01			2
+curve_I	phage_exposed	ZS_PA_35_del_rhlR	phiPA2	0.01			3
+curve_J	phage_exposed	ZS_PA_35_del_lasI	phiPA2	0.01			1
+curve_K	phage_exposed	ZS_PA_35_del_lasI	phiPA2	0.01			2
+curve_L	phage_exposed	ZS_PA_35_del_lasI	phiPA2	0.01			3
+curve_M	phage_exposed	ZS_PA_35_del_rhlI	phiPA2	0.01			1
+curve_N	phage_exposed	ZS_PA_35_del_rhlI	phiPA2	0.01			2
+curve_O	phage_exposed	ZS_PA_35_del_rhlI	phiPA2	0.01			3
+curve_P	phage_exposed	ZS_PA_35_del_lasR_del_rhlR	phiPA2	0.01			1
+curve_Q	phage_exposed	ZS_PA_35_del_lasR_del_rhlR	phiPA2	0.01			2
+curve_R	phage_exposed	ZS_PA_35_del_lasR_del_rhlR	phiPA2	0.01			3
+curve_S	phage_exposed	ZS_PA_35_del_lasI_del_rhlI	phiPA2	0.01			1
+curve_T	phage_exposed	ZS_PA_35_del_lasI_del_rhlI	phiPA2	0.01			2
+curve_U	phage_exposed	ZS_PA_35_del_lasI_del_rhlI	phiPA2	0.01			3

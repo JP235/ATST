@@ -1,0 +1,6 @@
+instrument	CLARIOstar
+date_start	2026-01-01
+operator	OP2
+filename	simulated_clariostar_gfp_output
+id1	2026_OP2_isolate_1_100rpm
+measurement_mode	Fluorescence

@@ -1,0 +1,66 @@
+===FILE_START
+:::FILE_INFO_START
+   file_name       	atst_burkle_2025.atst.txt
+   format          	ATST
+   format_version  	0.1
+   created_on      	2026-10-08
+   field_delimiter 	TAB
+   encoding        	UTF-8
+:::FILE_INFO_END
+
+:::STUDY_START
+   title            	Phage-phage competition and biofilms affect interactions between two virulent bacteriophages and Pseudomonas aeruginosa
+   study_id         	doi:10.1093/ismejo/wraf065
+   authors          	Magdalena Bürkle et al.
+   publication_date 	2025-04-06
+   publication_doi  	10.1093/ismejo/wraf065
+   description      	Five reported OD600 blocks from planktonic phage assays across main and supplementary figures.
+:::STUDY_END
+
+:::READOUT_IDS_START
+readout_id
+Fig_1A
+Fig_6A
+Fig_S1B
+Fig_S1C
+Fig_S6B
+:::READOUT_IDS_END
+
+:::METADATA_START
+<<<METADATA_READOUT readout_id=Fig_1A file=metadata/meta_Fig_1A.tsv
+<<<METADATA_READOUT readout_id=Fig_6A file=metadata/meta_Fig_6A.tsv
+<<<METADATA_READOUT readout_id=Fig_S1B file=metadata/meta_Fig_S1B.tsv
+<<<METADATA_READOUT readout_id=Fig_S1C file=metadata/meta_Fig_S1C.tsv
+<<<METADATA_READOUT readout_id=Fig_S6B file=metadata/meta_Fig_S6B.tsv
+:::METADATA_END
+
+:::ASSAY_START
+<<<ASSAY_READOUT readout_id=Fig_1A file=assays/assay_Fig_1A.tsv
+<<<ASSAY_READOUT readout_id=Fig_6A file=assays/assay_Fig_6A.tsv
+<<<ASSAY_READOUT readout_id=Fig_S1B file=assays/assay_Fig_S1B.tsv
+<<<ASSAY_READOUT readout_id=Fig_S1C file=assays/assay_Fig_S1C.tsv
+<<<ASSAY_READOUT readout_id=Fig_S6B file=assays/assay_Fig_S6B.tsv
+:::ASSAY_END
+
+:::ENTITIES_START
+<<<TABLE name=ISOLATES pk=ISOLATE_ID file=entities/isolates.tsv
+<<<TABLE name=PHAGES pk=PHAGE_ID file=entities/phages.tsv
+<<<TABLE name=MEDIA pk=MEDIUM_ID file=entities/media.tsv
+:::ENTITIES_END
+
+:::LAYOUT_START
+<<<LAYOUT_READOUT readout_id=Fig_1A file=layouts/layout_Fig_1A.tsv
+<<<LAYOUT_READOUT readout_id=Fig_6A file=layouts/layout_Fig_6A.tsv
+<<<LAYOUT_READOUT readout_id=Fig_S1B file=layouts/layout_Fig_S1B.tsv
+<<<LAYOUT_READOUT readout_id=Fig_S1C file=layouts/layout_Fig_S1C.tsv
+<<<LAYOUT_READOUT readout_id=Fig_S6B file=layouts/layout_Fig_S6B.tsv
+:::LAYOUT_END
+
+:::READINGS_START
+<<<READOUT readout_id=Fig_1A file=readings/readings_Fig_1A.tsv
+<<<READOUT readout_id=Fig_6A file=readings/readings_Fig_6A.tsv
+<<<READOUT readout_id=Fig_S1B file=readings/readings_Fig_S1B.tsv
+<<<READOUT readout_id=Fig_S1C file=readings/readings_Fig_S1C.tsv
+<<<READOUT readout_id=Fig_S6B file=readings/readings_Fig_S6B.tsv
+:::READINGS_END
+===FILE_END

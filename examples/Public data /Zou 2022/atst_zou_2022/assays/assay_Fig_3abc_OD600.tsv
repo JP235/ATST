@@ -1,0 +1,8 @@
+readout_type	absorbance
+readout_unit	od600
+time_unit	h
+medium_id	LB
+culture_type	mixed microplate and shake-flask
+conditions	Figure 3a microplate phage curves; Figures 3b/c shake-flask uninfected/cocktail curves
+source_reference	doi:10.1038/s41467-022-31934-9
+instrument	Multiskan GO microplate spectrophotometer (Figure 3b/c flask OD600 instrument: Ultrospec 3000)

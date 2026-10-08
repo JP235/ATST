@@ -1,0 +1,8 @@
+readout_type	absorbance
+readout_unit	od600
+time_unit	h
+medium_id	LB
+culture_type	planktonic microplate
+conditions	Phage infection growth curves; 200 µL in 96-well plate at 37 °C with agitation
+source_reference	doi:10.1038/s41467-022-31934-9
+instrument	Multiskan GO microplate spectrophotometer (Figure 3b/c flask OD600 instrument: Ultrospec 3000)

@@ -1,0 +1,25 @@
+curve_id	type	isolate_id	phage_id	pfu_ml	replicate
+curve_A	uninfected_control	Lfar01		0	1
+curve_B	uninfected_control	Lfar01		0	2
+curve_C	uninfected_control	Lfar01		0	3
+curve_D	phage_exposed	Lfar01	BrSP1	1000000	1
+curve_E	phage_exposed	Lfar01	BrSP1	1000000	2
+curve_F	phage_exposed	Lfar01	BrSP1	1000000	3
+curve_G	uninfected_control	Lfar01		0	1
+curve_H	uninfected_control	Lfar01		0	2
+curve_I	uninfected_control	Lfar01		0	3
+curve_J	phage_exposed	Lfar01	BrSP1	10000000	1
+curve_K	phage_exposed	Lfar01	BrSP1	10000000	2
+curve_L	phage_exposed	Lfar01	BrSP1	10000000	3
+curve_M	uninfected_control	ATCC_27853		0	1
+curve_N	uninfected_control	ATCC_27853		0	2
+curve_O	uninfected_control	ATCC_27853		0	3
+curve_P	phage_exposed	ATCC_27853	BrSP1	10000000	1
+curve_Q	phage_exposed	ATCC_27853	BrSP1	10000000	2
+curve_R	phage_exposed	ATCC_27853	BrSP1	10000000	3
+curve_S	uninfected_control	BOIJ02		0	1
+curve_T	uninfected_control	BOIJ02		0	2
+curve_U	uninfected_control	BOIJ02		0	3
+curve_V	phage_exposed	BOIJ02	BrSP1	10000000	1
+curve_W	phage_exposed	BOIJ02	BrSP1	10000000	2
+curve_X	phage_exposed	BOIJ02	BrSP1	10000000	3

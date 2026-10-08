@@ -1,0 +1,19 @@
+curve_id	type	isolate_id	phage_id	moi	replicate
+curve_A	uninfected_control	PAO1_CBASS_Type_II_C		0	1
+curve_B	uninfected_control	PAO1_CBASS_Type_II_C		0	2
+curve_C	uninfected_control	PAO1_CBASS_Type_II_C		0	3
+curve_D	phage_exposed	PAO1_CBASS_Type_II_C	Pa2	10	1
+curve_E	phage_exposed	PAO1_CBASS_Type_II_C	Pa2	10	2
+curve_F	phage_exposed	PAO1_CBASS_Type_II_C	Pa2	10	3
+curve_G	phage_exposed	PAO1_CBASS_Type_II_C	Pa10	10	1
+curve_H	phage_exposed	PAO1_CBASS_Type_II_C	Pa10	10	2
+curve_I	phage_exposed	PAO1_CBASS_Type_II_C	Pa10	10	3
+curve_J	phage_exposed	PAO1_CBASS_Type_II_C	Pa28	10	1
+curve_K	phage_exposed	PAO1_CBASS_Type_II_C	Pa28	10	2
+curve_L	phage_exposed	PAO1_CBASS_Type_II_C	Pa28	10	3
+curve_M	phage_exposed	PAO1_CBASS_Type_II_C	Pa33	10	1
+curve_N	phage_exposed	PAO1_CBASS_Type_II_C	Pa33	10	2
+curve_O	phage_exposed	PAO1_CBASS_Type_II_C	Pa33	10	3
+curve_P	phage_exposed	PAO1_CBASS_Type_II_C	Pa35	10	1
+curve_Q	phage_exposed	PAO1_CBASS_Type_II_C	Pa35	10	2
+curve_R	phage_exposed	PAO1_CBASS_Type_II_C	Pa35	10	3

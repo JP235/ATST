@@ -1,0 +1,34 @@
+curve_id	type	isolate_id	phage_id	moi	replicate
+ph_1_rep_1	treated	isolate_1	ph_1	0.1	1
+ph_1_rep_2	treated	isolate_1	ph_1	0.1	2
+ph_1_rep_3	treated	isolate_1	ph_1	0.1	3
+ph_2_rep_1	treated	isolate_1	ph_2	0.1	1
+ph_2_rep_2	treated	isolate_1	ph_2	0.1	2
+ph_2_rep_3	treated	isolate_1	ph_2	0.1	3
+ph_3_rep_1	treated	isolate_1	ph_3	0.1	1
+ph_3_rep_2	treated	isolate_1	ph_3	0.1	2
+ph_3_rep_3	treated	isolate_1	ph_3	0.1	3
+ph_4_rep_1	treated	isolate_1	ph_4	0.1	1
+ph_4_rep_2	treated	isolate_1	ph_4	0.1	2
+ph_4_rep_3	treated	isolate_1	ph_4	0.1	3
+ph_5_rep_1	treated	isolate_1	ph_5	0.1	1
+ph_5_rep_2	treated	isolate_1	ph_5	0.1	2
+ph_5_rep_3	treated	isolate_1	ph_5	0.1	3
+ph_6_rep_1	treated	isolate_1	ph_6	0.1	1
+ph_6_rep_2	treated	isolate_1	ph_6	0.1	2
+ph_6_rep_3	treated	isolate_1	ph_6	0.1	3
+ph_7_rep_1	treated	isolate_1	ph_7	0.1	1
+ph_7_rep_2	treated	isolate_1	ph_7	0.1	2
+ph_7_rep_3	treated	isolate_1	ph_7	0.1	3
+ph_8_rep_1	treated	isolate_1	ph_8	0.1	1
+ph_8_rep_2	treated	isolate_1	ph_8	0.1	2
+ph_8_rep_3	treated	isolate_1	ph_8	0.1	3
+ph_9_rep_1	treated	isolate_1	ph_9	0.1	1
+ph_9_rep_2	treated	isolate_1	ph_9	0.1	2
+ph_9_rep_3	treated	isolate_1	ph_9	0.1	3
+ph_10_rep_1	treated	isolate_1	ph_10	0.1	1
+ph_10_rep_2	treated	isolate_1	ph_10	0.1	2
+ph_10_rep_3	treated	isolate_1	ph_10	0.1	3
+isolate_control_1	isolate_control	isolate_1			1
+isolate_control_2	isolate_control	isolate_1			2
+isolate_control_3	isolate_control	isolate_1			3

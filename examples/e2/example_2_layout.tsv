@@ -1,0 +1,34 @@
+well_loc	type	isolate_id	phage_id	moi	replicate
+A1	treated	isolate_1	ph_1	0.1	1
+B1	treated	isolate_1	ph_1	0.1	2
+C1	treated	isolate_1	ph_1	0.1	3
+A2	treated	isolate_1	ph_2	0.1	1
+B2	treated	isolate_1	ph_2	0.1	2
+C2	treated	isolate_1	ph_2	0.1	3
+A3	treated	isolate_1	ph_3	0.1	1
+B3	treated	isolate_1	ph_3	0.1	2
+C3	treated	isolate_1	ph_3	0.1	3
+A4	treated	isolate_1	ph_4	0.1	1
+B4	treated	isolate_1	ph_4	0.1	2
+C4	treated	isolate_1	ph_4	0.1	3
+A5	treated	isolate_1	ph_5	0.1	1
+B5	treated	isolate_1	ph_5	0.1	2
+C5	treated	isolate_1	ph_5	0.1	3
+A6	treated	isolate_1	ph_6	0.1	1
+B6	treated	isolate_1	ph_6	0.1	2
+C6	treated	isolate_1	ph_6	0.1	3
+A7	treated	isolate_1	ph_7	0.1	1
+B7	treated	isolate_1	ph_7	0.1	2
+C7	treated	isolate_1	ph_7	0.1	3
+A8	treated	isolate_1	ph_8	0.1	1
+B8	treated	isolate_1	ph_8	0.1	2
+C8	treated	isolate_1	ph_8	0.1	3
+A9	treated	isolate_1	ph_9	0.1	1
+B9	treated	isolate_1	ph_9	0.1	2
+C9	treated	isolate_1	ph_9	0.1	3
+A10	treated	isolate_1	ph_10	0.1	1
+B10	treated	isolate_1	ph_10	0.1	2
+C10	treated	isolate_1	ph_10	0.1	3
+A11	isolate_control	isolate_1			1
+B11	isolate_control	isolate_1			2
+C11	isolate_control	isolate_1			3

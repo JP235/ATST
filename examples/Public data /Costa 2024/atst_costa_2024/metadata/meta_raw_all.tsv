@@ -1,0 +1,7 @@
+instrument	Epoch2
+instrument_manufacturer	BioTek
+instrument_source	Paper p. 9, Liquid culture collapse assays
+source_file	sources/Plate reader/Plate_reader_raw.xlsx
+source_data_rows	2:146
+source_dataset_doi	10.5281/zenodo.8405451
+conversion	Preserve numeric values and source times; map columns to curve_id using curated layout

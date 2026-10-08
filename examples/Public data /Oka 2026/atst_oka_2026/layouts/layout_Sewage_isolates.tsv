@@ -1,0 +1,27 @@
+curve_id	type	isolate_id	phage_id	moi	replicate
+curve_A	phage_exposed	E_coli_NBRC13898	sewage_1		1
+curve_B	phage_exposed	E_coli_NBRC13898	sewage_2		1
+curve_C	phage_exposed	E_coli_NBRC13898	sewage_3		1
+curve_D	phage_exposed	E_coli_NBRC13898	sewage_4		1
+curve_E	phage_exposed	E_coli_NBRC13898	sewage_5		1
+curve_F	phage_exposed	E_coli_NBRC13898	sewage_6		1
+curve_G	phage_exposed	E_coli_NBRC13898	sewage_7		1
+curve_H	phage_exposed	E_coli_NBRC13898	sewage_8		1
+curve_I	phage_exposed	E_coli_NBRC13898	sewage_9		1
+curve_J	phage_exposed	E_coli_NBRC13898	sewage_10		1
+curve_K	phage_exposed	E_coli_NBRC13898	sewage_11		1
+curve_L	phage_exposed	E_coli_NBRC13898	sewage_12		1
+curve_M	phage_exposed	E_coli_NBRC13898	sewage_13		1
+curve_N	phage_exposed	E_coli_NBRC13898	sewage_14		1
+curve_O	phage_exposed	E_coli_NBRC13898	sewage_15		1
+curve_P	phage_exposed	E_coli_NBRC13898	sewage_16		1
+curve_Q	phage_exposed	E_coli_NBRC13898	sewage_17		1
+curve_R	phage_exposed	E_coli_NBRC13898	sewage_18		1
+curve_S	phage_exposed	E_coli_NBRC13898	sewage_19		1
+curve_T	phage_exposed	E_coli_NBRC13898	sewage_20		1
+curve_U	phage_exposed	E_coli_NBRC13898	sewage_21		1
+curve_V	phage_exposed	E_coli_NBRC13898	sewage_22		1
+curve_W	phage_exposed	E_coli_NBRC13898	sewage_23		1
+curve_X	phage_exposed	E_coli_NBRC13898	sewage_24		1
+curve_Y	uninfected_control	E_coli_NBRC13898			1
+curve_Z	blank				1

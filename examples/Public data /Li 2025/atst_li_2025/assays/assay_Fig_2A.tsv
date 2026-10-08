@@ -1,0 +1,13 @@
+readout_type	absorbance
+readout_unit	od600
+time_unit	h
+temperature_c	37
+medium_id	LB
+phage_inoculum_moi	2
+culture_density	low density
+experiment_context	CFS experiment; conditioned medium + 25% 4x LB
+readout_description	OD600 trajectory
+measurement_method	spectrophotometry
+instrument	SP-UV 200
+replicates_per_condition	3
+source_reference	Paper Fig. 2A, caption; Methods, Phage-host interaction in liquid medium

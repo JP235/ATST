@@ -1,0 +1,9 @@
+# Rajnovic 2019 OD600 curation
+
+Sources: [paper](https://doi.org/10.1371/journal.pone.0216292) and [S1 Dataset workbook](sources/pone.0216292.s002.xlsx). Workbook Description says the OD-versus-time data underlie supplementary Figure S1; Figure 2 uses a subset. Ten concentration sheets each provide nine phage-dose triplets, 27 curves per sheet. The `0 cfu per ml` sheet has three LB-only blank curves. Source-column layouts are combined when metadata, assay and Time values match.
+
+Each concentration sheet uses time in column A, with dose triplets B:D, E:G, H:J, K:M, N:P, Q:S, T:V, W:Y and Z:AB. Row 2 provides phage PFU/mL labels, sheet names provide starting bacteria CFU/mL, and every triplet is mapped to replicates 1-3. The blank sheet uses A3:A5 and B3:D5. Times remain in source minutes. Figure 2A/B/C correspond to 10^8, 10^7 and 10^6 CFU/mL, respectively. Both readers instead plot 10^5 CFU/mL as requested.
+
+The two lowest-concentration sheets have empty readings: `5x10^5 cfu per ml` has 27 and `10^5 cfu per ml` has 336 missing curve/time cells in rows with numeric time. Empty source cells remain empty READINGS entries, while all 27 curves remain in LAYOUT. Source rows without a numeric time are omitted. Seventy-five cells across `5x10^7`, `5x10^5` and `10^5 cfu per ml` contain decimal-comma text suffixed by `*` (6, 21, 48 cells, respectively); e.g. `5x10^7`!B9=`0,154999*`. The asterisk is removed and the numeric value retained in ATST; source coordinates are listed in each readout's METADATA. Numeric READINGS validation surfaces this problem before sharing, whereas direct spreadsheet use needs an explicit repair step.
+
+Paper Methods identify *E. coli* DSMZ 613 and T4, LB, a transparent 96-well plate, 37 °C, and Varioskan Flash OD600 readings. Paper lists 160 µL LB and three 20 µL additions; ATST retains the reported 220 µL total. Dose values come from worksheet headers, not calculated MOI.

@@ -1,0 +1,7 @@
+readout_type	absorbance
+readout_unit	od445
+time_unit	h
+medium_id	fed_batch
+culture_type	fed-batch bioreactor
+conditions	445-nm absorbance of the DAAO activity reaction mixture; distinct from culture OD600
+source_reference	doi:10.1038/s41467-022-31934-9

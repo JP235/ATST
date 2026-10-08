@@ -1,0 +1,9 @@
+PHAGE_ID,name,kind,components
+T1,T1,single,
+JMPW2,JMPW2,single,
+T4,T4,single,
+T5,T5,single,
+T7,T7,single,
+EEP,EEP,single,
+lambda,lambda,single,
+phage_cocktail,T1/JMPW2/T4/T5/T7/EEP/lambda mixture,mixture,T1;JMPW2;T4;T5;T7;EEP;lambda

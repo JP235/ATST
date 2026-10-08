@@ -1,0 +1,70 @@
+curve_id	type	isolate_id	phage_id	pfu_ml	replicate
+curve_A	uninfected_control	PAO1_Zorya_Type_I			1
+curve_B	uninfected_control	PAO1_Zorya_Type_I			2
+curve_C	uninfected_control	PAO1_Zorya_Type_I			3
+curve_D	uninfected_control	PAO1_Zorya_Type_I			1
+curve_E	uninfected_control	PAO1_Zorya_Type_I			2
+curve_F	uninfected_control	PAO1_Zorya_Type_I			3
+curve_G	phage_exposed	PAO1_Zorya_Type_I	Pa3	1*10^7	1
+curve_H	phage_exposed	PAO1_Zorya_Type_I	Pa3	1*10^7	2
+curve_I	phage_exposed	PAO1_Zorya_Type_I	Pa3	1*10^7	3
+curve_J	phage_exposed	PAO1_Zorya_Type_I	Pa6	1*10^7	1
+curve_K	phage_exposed	PAO1_Zorya_Type_I	Pa6	1*10^7	2
+curve_L	phage_exposed	PAO1_Zorya_Type_I	Pa6	1*10^7	3
+curve_M	phage_exposed	PAO1_Zorya_Type_I	Pa3	1*10^6	1
+curve_N	phage_exposed	PAO1_Zorya_Type_I	Pa3	1*10^6	2
+curve_O	phage_exposed	PAO1_Zorya_Type_I	Pa3	1*10^6	3
+curve_P	phage_exposed	PAO1_Zorya_Type_I	Pa6	1*10^6	1
+curve_Q	phage_exposed	PAO1_Zorya_Type_I	Pa6	1*10^6	2
+curve_R	phage_exposed	PAO1_Zorya_Type_I	Pa6	1*10^6	3
+curve_S	uninfected_control	PAO1_Zorya_Type_I			1
+curve_T	uninfected_control	PAO1_Zorya_Type_I			2
+curve_U	uninfected_control	PAO1_Zorya_Type_I			3
+curve_V	phage_exposed	PAO1_Zorya_Type_I	Pa18	1*10^7	1
+curve_W	phage_exposed	PAO1_Zorya_Type_I	Pa18	1*10^7	2
+curve_X	phage_exposed	PAO1_Zorya_Type_I	Pa18	1*10^7	3
+curve_Y	phage_exposed	PAO1_Zorya_Type_I	Pa18	1*10^6	1
+curve_Z	phage_exposed	PAO1_Zorya_Type_I	Pa18	1*10^6	2
+curve_AA	phage_exposed	PAO1_Zorya_Type_I	Pa18	1*10^6	3
+curve_AB	uninfected_control	PAO1_Zorya_Type_I			1
+curve_AC	uninfected_control	PAO1_Zorya_Type_I			2
+curve_AD	uninfected_control	PAO1_Zorya_Type_I			3
+curve_AE	uninfected_control	PAO1_Zorya_Type_I			1
+curve_AF	uninfected_control	PAO1_Zorya_Type_I			2
+curve_AG	uninfected_control	PAO1_Zorya_Type_I			3
+curve_AH	phage_exposed	PAO1_Zorya_Type_I	Pa22	1*10^7	1
+curve_AI	phage_exposed	PAO1_Zorya_Type_I	Pa22	1*10^7	2
+curve_AJ	phage_exposed	PAO1_Zorya_Type_I	Pa22	1*10^7	3
+curve_AK	phage_exposed	PAO1_Zorya_Type_I	Pa25	1*10^7	1
+curve_AL	phage_exposed	PAO1_Zorya_Type_I	Pa25	1*10^7	2
+curve_AM	phage_exposed	PAO1_Zorya_Type_I	Pa25	1*10^7	3
+curve_AN	phage_exposed	PAO1_Zorya_Type_I	Pa22	1*10^6	1
+curve_AO	phage_exposed	PAO1_Zorya_Type_I	Pa22	1*10^6	2
+curve_AP	phage_exposed	PAO1_Zorya_Type_I	Pa22	1*10^6	3
+curve_AQ	phage_exposed	PAO1_Zorya_Type_I	Pa25	1*10^6	1
+curve_AR	phage_exposed	PAO1_Zorya_Type_I	Pa25	1*10^6	2
+curve_AS	phage_exposed	PAO1_Zorya_Type_I	Pa25	1*10^6	3
+curve_AT	uninfected_control	PAO1_Zorya_Type_I			1
+curve_AU	uninfected_control	PAO1_Zorya_Type_I			2
+curve_AV	uninfected_control	PAO1_Zorya_Type_I			3
+curve_AW	phage_exposed	PAO1_Zorya_Type_I	Pa29	1*10^7	1
+curve_AX	phage_exposed	PAO1_Zorya_Type_I	Pa29	1*10^7	2
+curve_AY	phage_exposed	PAO1_Zorya_Type_I	Pa29	1*10^7	3
+curve_AZ	phage_exposed	PAO1_Zorya_Type_I	Pa29	1*10^6	1
+curve_BA	phage_exposed	PAO1_Zorya_Type_I	Pa29	1*10^6	2
+curve_BB	phage_exposed	PAO1_Zorya_Type_I	Pa29	1*10^6	3
+curve_BC	uninfected_control	PAO1_Zorya_Type_I			1
+curve_BD	uninfected_control	PAO1_Zorya_Type_I			2
+curve_BE	uninfected_control	PAO1_Zorya_Type_I			3
+curve_BF	phage_exposed	PAO1_Zorya_Type_I	Pa28	1*10^7	1
+curve_BG	phage_exposed	PAO1_Zorya_Type_I	Pa28	1*10^7	2
+curve_BH	phage_exposed	PAO1_Zorya_Type_I	Pa28	1*10^7	3
+curve_BI	phage_exposed	PAO1_Zorya_Type_I	Pa28	1*10^6	1
+curve_BJ	phage_exposed	PAO1_Zorya_Type_I	Pa28	1*10^6	2
+curve_BK	phage_exposed	PAO1_Zorya_Type_I	Pa28	1*10^6	3
+curve_BL	uninfected_control	PAO1_Zorya_Type_I			1
+curve_BM	uninfected_control	PAO1_Zorya_Type_I			2
+curve_BN	uninfected_control	PAO1_Zorya_Type_I			3
+curve_BO	phage_exposed	PAO1_Zorya_Type_I	PP7	1*10^6	1
+curve_BP	phage_exposed	PAO1_Zorya_Type_I	PP7	1*10^6	2
+curve_BQ	phage_exposed	PAO1_Zorya_Type_I	PP7	1*10^6	3

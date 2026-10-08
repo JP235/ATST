@@ -1,0 +1,3 @@
+source_file	read_shared_data/sources/41467_2022_31934_MOESM7_ESM.xlsx
+source_blocks	WT-W3110 DAAO enzyme (without phage cocktail): A6:C49 | WT-W3110 DAAO enzyme (with phage cocktail): A55:C98 | EPR-W3110 DAAO enzyme (without phage cocktail): A108:C151 | EPR-W3110 DAAO enzyme (with phage cocktail): A157:C200
+conversion	Source numeric readings and time values retained; distinct source panels aligned by union of times with empty cells where a curve has no measurement

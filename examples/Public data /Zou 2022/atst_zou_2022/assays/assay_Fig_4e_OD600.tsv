@@ -1,0 +1,8 @@
+readout_type	absorbance
+readout_unit	od600
+time_unit	h
+medium_id	fed_batch
+culture_type	fed-batch bioreactor
+conditions	Fed-batch bioreactor cell density, duplicate profiles; phage cocktail added at fermentation start
+source_reference	doi:10.1038/s41467-022-31934-9
+bioreactor	5 L BIOTECH2002

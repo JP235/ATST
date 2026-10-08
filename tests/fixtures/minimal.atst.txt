@@ -1,0 +1,58 @@
+===FILE_START
+:::FILE_INFO_START
+file_name       	minimal.atst.txt
+format          	ATST
+format_version  	0.1
+created_on      	2026-01-01
+field_delimiter 	TAB
+encoding        	UTF-8
+:::FILE_INFO_END
+
+:::STUDY_START
+title    	Minimal ATST example
+study_id 	ATST_MINIMAL
+:::STUDY_END
+
+:::METADATA_START
+instrument 	ExampleReader
+plate_type 	6 well plate
+date_start 	2026-01-01
+operator   	OP1
+:::METADATA_END
+
+:::ASSAY_START
+readout_type 	absorbance
+readout_unit 	od600
+time_unit    	s
+plate_format 	6_well
+:::ASSAY_END
+
+:::ENTITIES_START
+%%%TABLE_START name=PHAGES pk=phage_id
+phage_id 	gene_length 	genome
+ph_1     	45031bp     	https://www.ncbi.nlm.nih.gov/datasets/genome/{}
+ph_2     	240123bp    	https://www.ncbi.nlm.nih.gov/datasets/genome/{}
+%%%TABLE_END
+
+%%%TABLE_START name=ISOLATES pk=isolate_id
+isolate_id 	genome
+iso_1      	https://www.ncbi.nlm.nih.gov/datasets/genome/{}
+%%%TABLE_END
+:::ENTITIES_END
+
+:::LAYOUT_START
+well_loc	type      	phage_id 	isolate_id
+A1      	Treatment 	ph_1       	iso_1
+A2      	Control   	         	iso_1
+A3      	Blank
+B1      	Treatment 	ph_2       	iso_1
+B2      	Control   	         	iso_1
+B3      	Blank
+:::LAYOUT_END
+
+:::READINGS_START
+Time	A1   	A2   	A3   	B1   	B2   	B3
+0   	0.10 	0.09 	0.01 	0.10 	0.09 	0.01
+600 	0.10 	0.12 	0.01 	0.12 	0.12 	0.01
+:::READINGS_END
+===FILE_END

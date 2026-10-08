@@ -1,0 +1,16 @@
+readout_type	absorbance
+readout_unit	od600
+time_unit	h
+wavelength_nm	600
+temperature_c	36
+shaking_speed_rpm	120
+vessel	10 mL culture in test tubes
+medium_id	TSB_Ca_Mg
+medium_supplementation	CaCl2 40 mg/L; MgSO4 40 mg/L
+growth_stage	early exponential
+control_treatment	SM buffer
+duration_h	24
+sampling_times_h	0, 2, 4, 6, 8, 10, 12, 24
+instrument	NanoDrop 2000c (Thermo Scientific)
+replicates_per_condition	3
+source_reference	Paper p. 11, Biological assays; Fig. 3; Additional file 8

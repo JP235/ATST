@@ -1,0 +1,86 @@
+===FILE_START
+:::FILE_INFO_START
+   file_name       	atst_zou_2022.atst.txt
+   format          	ATST
+   format_version  	0.1
+   created_on      	2026-10-08
+   field_delimiter 	TAB
+   encoding        	UTF-8
+:::FILE_INFO_END
+
+:::STUDY_START
+   title            	Systematic strategies for developing phage resistant Escherichia coli strains
+   study_id         	doi:10.1038/s41467-022-31934-9
+   authors          	Xuan Zou et al.
+   publication_doi  	10.1038/s41467-022-31934-9
+   publication_date 	2022
+   description      	Source-data OD600 growth and fermentation series, plus separate 445-nm absorbance series for DAAO assay.
+:::STUDY_END
+
+:::READOUT_IDS_START
+readout_id
+Fig_1bc_OD600
+Fig_3abc_OD600
+SFig_3_OD600
+SFig_6_OD600
+Fig_4e_OD600
+Fig_4f_OD600
+Fig_4g_OD600
+Fig_4e_OD445
+Fig_4f_OD445
+:::READOUT_IDS_END
+
+:::METADATA_START
+<<<METADATA_READOUT readout_id=Fig_1bc_OD600 file=metadata/meta_Fig_1bc_OD600.tsv
+<<<METADATA_READOUT readout_id=Fig_3abc_OD600 file=metadata/meta_Fig_3abc_OD600.tsv
+<<<METADATA_READOUT readout_id=SFig_3_OD600 file=metadata/meta_SFig_3_OD600.tsv
+<<<METADATA_READOUT readout_id=SFig_6_OD600 file=metadata/meta_SFig_6_OD600.tsv
+<<<METADATA_READOUT readout_id=Fig_4e_OD600 file=metadata/meta_Fig_4e_OD600.tsv
+<<<METADATA_READOUT readout_id=Fig_4f_OD600 file=metadata/meta_Fig_4f_OD600.tsv
+<<<METADATA_READOUT readout_id=Fig_4g_OD600 file=metadata/meta_Fig_4g_OD600.tsv
+<<<METADATA_READOUT readout_id=Fig_4e_OD445 file=metadata/meta_Fig_4e_OD445.tsv
+<<<METADATA_READOUT readout_id=Fig_4f_OD445 file=metadata/meta_Fig_4f_OD445.tsv
+:::METADATA_END
+
+:::ASSAY_START
+<<<ASSAY_READOUT readout_id=Fig_1bc_OD600 file=assays/assay_Fig_1bc_OD600.tsv
+<<<ASSAY_READOUT readout_id=Fig_3abc_OD600 file=assays/assay_Fig_3abc_OD600.tsv
+<<<ASSAY_READOUT readout_id=SFig_3_OD600 file=assays/assay_SFig_3_OD600.tsv
+<<<ASSAY_READOUT readout_id=SFig_6_OD600 file=assays/assay_SFig_6_OD600.tsv
+<<<ASSAY_READOUT readout_id=Fig_4e_OD600 file=assays/assay_Fig_4e_OD600.tsv
+<<<ASSAY_READOUT readout_id=Fig_4f_OD600 file=assays/assay_Fig_4f_OD600.tsv
+<<<ASSAY_READOUT readout_id=Fig_4g_OD600 file=assays/assay_Fig_4g_OD600.tsv
+<<<ASSAY_READOUT readout_id=Fig_4e_OD445 file=assays/assay_Fig_4e_OD445.tsv
+<<<ASSAY_READOUT readout_id=Fig_4f_OD445 file=assays/assay_Fig_4f_OD445.tsv
+:::ASSAY_END
+
+:::ENTITIES_START
+<<<TABLE name=ISOLATES pk=ISOLATE_ID file=entities/isolates.tsv
+<<<TABLE name=PHAGES pk=PHAGE_ID file=entities/phages.tsv
+<<<TABLE name=MEDIA pk=MEDIUM_ID file=entities/media.tsv
+:::ENTITIES_END
+
+:::LAYOUT_START
+<<<LAYOUT_READOUT readout_id=Fig_1bc_OD600 file=layouts/layout_Fig_1bc_OD600.tsv
+<<<LAYOUT_READOUT readout_id=Fig_3abc_OD600 file=layouts/layout_Fig_3abc_OD600.tsv
+<<<LAYOUT_READOUT readout_id=SFig_3_OD600 file=layouts/layout_SFig_3_OD600.tsv
+<<<LAYOUT_READOUT readout_id=SFig_6_OD600 file=layouts/layout_SFig_6_OD600.tsv
+<<<LAYOUT_READOUT readout_id=Fig_4e_OD600 file=layouts/layout_Fig_4e_OD600.tsv
+<<<LAYOUT_READOUT readout_id=Fig_4f_OD600 file=layouts/layout_Fig_4f_OD600.tsv
+<<<LAYOUT_READOUT readout_id=Fig_4g_OD600 file=layouts/layout_Fig_4g_OD600.tsv
+<<<LAYOUT_READOUT readout_id=Fig_4e_OD445 file=layouts/layout_Fig_4e_OD445.tsv
+<<<LAYOUT_READOUT readout_id=Fig_4f_OD445 file=layouts/layout_Fig_4f_OD445.tsv
+:::LAYOUT_END
+
+:::READINGS_START
+<<<READOUT readout_id=Fig_1bc_OD600 file=readings/readings_Fig_1bc_OD600.tsv
+<<<READOUT readout_id=Fig_3abc_OD600 file=readings/readings_Fig_3abc_OD600.tsv
+<<<READOUT readout_id=SFig_3_OD600 file=readings/readings_SFig_3_OD600.tsv
+<<<READOUT readout_id=SFig_6_OD600 file=readings/readings_SFig_6_OD600.tsv
+<<<READOUT readout_id=Fig_4e_OD600 file=readings/readings_Fig_4e_OD600.tsv
+<<<READOUT readout_id=Fig_4f_OD600 file=readings/readings_Fig_4f_OD600.tsv
+<<<READOUT readout_id=Fig_4g_OD600 file=readings/readings_Fig_4g_OD600.tsv
+<<<READOUT readout_id=Fig_4e_OD445 file=readings/readings_Fig_4e_OD445.tsv
+<<<READOUT readout_id=Fig_4f_OD445 file=readings/readings_Fig_4f_OD445.tsv
+:::READINGS_END
+===FILE_END

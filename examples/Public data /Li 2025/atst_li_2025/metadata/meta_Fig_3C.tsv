@@ -1,0 +1,5 @@
+source_file	read_shared_data/sources/aem.02402-24-s0002.xlsx
+source_header_row	1
+source_data_rows	2:6
+source_column_rule	one condition per three adjacent source columns; left-to-right replicates
+conversion	numeric source values and time retained; statistical comparison tables omitted

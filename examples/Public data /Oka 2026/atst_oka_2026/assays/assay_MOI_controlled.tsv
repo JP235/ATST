@@ -1,0 +1,11 @@
+readout_type	absorbance
+readout_unit	od600
+time_unit	s
+medium_id	LB
+culture_type	planktonic
+temperature_c	37
+instrument	Varioskan LUX microplate reader (Thermo Fisher Scientific)
+plate	96-well plate
+shaking	continuous orbital shaking, 600 rpm
+conditions	Mid-exponential OD600 0.5 culture diluted 10-fold in fresh LB; T-phages at MOI 1, 0.1 or 0.01
+source_reference	doi:10.3390/v18010092

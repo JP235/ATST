@@ -1,0 +1,7 @@
+instrument	Tecan Spark
+plate_type	Corning 96 well
+date_start	2026-01-01T09:00:00
+operator	OP3
+filename	simulated_tecan_100rpm_output
+application	Absorbance
+experiment_type	tecan_100rpm_output

@@ -1,0 +1,8 @@
+ISOLATE_ID	source_label	species	parent_strain	genome_accession	alteration
+ZS_PA_35	ZS-PA-35	Pseudomonas aeruginosa	ZS-PA-35	GCA_020567355.1	wild type
+ZS_PA_35_del_lasR	ZS-PA-35 ΔlasR	Pseudomonas aeruginosa	ZS-PA-35	GCA_020567355.1	in-frame deletion lasR
+ZS_PA_35_del_rhlR	ZS-PA-35 ΔrhlR	Pseudomonas aeruginosa	ZS-PA-35	GCA_020567355.1	in-frame deletion rhlR
+ZS_PA_35_del_lasI	ZS-PA-35 ΔlasI	Pseudomonas aeruginosa	ZS-PA-35	GCA_020567355.1	in-frame deletion lasI
+ZS_PA_35_del_rhlI	ZS-PA-35 ΔrhlI	Pseudomonas aeruginosa	ZS-PA-35	GCA_020567355.1	in-frame deletion rhlI
+ZS_PA_35_del_lasR_del_rhlR	ZS-PA-35 ΔlasR ΔrhlR	Pseudomonas aeruginosa	ZS-PA-35	GCA_020567355.1	in-frame deletions lasR and rhlR
+ZS_PA_35_del_lasI_del_rhlI	ZS-PA-35 ΔlasI ΔrhlI	Pseudomonas aeruginosa	ZS-PA-35	GCA_020567355.1	in-frame deletions lasI and rhlI

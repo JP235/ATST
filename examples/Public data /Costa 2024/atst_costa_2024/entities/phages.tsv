@@ -1,0 +1,19 @@
+PHAGE_ID	published_name	table_s3_host_strain	genome_accession	accession_as_reported	genome_size_bp_as_reported	morphology_as_reported	family_as_reported	genus_as_reported	lifestyle_prediction_phageai	assay_stock_propagation_host
+Pa2	vB_PaeM_FBPa2	L1264	ON857925	ON857925	65825	Myophage	NA	Pbunavirus	Virulent	PAO1
+Pa3	vB_PaeP_FBPa3	N1520	ON857926	ON857926	43171	Podophage	Autographiviridae	-	Virulent	PAO1
+Pa6	vB_PaeP_FBPa6	L1509	ON857928	ON857928	40865	Podophage	Autographiviridae	-	Virulent	PAO1
+Pa10	vB_PaeM_FBPa10	K6156	ON857929	ON857929	66638	Myophage	NA	Pbunavirus	Virulent	PAO1
+Pa12	vB_PaeM_FBPa12	K5993	ON857930	ON857930	66223	Myophage	NA	Pbunavirus	Virulent	PAO1
+Pa18	vB_PaeS_FBPa18	L1165	ON857933	ON857933	45261	Podophage	Autographiviridae	-	Virulent	PAO1
+Pa21	vB_PaeM_FBPa21	L1347	ON857942	ON857942	62511	Myophage	NA	Pbunavirus	Virulent	PAO1
+Pa22	vB_PaeS_FBPa22	L1464		TBD	42494	Podophage	Autographiviridae	-	Virulent	PAO1
+Pa24	vB_PaeM_FBPa24	L1496	ON857934	ON857934	63382	Myophage	NA	Pbunavirus	Virulent	PAO1
+Pa25	vB_PaeP_FBPa25	L1262	ON857935	ON857935	41566	Podophage	Autographiviridae	-	Virulent	PAO1
+Pa28	vB_PaeS_FBPa28	L0213		TBD	36780	Siphophage	NA	Casadabanvirus	Temperate	PAO1
+Pa29	vB_PaeP_FBPa29	L1126	ON857936	ON857936	43826	Podophage	NA	Bruynoghevirus	Virulent	PAO1
+Pa33	vB_PaeM_FBPa33	L1171		TBD	66014	Myophage	NA	Pbunavirus	Virulent	PAO1
+Pa34	vB_PaeM_FBPa34	L0665	ON857937	ON857937	65798	Myophage	NA	Pbunavirus	Virulent	PAO1
+Pa35	vB_PaeM_FBPa35	L1496	ON857938	ON857938	41566	Myophage	NA	Pbunavirus	Virulent	PAO1
+Pa36	vB_PaeM_FBPa36	L1264		TBD	276317	Myophage	NA	Phikzvirus	Virulent	PAO1
+Pa53	vB_PaeS_FBPa53	PAO1		TBD	61030	Siphophage	Mesyanzhinovviridae	Yuavirus	Virulent	PAO1
+PP7	PP7	PAO1	NC_001628	NC_001628	-	-	Fiersviridae		-	PAO1

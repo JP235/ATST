@@ -1,0 +1,6 @@
+source_file	read_shared_data/sources/raw_data_set_wraf065.xlsx
+source_time_range	I84:I88
+source_data_rows	84:88
+source_column_groups	J:L=untreated | M:O=Single JG005 | P:R=Single JG024 | S:U=Combination JG005+JG024
+source_missing_cells	
+conversion	Numeric source values and source times preserved; source 'Not done' represented by empty READINGS cells; group labels normalized in LAYOUT

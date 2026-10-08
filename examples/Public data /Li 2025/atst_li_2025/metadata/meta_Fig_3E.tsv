@@ -1,0 +1,5 @@
+source_file	read_shared_data/sources/aem.02402-24-s0002.xlsx
+source_header_row	1
+source_data_rows	2:4 (three replicate rows)
+source_column_rule	one condition per source column; rows 2-4 are replicates
+conversion	numeric source values retained; statistical comparison tables omitted; endpoint time 8 h from Fig. 3 caption

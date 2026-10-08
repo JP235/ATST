@@ -1,0 +1,9 @@
+curve_id	type	isolate_id	phage_id	moi	replicate	assay_mode
+curve_A	uninfected_control	MG1655_WT			1	DAAO_reaction
+curve_B	uninfected_control	MG1655_WT			2	DAAO_reaction
+curve_C	phage_exposed	MG1655_WT	phage_cocktail		1	DAAO_reaction
+curve_D	phage_exposed	MG1655_WT	phage_cocktail		2	DAAO_reaction
+curve_E	uninfected_control	MG1655_EPR			1	DAAO_reaction
+curve_F	uninfected_control	MG1655_EPR			2	DAAO_reaction
+curve_G	phage_exposed	MG1655_EPR	phage_cocktail		1	DAAO_reaction
+curve_H	phage_exposed	MG1655_EPR	phage_cocktail		2	DAAO_reaction

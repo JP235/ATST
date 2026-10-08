@@ -1,0 +1,10 @@
+readout_type	absorbance
+readout_unit	od600
+time_unit	seconds
+plate_format	96_well
+method_name	Simulated ATST KG class plate
+runtime	12h
+interval	40min
+total_cycles	19
+temperature	37C
+shaking_frequency	300rpm

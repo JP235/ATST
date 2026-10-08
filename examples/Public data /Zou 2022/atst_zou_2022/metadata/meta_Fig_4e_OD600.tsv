@@ -1,0 +1,3 @@
+source_file	read_shared_data/sources/41467_2022_31934_MOESM7_ESM.xlsx
+source_blocks	WT-MG1655 (without phage cocktail): H7:J29 | WT-MG1655 DAAO enzyme (with phage cocktail): H37:J59 | EPR-MG1655 (without phage cocktail): H109:J131 | EPR-MG1655 DAAO enzyme (with phage cocktail): H139:J161
+conversion	Source numeric readings and time values retained; distinct source panels aligned by union of times with empty cells where a curve has no measurement

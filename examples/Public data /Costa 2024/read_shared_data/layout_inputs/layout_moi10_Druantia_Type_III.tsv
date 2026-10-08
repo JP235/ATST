@@ -1,0 +1,10 @@
+curve_id	type	isolate_id	phage_id	moi	replicate
+curve_A	uninfected_control	PAO1_Druantia_Type_III		0	1
+curve_B	uninfected_control	PAO1_Druantia_Type_III		0	2
+curve_C	uninfected_control	PAO1_Druantia_Type_III		0	3
+curve_D	phage_exposed	PAO1_Druantia_Type_III	Pa12	10	1
+curve_E	phage_exposed	PAO1_Druantia_Type_III	Pa12	10	2
+curve_F	phage_exposed	PAO1_Druantia_Type_III	Pa12	10	3
+curve_G	phage_exposed	PAO1_Druantia_Type_III	Pa33	10	1
+curve_H	phage_exposed	PAO1_Druantia_Type_III	Pa33	10	2
+curve_I	phage_exposed	PAO1_Druantia_Type_III	Pa33	10	3

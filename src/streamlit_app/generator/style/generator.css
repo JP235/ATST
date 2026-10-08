@@ -1,0 +1,32 @@
+.stMainBlockContainer {
+    max-width: min(70rem, 1200px, 90%);
+    margin: auto;
+}
+
+section[data-testid="stFileUploaderDropzone"] {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+}
+
+div[data-testid="stTextInput"] input[aria-label^="ASSAY field "]:disabled {
+    background-color: var(--background-color) !important;
+    color: var(--text-color, black) !important;
+    cursor: default !important;
+    opacity: 1 !important;
+    -webkit-text-fill-color: var(--text-color, black) !important;
+}
+
+.atst-section-title {
+    min-height: 2.5rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    background-color: rgb(240, 242, 246);
+    border: 1px solid rgba(49, 51, 63, 0.2);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    translate: -1rem -1rem;
+    width: calc(100% + 2rem);
+}

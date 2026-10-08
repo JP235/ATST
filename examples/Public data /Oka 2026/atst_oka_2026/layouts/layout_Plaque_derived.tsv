@@ -1,0 +1,26 @@
+curve_id	type	isolate_id	phage_id	moi	replicate
+curve_A	phage_exposed	E_coli_NBRC13168	T1		1
+curve_B	phage_exposed	E_coli_NBRC13168	T1		2
+curve_C	phage_exposed	E_coli_NBRC13168	T1		3
+curve_D	phage_exposed	E_coli_NBRC13168	T2		1
+curve_E	phage_exposed	E_coli_NBRC13168	T2		2
+curve_F	phage_exposed	E_coli_NBRC13168	T2		3
+curve_G	phage_exposed	E_coli_NBRC13168	T3		1
+curve_H	phage_exposed	E_coli_NBRC13168	T3		2
+curve_I	phage_exposed	E_coli_NBRC13168	T3		3
+curve_J	phage_exposed	E_coli_NBRC13168	T4		1
+curve_K	phage_exposed	E_coli_NBRC13168	T4		2
+curve_L	phage_exposed	E_coli_NBRC13168	T4		3
+curve_M	phage_exposed	E_coli_NBRC13168	T5		1
+curve_N	phage_exposed	E_coli_NBRC13168	T5		2
+curve_O	phage_exposed	E_coli_NBRC13168	T5		3
+curve_P	phage_exposed	E_coli_NBRC13168	T6		1
+curve_Q	phage_exposed	E_coli_NBRC13168	T6		2
+curve_R	phage_exposed	E_coli_NBRC13168	T6		3
+curve_S	phage_exposed	E_coli_NBRC13168	T7		1
+curve_T	phage_exposed	E_coli_NBRC13168	T7		2
+curve_U	phage_exposed	E_coli_NBRC13168	T7		3
+curve_V	uninfected_control	E_coli_NBRC13168			1
+curve_W	uninfected_control	E_coli_NBRC13168			2
+curve_X	uninfected_control	E_coli_NBRC13168			3
+curve_Y	blank				1

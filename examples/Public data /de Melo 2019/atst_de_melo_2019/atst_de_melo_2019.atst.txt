@@ -1,0 +1,46 @@
+===FILE_START
+:::FILE_INFO_START
+   file_name       	atst_de_melo_2019.atst.txt
+   format          	ATST
+   format_version  	0.1
+   created_on      	2026-10-08
+   field_delimiter 	TAB
+   encoding        	UTF-8
+:::FILE_INFO_END
+
+:::STUDY_START
+   title            	Characterization of a bacteriophage with broad host range against strains of Pseudomonas aeruginosa isolated from domestic animals
+   study_id         	doi:10.1186/s12866-019-1481-z
+   authors          	Anna Cristhina Carmine de Melo; Amanda da Mata Gomes; Fernando L. Melo; Daniel M. P. Ardisson-Araújo; Agueda Palmira Castagna de Vargas; Valessa Lunkes Ely; Elliot W. Kitajima; Bergmann M. Ribeiro; José Luiz Caldas Wolff
+   publication_date 	2019
+   publication_doi  	10.1186/s12866-019-1481-z
+   description      	BrSP1 infection and matched no-phage controls for three Pseudomonas aeruginosa strains; raw absorbance triplicates from Additional file 8.
+:::STUDY_END
+
+:::READOUT_IDS_START
+readout_id
+All_strains
+:::READOUT_IDS_END
+
+:::METADATA_START
+<<<METADATA_READOUT readout_id=All_strains file=metadata/meta.tsv
+:::METADATA_END
+
+:::ASSAY_START
+<<<ASSAY_READOUT readout_id=All_strains file=assays/assay.tsv
+:::ASSAY_END
+
+:::ENTITIES_START
+<<<TABLE name=ISOLATES pk=ISOLATE_ID file=entities/isolates.tsv
+<<<TABLE name=PHAGES pk=PHAGE_ID file=entities/phages.tsv
+<<<TABLE name=MEDIA pk=MEDIUM_ID file=entities/media.tsv
+:::ENTITIES_END
+
+:::LAYOUT_START
+<<<LAYOUT_READOUT readout_id=All_strains file=layouts/layout_All_strains.tsv
+:::LAYOUT_END
+
+:::READINGS_START
+<<<READOUT readout_id=All_strains file=readings/readings_All_strains.tsv
+:::READINGS_END
+===FILE_END

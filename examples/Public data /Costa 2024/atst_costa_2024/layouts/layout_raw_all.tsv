@@ -1,0 +1,553 @@
+curve_id	type	isolate_id	phage_id	pfu_ml	replicate
+curve_A	uninfected_control	PAO1			1
+curve_B	uninfected_control	PAO1			2
+curve_C	uninfected_control	PAO1			3
+curve_D	uninfected_control	PAO1			1
+curve_E	uninfected_control	PAO1			2
+curve_F	uninfected_control	PAO1			3
+curve_G	uninfected_control	PAO1			1
+curve_H	uninfected_control	PAO1			2
+curve_I	uninfected_control	PAO1			3
+curve_J	phage_exposed	PAO1	Pa2	1*10^7	1
+curve_K	phage_exposed	PAO1	Pa2	1*10^7	2
+curve_L	phage_exposed	PAO1	Pa2	1*10^7	3
+curve_M	phage_exposed	PAO1	Pa3	1*10^7	1
+curve_N	phage_exposed	PAO1	Pa3	1*10^7	2
+curve_O	phage_exposed	PAO1	Pa3	1*10^7	3
+curve_P	phage_exposed	PAO1	Pa6	1*10^7	1
+curve_Q	phage_exposed	PAO1	Pa6	1*10^7	2
+curve_R	phage_exposed	PAO1	Pa6	1*10^7	3
+curve_S	phage_exposed	PAO1	Pa2	1*10^6	1
+curve_T	phage_exposed	PAO1	Pa2	1*10^6	2
+curve_U	phage_exposed	PAO1	Pa2	1*10^6	3
+curve_V	phage_exposed	PAO1	Pa3	1*10^6	1
+curve_W	phage_exposed	PAO1	Pa3	1*10^6	2
+curve_X	phage_exposed	PAO1	Pa3	1*10^6	3
+curve_Y	phage_exposed	PAO1	Pa6	1*10^6	1
+curve_Z	phage_exposed	PAO1	Pa6	1*10^6	2
+curve_AA	phage_exposed	PAO1	Pa6	1*10^6	3
+curve_AB	uninfected_control	PAO1			1
+curve_AC	uninfected_control	PAO1			2
+curve_AD	uninfected_control	PAO1			3
+curve_AE	uninfected_control	PAO1			1
+curve_AF	uninfected_control	PAO1			2
+curve_AG	uninfected_control	PAO1			3
+curve_AH	phage_exposed	PAO1	Pa10	1*10^7	1
+curve_AI	phage_exposed	PAO1	Pa10	1*10^7	2
+curve_AJ	phage_exposed	PAO1	Pa10	1*10^7	3
+curve_AK	phage_exposed	PAO1	Pa12	1*10^7	1
+curve_AL	phage_exposed	PAO1	Pa12	1*10^7	2
+curve_AM	phage_exposed	PAO1	Pa12	1*10^7	3
+curve_AN	phage_exposed	PAO1	Pa10	1*10^6	1
+curve_AO	phage_exposed	PAO1	Pa10	1*10^6	2
+curve_AP	phage_exposed	PAO1	Pa10	1*10^6	3
+curve_AQ	phage_exposed	PAO1	Pa12	1*10^6	1
+curve_AR	phage_exposed	PAO1	Pa12	1*10^6	2
+curve_AS	phage_exposed	PAO1	Pa12	1*10^6	3
+curve_AT	uninfected_control	PAO1			1
+curve_AU	uninfected_control	PAO1			2
+curve_AV	uninfected_control	PAO1			3
+curve_AW	uninfected_control	PAO1			1
+curve_AX	uninfected_control	PAO1			2
+curve_AY	uninfected_control	PAO1			3
+curve_AZ	phage_exposed	PAO1	Pa18	1*10^7	1
+curve_BA	phage_exposed	PAO1	Pa18	1*10^7	2
+curve_BB	phage_exposed	PAO1	Pa18	1*10^7	3
+curve_BC	phage_exposed	PAO1	Pa21	1*10^7	1
+curve_BD	phage_exposed	PAO1	Pa21	1*10^7	2
+curve_BE	phage_exposed	PAO1	Pa21	1*10^7	3
+curve_BF	phage_exposed	PAO1	Pa18	1*10^6	1
+curve_BG	phage_exposed	PAO1	Pa18	1*10^6	2
+curve_BH	phage_exposed	PAO1	Pa18	1*10^6	3
+curve_BI	phage_exposed	PAO1	Pa21	1*10^6	1
+curve_BJ	phage_exposed	PAO1	Pa21	1*10^6	2
+curve_BK	phage_exposed	PAO1	Pa21	1*10^6	3
+curve_BL	uninfected_control	PAO1			1
+curve_BM	uninfected_control	PAO1			2
+curve_BN	uninfected_control	PAO1			3
+curve_BO	uninfected_control	PAO1			1
+curve_BP	uninfected_control	PAO1			2
+curve_BQ	uninfected_control	PAO1			3
+curve_BR	uninfected_control	PAO1			1
+curve_BS	uninfected_control	PAO1			2
+curve_BT	uninfected_control	PAO1			3
+curve_BU	phage_exposed	PAO1	Pa22	1*10^7	1
+curve_BV	phage_exposed	PAO1	Pa22	1*10^7	2
+curve_BW	phage_exposed	PAO1	Pa22	1*10^7	3
+curve_BX	phage_exposed	PAO1	Pa24	1*10^7	1
+curve_BY	phage_exposed	PAO1	Pa24	1*10^7	2
+curve_BZ	phage_exposed	PAO1	Pa24	1*10^7	3
+curve_CA	phage_exposed	PAO1	Pa25	1*10^7	1
+curve_CB	phage_exposed	PAO1	Pa25	1*10^7	2
+curve_CC	phage_exposed	PAO1	Pa25	1*10^7	3
+curve_CD	phage_exposed	PAO1	Pa22	1*10^6	1
+curve_CE	phage_exposed	PAO1	Pa22	1*10^6	2
+curve_CF	phage_exposed	PAO1	Pa22	1*10^6	3
+curve_CG	phage_exposed	PAO1	Pa24	1*10^6	1
+curve_CH	phage_exposed	PAO1	Pa24	1*10^6	2
+curve_CI	phage_exposed	PAO1	Pa24	1*10^6	3
+curve_CJ	phage_exposed	PAO1	Pa25	1*10^6	1
+curve_CK	phage_exposed	PAO1	Pa25	1*10^6	2
+curve_CL	phage_exposed	PAO1	Pa25	1*10^6	3
+curve_CM	uninfected_control	PAO1			1
+curve_CN	uninfected_control	PAO1			2
+curve_CO	uninfected_control	PAO1			3
+curve_CP	uninfected_control	PAO1			1
+curve_CQ	uninfected_control	PAO1			2
+curve_CR	uninfected_control	PAO1			3
+curve_CS	phage_exposed	PAO1	Pa29	1*10^7	1
+curve_CT	phage_exposed	PAO1	Pa29	1*10^7	2
+curve_CU	phage_exposed	PAO1	Pa29	1*10^7	3
+curve_CV	phage_exposed	PAO1	Pa33	1*10^7	1
+curve_CW	phage_exposed	PAO1	Pa33	1*10^7	2
+curve_CX	phage_exposed	PAO1	Pa33	1*10^7	3
+curve_CY	phage_exposed	PAO1	Pa29	1*10^6	1
+curve_CZ	phage_exposed	PAO1	Pa29	1*10^6	2
+curve_DA	phage_exposed	PAO1	Pa29	1*10^6	3
+curve_DB	phage_exposed	PAO1	Pa33	1*10^6	1
+curve_DC	phage_exposed	PAO1	Pa33	1*10^6	2
+curve_DD	phage_exposed	PAO1	Pa33	1*10^6	3
+curve_DE	uninfected_control	PAO1			1
+curve_DF	uninfected_control	PAO1			2
+curve_DG	uninfected_control	PAO1			3
+curve_DH	uninfected_control	PAO1			1
+curve_DI	uninfected_control	PAO1			2
+curve_DJ	uninfected_control	PAO1			3
+curve_DK	phage_exposed	PAO1	Pa34	1*10^7	1
+curve_DL	phage_exposed	PAO1	Pa34	1*10^7	2
+curve_DM	phage_exposed	PAO1	Pa34	1*10^7	3
+curve_DN	phage_exposed	PAO1	Pa35	1*10^7	1
+curve_DO	phage_exposed	PAO1	Pa35	1*10^7	2
+curve_DP	phage_exposed	PAO1	Pa35	1*10^7	3
+curve_DQ	phage_exposed	PAO1	Pa34	1*10^6	1
+curve_DR	phage_exposed	PAO1	Pa34	1*10^6	2
+curve_DS	phage_exposed	PAO1	Pa34	1*10^6	3
+curve_DT	phage_exposed	PAO1	Pa35	1*10^6	1
+curve_DU	phage_exposed	PAO1	Pa35	1*10^6	2
+curve_DV	phage_exposed	PAO1	Pa35	1*10^6	3
+curve_DW	uninfected_control	PAO1			1
+curve_DX	uninfected_control	PAO1			2
+curve_DY	uninfected_control	PAO1			3
+curve_DZ	uninfected_control	PAO1			1
+curve_EA	uninfected_control	PAO1			2
+curve_EB	uninfected_control	PAO1			3
+curve_EC	phage_exposed	PAO1	Pa28	1*10^7	1
+curve_ED	phage_exposed	PAO1	Pa28	1*10^7	2
+curve_EE	phage_exposed	PAO1	Pa28	1*10^7	3
+curve_EF	phage_exposed	PAO1	Pa36	1*10^7	1
+curve_EG	phage_exposed	PAO1	Pa36	1*10^7	2
+curve_EH	phage_exposed	PAO1	Pa36	1*10^7	3
+curve_EI	phage_exposed	PAO1	Pa28	1*10^6	1
+curve_EJ	phage_exposed	PAO1	Pa28	1*10^6	2
+curve_EK	phage_exposed	PAO1	Pa28	1*10^6	3
+curve_EL	phage_exposed	PAO1	Pa36	1*10^6	1
+curve_EM	phage_exposed	PAO1	Pa36	1*10^6	2
+curve_EN	phage_exposed	PAO1	Pa36	1*10^6	3
+curve_EO	phage_exposed	PAO1	Pa53	no dilution	1
+curve_EP	phage_exposed	PAO1	Pa53	no dilution	2
+curve_EQ	phage_exposed	PAO1	Pa53	no dilution	3
+curve_ER	phage_exposed	PAO1	Pa53	1*10^6	1
+curve_ES	phage_exposed	PAO1	Pa53	1*10^6	2
+curve_ET	phage_exposed	PAO1	Pa53	1*10^6	3
+curve_EU	phage_exposed	PAO1	PP7	no dilution	1
+curve_EV	phage_exposed	PAO1	PP7	no dilution	2
+curve_EW	phage_exposed	PAO1	PP7	no dilution	3
+curve_EX	phage_exposed	PAO1	PP7	1*10^6	1
+curve_EY	phage_exposed	PAO1	PP7	1*10^6	2
+curve_EZ	phage_exposed	PAO1	PP7	1*10^6	3
+curve_FA	uninfected_control	PAO1_AVAST_Type_V			1
+curve_FB	uninfected_control	PAO1_AVAST_Type_V			2
+curve_FC	uninfected_control	PAO1_AVAST_Type_V			3
+curve_FD	phage_exposed	PAO1_AVAST_Type_V	Pa36	1*10^7	1
+curve_FE	phage_exposed	PAO1_AVAST_Type_V	Pa36	1*10^7	2
+curve_FF	phage_exposed	PAO1_AVAST_Type_V	Pa36	1*10^7	3
+curve_FG	phage_exposed	PAO1_AVAST_Type_V	Pa36	1*10^6	1
+curve_FH	phage_exposed	PAO1_AVAST_Type_V	Pa36	1*10^6	2
+curve_FI	phage_exposed	PAO1_AVAST_Type_V	Pa36	1*10^6	3
+curve_FJ	uninfected_control	PAO1_CBASS_Type_II_A			1
+curve_FK	uninfected_control	PAO1_CBASS_Type_II_A			2
+curve_FL	uninfected_control	PAO1_CBASS_Type_II_A			3
+curve_FM	phage_exposed	PAO1_CBASS_Type_II_A	Pa33	1*10^7	1
+curve_FN	phage_exposed	PAO1_CBASS_Type_II_A	Pa33	1*10^7	2
+curve_FO	phage_exposed	PAO1_CBASS_Type_II_A	Pa33	1*10^7	3
+curve_FP	phage_exposed	PAO1_CBASS_Type_II_A	Pa33	1*10^6	1
+curve_FQ	phage_exposed	PAO1_CBASS_Type_II_A	Pa33	1*10^6	2
+curve_FR	phage_exposed	PAO1_CBASS_Type_II_A	Pa33	1*10^6	3
+curve_FS	uninfected_control	PAO1_CBASS_Type_II_C			1
+curve_FT	uninfected_control	PAO1_CBASS_Type_II_C			2
+curve_FU	uninfected_control	PAO1_CBASS_Type_II_C			3
+curve_FV	phage_exposed	PAO1_CBASS_Type_II_C	Pa2	1*10^7	1
+curve_FW	phage_exposed	PAO1_CBASS_Type_II_C	Pa2	1*10^7	2
+curve_FX	phage_exposed	PAO1_CBASS_Type_II_C	Pa2	1*10^7	3
+curve_FY	phage_exposed	PAO1_CBASS_Type_II_C	Pa2	1*10^6	1
+curve_FZ	phage_exposed	PAO1_CBASS_Type_II_C	Pa2	1*10^6	2
+curve_GA	phage_exposed	PAO1_CBASS_Type_II_C	Pa2	1*10^6	3
+curve_GB	uninfected_control	PAO1_CBASS_Type_II_C			1
+curve_GC	uninfected_control	PAO1_CBASS_Type_II_C			2
+curve_GD	uninfected_control	PAO1_CBASS_Type_II_C			3
+curve_GE	phage_exposed	PAO1_CBASS_Type_II_C	Pa10	1*10^7	1
+curve_GF	phage_exposed	PAO1_CBASS_Type_II_C	Pa10	1*10^7	2
+curve_GG	phage_exposed	PAO1_CBASS_Type_II_C	Pa10	1*10^7	3
+curve_GH	phage_exposed	PAO1_CBASS_Type_II_C	Pa10	1*10^6	1
+curve_GI	phage_exposed	PAO1_CBASS_Type_II_C	Pa10	1*10^6	2
+curve_GJ	phage_exposed	PAO1_CBASS_Type_II_C	Pa10	1*10^6	3
+curve_GK	uninfected_control	PAO1_CBASS_Type_II_C			1
+curve_GL	uninfected_control	PAO1_CBASS_Type_II_C			2
+curve_GM	uninfected_control	PAO1_CBASS_Type_II_C			3
+curve_GN	phage_exposed	PAO1_CBASS_Type_II_C	Pa33	1*10^7	1
+curve_GO	phage_exposed	PAO1_CBASS_Type_II_C	Pa33	1*10^7	2
+curve_GP	phage_exposed	PAO1_CBASS_Type_II_C	Pa33	1*10^7	3
+curve_GQ	phage_exposed	PAO1_CBASS_Type_II_C	Pa33	1*10^6	1
+curve_GR	phage_exposed	PAO1_CBASS_Type_II_C	Pa33	1*10^6	2
+curve_GS	phage_exposed	PAO1_CBASS_Type_II_C	Pa33	1*10^6	3
+curve_GT	uninfected_control	PAO1_CBASS_Type_II_C			1
+curve_GU	uninfected_control	PAO1_CBASS_Type_II_C			2
+curve_GV	uninfected_control	PAO1_CBASS_Type_II_C			3
+curve_GW	phage_exposed	PAO1_CBASS_Type_II_C	Pa35	1*10^7	1
+curve_GX	phage_exposed	PAO1_CBASS_Type_II_C	Pa35	1*10^7	2
+curve_GY	phage_exposed	PAO1_CBASS_Type_II_C	Pa35	1*10^7	3
+curve_GZ	phage_exposed	PAO1_CBASS_Type_II_C	Pa35	1*10^6	1
+curve_HA	phage_exposed	PAO1_CBASS_Type_II_C	Pa35	1*10^6	2
+curve_HB	phage_exposed	PAO1_CBASS_Type_II_C	Pa35	1*10^6	3
+curve_HC	uninfected_control	PAO1_CBASS_Type_II_C			1
+curve_HD	uninfected_control	PAO1_CBASS_Type_II_C			2
+curve_HE	uninfected_control	PAO1_CBASS_Type_II_C			3
+curve_HF	phage_exposed	PAO1_CBASS_Type_II_C	Pa28	1*10^7	1
+curve_HG	phage_exposed	PAO1_CBASS_Type_II_C	Pa28	1*10^7	2
+curve_HH	phage_exposed	PAO1_CBASS_Type_II_C	Pa28	1*10^7	3
+curve_HI	phage_exposed	PAO1_CBASS_Type_II_C	Pa28	1*10^6	1
+curve_HJ	phage_exposed	PAO1_CBASS_Type_II_C	Pa28	1*10^6	2
+curve_HK	phage_exposed	PAO1_CBASS_Type_II_C	Pa28	1*10^6	3
+curve_HL	uninfected_control	PAO1_CBASS_Type_III			1
+curve_HM	uninfected_control	PAO1_CBASS_Type_III			2
+curve_HN	uninfected_control	PAO1_CBASS_Type_III			3
+curve_HO	phage_exposed	PAO1_CBASS_Type_III	Pa6	1*10^7	1
+curve_HP	phage_exposed	PAO1_CBASS_Type_III	Pa6	1*10^7	2
+curve_HQ	phage_exposed	PAO1_CBASS_Type_III	Pa6	1*10^7	3
+curve_HR	phage_exposed	PAO1_CBASS_Type_III	Pa6	1*10^6	1
+curve_HS	phage_exposed	PAO1_CBASS_Type_III	Pa6	1*10^6	2
+curve_HT	phage_exposed	PAO1_CBASS_Type_III	Pa6	1*10^6	3
+curve_HU	uninfected_control	PAO1_CBASS_Type_III			1
+curve_HV	uninfected_control	PAO1_CBASS_Type_III			2
+curve_HW	uninfected_control	PAO1_CBASS_Type_III			3
+curve_HX	phage_exposed	PAO1_CBASS_Type_III	Pa12	1*10^7	1
+curve_HY	phage_exposed	PAO1_CBASS_Type_III	Pa12	1*10^7	2
+curve_HZ	phage_exposed	PAO1_CBASS_Type_III	Pa12	1*10^7	3
+curve_IA	phage_exposed	PAO1_CBASS_Type_III	Pa12	1*10^6	1
+curve_IB	phage_exposed	PAO1_CBASS_Type_III	Pa12	1*10^6	2
+curve_IC	phage_exposed	PAO1_CBASS_Type_III	Pa12	1*10^6	3
+curve_ID_238	uninfected_control	PAO1_CBASS_Type_III			1
+curve_IE	uninfected_control	PAO1_CBASS_Type_III			2
+curve_IF	uninfected_control	PAO1_CBASS_Type_III			3
+curve_IG	uninfected_control	PAO1_CBASS_Type_III			1
+curve_IH	uninfected_control	PAO1_CBASS_Type_III			2
+curve_II	uninfected_control	PAO1_CBASS_Type_III			3
+curve_IJ	phage_exposed	PAO1_CBASS_Type_III	Pa18	1*10^7	1
+curve_IK	phage_exposed	PAO1_CBASS_Type_III	Pa18	1*10^7	2
+curve_IL	phage_exposed	PAO1_CBASS_Type_III	Pa18	1*10^7	3
+curve_IM	phage_exposed	PAO1_CBASS_Type_III	Pa21	1*10^7	1
+curve_IN	phage_exposed	PAO1_CBASS_Type_III	Pa21	1*10^7	2
+curve_IO	phage_exposed	PAO1_CBASS_Type_III	Pa21	1*10^7	3
+curve_IP	phage_exposed	PAO1_CBASS_Type_III	Pa18	1*10^6	1
+curve_IQ	phage_exposed	PAO1_CBASS_Type_III	Pa18	1*10^6	2
+curve_IR	phage_exposed	PAO1_CBASS_Type_III	Pa18	1*10^6	3
+curve_IS	phage_exposed	PAO1_CBASS_Type_III	Pa21	1*10^6	1
+curve_IT	phage_exposed	PAO1_CBASS_Type_III	Pa21	1*10^6	2
+curve_IU	phage_exposed	PAO1_CBASS_Type_III	Pa21	1*10^6	3
+curve_IV	uninfected_control	PAO1_CBASS_Type_III			1
+curve_IW	uninfected_control	PAO1_CBASS_Type_III			2
+curve_IX	uninfected_control	PAO1_CBASS_Type_III			3
+curve_IY	phage_exposed	PAO1_CBASS_Type_III	Pa33	1*10^7	1
+curve_IZ	phage_exposed	PAO1_CBASS_Type_III	Pa33	1*10^7	2
+curve_JA	phage_exposed	PAO1_CBASS_Type_III	Pa33	1*10^7	3
+curve_JB	phage_exposed	PAO1_CBASS_Type_III	Pa33	1*10^6	1
+curve_JC	phage_exposed	PAO1_CBASS_Type_III	Pa33	1*10^6	2
+curve_JD	phage_exposed	PAO1_CBASS_Type_III	Pa33	1*10^6	3
+curve_JE	uninfected_control	PAO1_CBASS_Type_III			1
+curve_JF	uninfected_control	PAO1_CBASS_Type_III			2
+curve_JG	uninfected_control	PAO1_CBASS_Type_III			3
+curve_JH	phage_exposed	PAO1_CBASS_Type_III	Pa28	1*10^7	1
+curve_JI	phage_exposed	PAO1_CBASS_Type_III	Pa28	1*10^7	2
+curve_JJ	phage_exposed	PAO1_CBASS_Type_III	Pa28	1*10^7	3
+curve_JK	phage_exposed	PAO1_CBASS_Type_III	Pa28	1*10^6	1
+curve_JL	phage_exposed	PAO1_CBASS_Type_III	Pa28	1*10^6	2
+curve_JM	phage_exposed	PAO1_CBASS_Type_III	Pa28	1*10^6	3
+curve_JN	uninfected_control	PAO1_CBASS_Type_III			1
+curve_JO	uninfected_control	PAO1_CBASS_Type_III			2
+curve_JP	uninfected_control	PAO1_CBASS_Type_III			3
+curve_JQ	phage_exposed	PAO1_CBASS_Type_III	Pa36	1*10^6	1
+curve_JR	phage_exposed	PAO1_CBASS_Type_III	Pa36	1*10^6	2
+curve_JS	phage_exposed	PAO1_CBASS_Type_III	Pa36	1*10^6	3
+curve_JT	uninfected_control	PAO1_Druantia_Type_III			1
+curve_JU	uninfected_control	PAO1_Druantia_Type_III			2
+curve_JV	uninfected_control	PAO1_Druantia_Type_III			3
+curve_JW	phage_exposed	PAO1_Druantia_Type_III	Pa12	1*10^7	1
+curve_JX	phage_exposed	PAO1_Druantia_Type_III	Pa12	1*10^7	2
+curve_JY	phage_exposed	PAO1_Druantia_Type_III	Pa12	1*10^7	3
+curve_JZ	phage_exposed	PAO1_Druantia_Type_III	Pa12	1*10^6	1
+curve_KA	phage_exposed	PAO1_Druantia_Type_III	Pa12	1*10^6	2
+curve_KB	phage_exposed	PAO1_Druantia_Type_III	Pa12	1*10^6	3
+curve_KC	uninfected_control	PAO1_Druantia_Type_III			1
+curve_KD	uninfected_control	PAO1_Druantia_Type_III			2
+curve_KE	uninfected_control	PAO1_Druantia_Type_III			3
+curve_KF	phage_exposed	PAO1_Druantia_Type_III	Pa33	1*10^7	1
+curve_KG	phage_exposed	PAO1_Druantia_Type_III	Pa33	1*10^7	2
+curve_KH	phage_exposed	PAO1_Druantia_Type_III	Pa33	1*10^7	3
+curve_KI	phage_exposed	PAO1_Druantia_Type_III	Pa33	1*10^6	1
+curve_KJ	phage_exposed	PAO1_Druantia_Type_III	Pa33	1*10^6	2
+curve_KK	phage_exposed	PAO1_Druantia_Type_III	Pa33	1*10^6	3
+curve_KL	uninfected_control	PAO1_QatABCD			1
+curve_KM	uninfected_control	PAO1_QatABCD			2
+curve_KN	uninfected_control	PAO1_QatABCD			3
+curve_KO	phage_exposed	PAO1_QatABCD	Pa2	1*10^7	1
+curve_KP	phage_exposed	PAO1_QatABCD	Pa2	1*10^7	2
+curve_KQ	phage_exposed	PAO1_QatABCD	Pa2	1*10^7	3
+curve_KR	phage_exposed	PAO1_QatABCD	Pa2	1*10^6	1
+curve_KS	phage_exposed	PAO1_QatABCD	Pa2	1*10^6	2
+curve_KT	phage_exposed	PAO1_QatABCD	Pa2	1*10^6	3
+curve_KU	uninfected_control	PAO1_QatABCD			1
+curve_KV	uninfected_control	PAO1_QatABCD			2
+curve_KW	uninfected_control	PAO1_QatABCD			3
+curve_KX	uninfected_control	PAO1_QatABCD			1
+curve_KY	uninfected_control	PAO1_QatABCD			2
+curve_KZ	uninfected_control	PAO1_QatABCD			3
+curve_LA	phage_exposed	PAO1_QatABCD	Pa10	1*10^7	1
+curve_LB	phage_exposed	PAO1_QatABCD	Pa10	1*10^7	2
+curve_LC	phage_exposed	PAO1_QatABCD	Pa10	1*10^7	3
+curve_LD	phage_exposed	PAO1_QatABCD	Pa12	1*10^7	1
+curve_LE	phage_exposed	PAO1_QatABCD	Pa12	1*10^7	2
+curve_LF	phage_exposed	PAO1_QatABCD	Pa12	1*10^7	3
+curve_LG	phage_exposed	PAO1_QatABCD	Pa10	1*10^6	1
+curve_LH	phage_exposed	PAO1_QatABCD	Pa10	1*10^6	2
+curve_LI	phage_exposed	PAO1_QatABCD	Pa10	1*10^6	3
+curve_LJ	phage_exposed	PAO1_QatABCD	Pa12	1*10^6	1
+curve_LK	phage_exposed	PAO1_QatABCD	Pa12	1*10^6	2
+curve_LL	phage_exposed	PAO1_QatABCD	Pa12	1*10^6	3
+curve_LM	uninfected_control	PAO1_QatABCD			1
+curve_LN	uninfected_control	PAO1_QatABCD			2
+curve_LO	uninfected_control	PAO1_QatABCD			3
+curve_LP	phage_exposed	PAO1_QatABCD	Pa21	1*10^7	1
+curve_LQ	phage_exposed	PAO1_QatABCD	Pa21	1*10^7	2
+curve_LR	phage_exposed	PAO1_QatABCD	Pa21	1*10^7	3
+curve_LS	phage_exposed	PAO1_QatABCD	Pa21	1*10^6	1
+curve_LT	phage_exposed	PAO1_QatABCD	Pa21	1*10^6	2
+curve_LU	phage_exposed	PAO1_QatABCD	Pa21	1*10^6	3
+curve_LV	uninfected_control	PAO1_QatABCD			1
+curve_LW	uninfected_control	PAO1_QatABCD			2
+curve_LX	uninfected_control	PAO1_QatABCD			3
+curve_LY	phage_exposed	PAO1_QatABCD	Pa24	1*10^7	1
+curve_LZ	phage_exposed	PAO1_QatABCD	Pa24	1*10^7	2
+curve_MA	phage_exposed	PAO1_QatABCD	Pa24	1*10^7	3
+curve_MB	phage_exposed	PAO1_QatABCD	Pa24	1*10^6	1
+curve_MC	phage_exposed	PAO1_QatABCD	Pa24	1*10^6	2
+curve_MD	phage_exposed	PAO1_QatABCD	Pa24	1*10^6	3
+curve_ME	uninfected_control	PAO1_QatABCD			1
+curve_MF	uninfected_control	PAO1_QatABCD			2
+curve_MG	uninfected_control	PAO1_QatABCD			3
+curve_MH	phage_exposed	PAO1_QatABCD	Pa33	1*10^7	1
+curve_MI	phage_exposed	PAO1_QatABCD	Pa33	1*10^7	2
+curve_MJ	phage_exposed	PAO1_QatABCD	Pa33	1*10^7	3
+curve_MK	phage_exposed	PAO1_QatABCD	Pa33	1*10^6	1
+curve_ML	phage_exposed	PAO1_QatABCD	Pa33	1*10^6	2
+curve_MM	phage_exposed	PAO1_QatABCD	Pa33	1*10^6	3
+curve_MN	uninfected_control	PAO1_QatABCD			1
+curve_MO	uninfected_control	PAO1_QatABCD			2
+curve_MP	uninfected_control	PAO1_QatABCD			3
+curve_MQ	uninfected_control	PAO1_QatABCD			1
+curve_MR	uninfected_control	PAO1_QatABCD			2
+curve_MS	uninfected_control	PAO1_QatABCD			3
+curve_MT	phage_exposed	PAO1_QatABCD	Pa34	1*10^7	1
+curve_MU	phage_exposed	PAO1_QatABCD	Pa34	1*10^7	2
+curve_MV	phage_exposed	PAO1_QatABCD	Pa34	1*10^7	3
+curve_MW	phage_exposed	PAO1_QatABCD	Pa35	1*10^7	1
+curve_MX	phage_exposed	PAO1_QatABCD	Pa35	1*10^7	2
+curve_MY	phage_exposed	PAO1_QatABCD	Pa35	1*10^7	3
+curve_MZ	phage_exposed	PAO1_QatABCD	Pa34	1*10^6	1
+curve_NA	phage_exposed	PAO1_QatABCD	Pa34	1*10^6	2
+curve_NB	phage_exposed	PAO1_QatABCD	Pa34	1*10^6	3
+curve_NC	phage_exposed	PAO1_QatABCD	Pa35	1*10^6	1
+curve_ND	phage_exposed	PAO1_QatABCD	Pa35	1*10^6	2
+curve_NE	phage_exposed	PAO1_QatABCD	Pa35	1*10^6	3
+curve_NF	uninfected_control	PAO1_QatABCD			1
+curve_NG	uninfected_control	PAO1_QatABCD			2
+curve_NH	uninfected_control	PAO1_QatABCD			3
+curve_NI	phage_exposed	PAO1_QatABCD	Pa28	1*10^7	1
+curve_NJ	phage_exposed	PAO1_QatABCD	Pa28	1*10^7	2
+curve_NK	phage_exposed	PAO1_QatABCD	Pa28	1*10^7	3
+curve_NL	phage_exposed	PAO1_QatABCD	Pa28	1*10^6	1
+curve_NM	phage_exposed	PAO1_QatABCD	Pa28	1*10^6	2
+curve_NN	phage_exposed	PAO1_QatABCD	Pa28	1*10^6	3
+curve_NO	uninfected_control	PAO1_RADAR			1
+curve_NP	uninfected_control	PAO1_RADAR			2
+curve_NQ	uninfected_control	PAO1_RADAR			3
+curve_NR	phage_exposed	PAO1_RADAR	Pa12	1*10^7	1
+curve_NS	phage_exposed	PAO1_RADAR	Pa12	1*10^7	2
+curve_NT	phage_exposed	PAO1_RADAR	Pa12	1*10^7	3
+curve_NU	phage_exposed	PAO1_RADAR	Pa12	1*10^6	1
+curve_NV	phage_exposed	PAO1_RADAR	Pa12	1*10^6	2
+curve_NW	phage_exposed	PAO1_RADAR	Pa12	1*10^6	3
+curve_NX	uninfected_control	PAO1_RADAR			1
+curve_NY	uninfected_control	PAO1_RADAR			2
+curve_NZ	uninfected_control	PAO1_RADAR			3
+curve_OA	phage_exposed	PAO1_RADAR	Pa21	1*10^7	1
+curve_OB	phage_exposed	PAO1_RADAR	Pa21	1*10^7	2
+curve_OC	phage_exposed	PAO1_RADAR	Pa21	1*10^7	3
+curve_OD	phage_exposed	PAO1_RADAR	Pa21	1*10^6	1
+curve_OE	phage_exposed	PAO1_RADAR	Pa21	1*10^6	2
+curve_OF	phage_exposed	PAO1_RADAR	Pa21	1*10^6	3
+curve_OG	uninfected_control	PAO1_RADAR			1
+curve_OH	uninfected_control	PAO1_RADAR			2
+curve_OI	uninfected_control	PAO1_RADAR			3
+curve_OJ	phage_exposed	PAO1_RADAR	Pa24	1*10^7	1
+curve_OK	phage_exposed	PAO1_RADAR	Pa24	1*10^7	2
+curve_OL	phage_exposed	PAO1_RADAR	Pa24	1*10^7	3
+curve_OM	phage_exposed	PAO1_RADAR	Pa24	1*10^6	1
+curve_ON	phage_exposed	PAO1_RADAR	Pa24	1*10^6	2
+curve_OO	phage_exposed	PAO1_RADAR	Pa24	1*10^6	3
+curve_OP	uninfected_control	PAO1_RADAR			1
+curve_OQ	uninfected_control	PAO1_RADAR			2
+curve_OR	uninfected_control	PAO1_RADAR			3
+curve_OS	phage_exposed	PAO1_RADAR	Pa33	1*10^7	1
+curve_OT	phage_exposed	PAO1_RADAR	Pa33	1*10^7	2
+curve_OU	phage_exposed	PAO1_RADAR	Pa33	1*10^7	3
+curve_OV	phage_exposed	PAO1_RADAR	Pa33	1*10^6	1
+curve_OW	phage_exposed	PAO1_RADAR	Pa33	1*10^6	2
+curve_OX	phage_exposed	PAO1_RADAR	Pa33	1*10^6	3
+curve_OY	uninfected_control	PAO1_RADAR			1
+curve_OZ	uninfected_control	PAO1_RADAR			2
+curve_PA	uninfected_control	PAO1_RADAR			3
+curve_PB	uninfected_control	PAO1_RADAR			1
+curve_PC	uninfected_control	PAO1_RADAR			2
+curve_PD	uninfected_control	PAO1_RADAR			3
+curve_PE	phage_exposed	PAO1_RADAR	Pa34	1*10^7	1
+curve_PF	phage_exposed	PAO1_RADAR	Pa34	1*10^7	2
+curve_PG	phage_exposed	PAO1_RADAR	Pa34	1*10^7	3
+curve_PH	phage_exposed	PAO1_RADAR	Pa35	1*10^7	1
+curve_PI	phage_exposed	PAO1_RADAR	Pa35	1*10^7	2
+curve_PJ	phage_exposed	PAO1_RADAR	Pa35	1*10^7	3
+curve_PK	phage_exposed	PAO1_RADAR	Pa34	1*10^6	1
+curve_PL	phage_exposed	PAO1_RADAR	Pa34	1*10^6	2
+curve_PM	phage_exposed	PAO1_RADAR	Pa34	1*10^6	3
+curve_PN	phage_exposed	PAO1_RADAR	Pa35	1*10^6	1
+curve_PO	phage_exposed	PAO1_RADAR	Pa35	1*10^6	2
+curve_PP	phage_exposed	PAO1_RADAR	Pa35	1*10^6	3
+curve_PQ	uninfected_control	PAO1_RADAR			1
+curve_PR	uninfected_control	PAO1_RADAR			2
+curve_PS	uninfected_control	PAO1_RADAR			3
+curve_PT	phage_exposed	PAO1_RADAR	Pa53	1*10^6	1
+curve_PU	phage_exposed	PAO1_RADAR	Pa53	1*10^6	2
+curve_PV	phage_exposed	PAO1_RADAR	Pa53	1*10^6	3
+curve_PW	uninfected_control	PAO1_TerY_P			1
+curve_PX	uninfected_control	PAO1_TerY_P			2
+curve_PY	uninfected_control	PAO1_TerY_P			3
+curve_PZ	uninfected_control	PAO1_TerY_P			1
+curve_QA	uninfected_control	PAO1_TerY_P			2
+curve_QB	uninfected_control	PAO1_TerY_P			3
+curve_QC	phage_exposed	PAO1_TerY_P	Pa3	1*10^7	1
+curve_QD	phage_exposed	PAO1_TerY_P	Pa3	1*10^7	2
+curve_QE	phage_exposed	PAO1_TerY_P	Pa3	1*10^7	3
+curve_QF	phage_exposed	PAO1_TerY_P	Pa6	1*10^7	1
+curve_QG	phage_exposed	PAO1_TerY_P	Pa6	1*10^7	2
+curve_QH	phage_exposed	PAO1_TerY_P	Pa6	1*10^7	3
+curve_QI	phage_exposed	PAO1_TerY_P	Pa3	1*10^6	1
+curve_QJ	phage_exposed	PAO1_TerY_P	Pa3	1*10^6	2
+curve_QK	phage_exposed	PAO1_TerY_P	Pa3	1*10^6	3
+curve_QL	phage_exposed	PAO1_TerY_P	Pa6	1*10^6	1
+curve_QM	phage_exposed	PAO1_TerY_P	Pa6	1*10^6	2
+curve_QN	phage_exposed	PAO1_TerY_P	Pa6	1*10^6	3
+curve_QO	uninfected_control	PAO1_TerY_P			1
+curve_QP	uninfected_control	PAO1_TerY_P			2
+curve_QQ	uninfected_control	PAO1_TerY_P			3
+curve_QR	phage_exposed	PAO1_TerY_P	Pa18	1*10^7	1
+curve_QS	phage_exposed	PAO1_TerY_P	Pa18	1*10^7	2
+curve_QT	phage_exposed	PAO1_TerY_P	Pa18	1*10^7	3
+curve_QU	phage_exposed	PAO1_TerY_P	Pa18	1*10^6	1
+curve_QV	phage_exposed	PAO1_TerY_P	Pa18	1*10^6	2
+curve_QW	phage_exposed	PAO1_TerY_P	Pa18	1*10^6	3
+curve_QX	uninfected_control	PAO1_TerY_P			1
+curve_QY	uninfected_control	PAO1_TerY_P			2
+curve_QZ	uninfected_control	PAO1_TerY_P			3
+curve_RA	uninfected_control	PAO1_TerY_P			1
+curve_RB	uninfected_control	PAO1_TerY_P			2
+curve_RC	uninfected_control	PAO1_TerY_P			3
+curve_RD	phage_exposed	PAO1_TerY_P	Pa22	1*10^7	1
+curve_RE	phage_exposed	PAO1_TerY_P	Pa22	1*10^7	2
+curve_RF	phage_exposed	PAO1_TerY_P	Pa22	1*10^7	3
+curve_RG	phage_exposed	PAO1_TerY_P	Pa25	1*10^7	1
+curve_RH	phage_exposed	PAO1_TerY_P	Pa25	1*10^7	2
+curve_RI	phage_exposed	PAO1_TerY_P	Pa25	1*10^7	3
+curve_RJ	phage_exposed	PAO1_TerY_P	Pa22	1*10^6	1
+curve_RK	phage_exposed	PAO1_TerY_P	Pa22	1*10^6	2
+curve_RL	phage_exposed	PAO1_TerY_P	Pa22	1*10^6	3
+curve_RM	phage_exposed	PAO1_TerY_P	Pa25	1*10^6	1
+curve_RN	phage_exposed	PAO1_TerY_P	Pa25	1*10^6	2
+curve_RO	phage_exposed	PAO1_TerY_P	Pa25	1*10^6	3
+curve_RP	uninfected_control	PAO1_Zorya_Type_I			1
+curve_RQ	uninfected_control	PAO1_Zorya_Type_I			2
+curve_RR	uninfected_control	PAO1_Zorya_Type_I			3
+curve_RS	uninfected_control	PAO1_Zorya_Type_I			1
+curve_RT	uninfected_control	PAO1_Zorya_Type_I			2
+curve_RU	uninfected_control	PAO1_Zorya_Type_I			3
+curve_RV	phage_exposed	PAO1_Zorya_Type_I	Pa3	1*10^7	1
+curve_RW	phage_exposed	PAO1_Zorya_Type_I	Pa3	1*10^7	2
+curve_RX	phage_exposed	PAO1_Zorya_Type_I	Pa3	1*10^7	3
+curve_RY	phage_exposed	PAO1_Zorya_Type_I	Pa6	1*10^7	1
+curve_RZ	phage_exposed	PAO1_Zorya_Type_I	Pa6	1*10^7	2
+curve_SA	phage_exposed	PAO1_Zorya_Type_I	Pa6	1*10^7	3
+curve_SB	phage_exposed	PAO1_Zorya_Type_I	Pa3	1*10^6	1
+curve_SC	phage_exposed	PAO1_Zorya_Type_I	Pa3	1*10^6	2
+curve_SD	phage_exposed	PAO1_Zorya_Type_I	Pa3	1*10^6	3
+curve_SE	phage_exposed	PAO1_Zorya_Type_I	Pa6	1*10^6	1
+curve_SF	phage_exposed	PAO1_Zorya_Type_I	Pa6	1*10^6	2
+curve_SG	phage_exposed	PAO1_Zorya_Type_I	Pa6	1*10^6	3
+curve_SH	uninfected_control	PAO1_Zorya_Type_I			1
+curve_SI	uninfected_control	PAO1_Zorya_Type_I			2
+curve_SJ	uninfected_control	PAO1_Zorya_Type_I			3
+curve_SK	phage_exposed	PAO1_Zorya_Type_I	Pa18	1*10^7	1
+curve_SL	phage_exposed	PAO1_Zorya_Type_I	Pa18	1*10^7	2
+curve_SM	phage_exposed	PAO1_Zorya_Type_I	Pa18	1*10^7	3
+curve_SN	phage_exposed	PAO1_Zorya_Type_I	Pa18	1*10^6	1
+curve_SO	phage_exposed	PAO1_Zorya_Type_I	Pa18	1*10^6	2
+curve_SP	phage_exposed	PAO1_Zorya_Type_I	Pa18	1*10^6	3
+curve_SQ	uninfected_control	PAO1_Zorya_Type_I			1
+curve_SR	uninfected_control	PAO1_Zorya_Type_I			2
+curve_SS	uninfected_control	PAO1_Zorya_Type_I			3
+curve_ST	uninfected_control	PAO1_Zorya_Type_I			1
+curve_SU	uninfected_control	PAO1_Zorya_Type_I			2
+curve_SV	uninfected_control	PAO1_Zorya_Type_I			3
+curve_SW	phage_exposed	PAO1_Zorya_Type_I	Pa22	1*10^7	1
+curve_SX	phage_exposed	PAO1_Zorya_Type_I	Pa22	1*10^7	2
+curve_SY	phage_exposed	PAO1_Zorya_Type_I	Pa22	1*10^7	3
+curve_SZ	phage_exposed	PAO1_Zorya_Type_I	Pa25	1*10^7	1
+curve_TA	phage_exposed	PAO1_Zorya_Type_I	Pa25	1*10^7	2
+curve_TB	phage_exposed	PAO1_Zorya_Type_I	Pa25	1*10^7	3
+curve_TC	phage_exposed	PAO1_Zorya_Type_I	Pa22	1*10^6	1
+curve_TD	phage_exposed	PAO1_Zorya_Type_I	Pa22	1*10^6	2
+curve_TE	phage_exposed	PAO1_Zorya_Type_I	Pa22	1*10^6	3
+curve_TF	phage_exposed	PAO1_Zorya_Type_I	Pa25	1*10^6	1
+curve_TG	phage_exposed	PAO1_Zorya_Type_I	Pa25	1*10^6	2
+curve_TH	phage_exposed	PAO1_Zorya_Type_I	Pa25	1*10^6	3
+curve_TI	uninfected_control	PAO1_Zorya_Type_I			1
+curve_TJ	uninfected_control	PAO1_Zorya_Type_I			2
+curve_TK	uninfected_control	PAO1_Zorya_Type_I			3
+curve_TL	phage_exposed	PAO1_Zorya_Type_I	Pa29	1*10^7	1
+curve_TM	phage_exposed	PAO1_Zorya_Type_I	Pa29	1*10^7	2
+curve_TN	phage_exposed	PAO1_Zorya_Type_I	Pa29	1*10^7	3
+curve_TO	phage_exposed	PAO1_Zorya_Type_I	Pa29	1*10^6	1
+curve_TP	phage_exposed	PAO1_Zorya_Type_I	Pa29	1*10^6	2
+curve_TQ	phage_exposed	PAO1_Zorya_Type_I	Pa29	1*10^6	3
+curve_TR	uninfected_control	PAO1_Zorya_Type_I			1
+curve_TS	uninfected_control	PAO1_Zorya_Type_I			2
+curve_TT	uninfected_control	PAO1_Zorya_Type_I			3
+curve_TU	phage_exposed	PAO1_Zorya_Type_I	Pa28	1*10^7	1
+curve_TV	phage_exposed	PAO1_Zorya_Type_I	Pa28	1*10^7	2
+curve_TW	phage_exposed	PAO1_Zorya_Type_I	Pa28	1*10^7	3
+curve_TX	phage_exposed	PAO1_Zorya_Type_I	Pa28	1*10^6	1
+curve_TY	phage_exposed	PAO1_Zorya_Type_I	Pa28	1*10^6	2
+curve_TZ	phage_exposed	PAO1_Zorya_Type_I	Pa28	1*10^6	3
+curve_UA	uninfected_control	PAO1_Zorya_Type_I			1
+curve_UB	uninfected_control	PAO1_Zorya_Type_I			2
+curve_UC	uninfected_control	PAO1_Zorya_Type_I			3
+curve_UD	phage_exposed	PAO1_Zorya_Type_I	PP7	1*10^6	1
+curve_UE	phage_exposed	PAO1_Zorya_Type_I	PP7	1*10^6	2
+curve_UF	phage_exposed	PAO1_Zorya_Type_I	PP7	1*10^6	3

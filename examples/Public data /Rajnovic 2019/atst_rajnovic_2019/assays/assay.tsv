@@ -1,0 +1,10 @@
+readout_type	absorbance
+readout_unit	od600
+time_unit	min
+medium_id	LB
+culture_type	planktonic
+temperature_c	37
+instrument	Varioskan Flash plate reader (Thermo Scientific)
+plate	transparent 96-well plate
+volumes	Paper reports 160 µL LB + 20 µL phage solution + 20 µL bacterial solution + 20 µL PB per assay; reported total is 220 µL
+source_reference	doi:10.1371/journal.pone.0216292
