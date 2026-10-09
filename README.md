@@ -524,7 +524,7 @@ For most new files, the easiest starting point is to load a known-good template,
 
 Sample files live in [examples/](examples/):
 
-- [Example 1](examples/e1/write_atst.ipynb): LogPhase600 input and a single-readout, all-in-one ATST file.
+- [Example 1](examples/e1/write_your_first_atst.ipynb): LogPhase600 input and a single-readout, all-in-one ATST file.
 - [Example 2](examples/e2/write_atst.ipynb): two CLARIOstar inputs and a multi-readout file with inline and linked payloads.
 - [Example 3](examples/e3/write_atst.ipynb): four Tecan SparkControl inputs and fully linked multi-readout payloads.
 - [Example 4](examples/e4/write_atst.ipynb): LogPhase600 input and a larger human-readable ATST file.
