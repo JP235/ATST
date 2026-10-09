@@ -649,12 +649,26 @@ selects any LAYOUT column (`filters={"phage_id": ["VAC1", "VAC3"]}`);
 own panels and time grid. `time_unit="h"` converts ASSAY time units among
 `s`, `min`, and `h`; omitted units retain the original scale.
 
+With facets, `require_all_filters=True` (default) requires every requested
+value of every filter column in each panel after filtering. For example,
+`filters={"phage_id": ["Pa2", ""]}` retains only facets with both Pa2 and
+controls. Set `require_all_filters=False` to retain partial matches.
+`points_only=True` draws unconnected points, supports `median_minmax`
+whiskers, and rejects `mean_sd`.
+
 Use `group_by` to specify all columns needed to distinguish conditions.
 Blank condition values are retained. `labels` and `colors` map condition
 values to legend labels and colours; for multiple grouping columns, use tuple
 keys in column order. `title` sets the figure title. Without `group_by`, raw
 curves receive individual labels and colours. ENTITIES remain available on the
 object; use `labels` for desired entity display names.
+
+Missing or blank `phage_id` appears as `control` in automatic legend labels.
+One shared legend appears above the panels, titled with the `group_by` fields
+in the order used by its labels. Pass `ax` to draw into existing
+axes, one per panel; `title` then sets the panel title. `.plot()` returns
+`None` by default to avoid duplicate notebook display. Use
+`fig = readout.plot(return_fig=True)` when the figure object is needed.
 
 Summary data requires explicit `group_by` condition columns. Each curve in a
 condition contributes once, including when only one condition remains.

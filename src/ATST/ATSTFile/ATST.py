@@ -65,12 +65,15 @@ class ATSTFile:
         group_by: str | Iterable[str] | None = None,
         filters: dict[str, Any] | None = None,
         facet_by: str | Iterable[str] | None = None,
+        require_all_filters: bool = True,
+        points_only: bool = False,
         summary: Literal["replicates", "median_minmax", "mean_sd"] = "replicates",
         time_unit: str | None = None,
         labels: dict[Any, str] | None = None,
         colors: dict[Any, Any] | None = None,
         title: str | None = None,
         ax: Axes | Iterable[Axes] | np.ndarray | None = None,
+        return_fig: bool = False,
     ):
         """Plot selected curves; see ATST.plotting.plot_readouts for options."""
         from ATST.plotting import plot_readouts
@@ -80,12 +83,15 @@ class ATSTFile:
             group_by=group_by,
             filters=filters,
             facet_by=facet_by,
+            require_all_filters=require_all_filters,
+            points_only=points_only,
             summary=summary,
             time_unit=time_unit,
             labels=labels,
             colors=colors,
             title=title,
             axes=ax,
+            return_fig=return_fig,
         )
 
     def summarize(
@@ -641,12 +647,15 @@ class MultiReadoutATST:
         for readout_id, atst in self.readouts.items():
             atst.readout_id = readout_id
 
-    def plot(self, *, readouts: str | Iterable[str] | None = None, **kwargs: Any):
+    def plot(
+        self, *, readouts: str | Iterable[str] | None = None,
+        ax: Axes | Iterable[Axes] | np.ndarray | None = None, **kwargs: Any,
+    ):
         """Plot selected readouts in separate panels, using ATSTFile.plot options."""
         from ATST.plotting import plot_readouts
 
         ids = list(self.readouts) if readouts is None else _as_list(readouts)
-        return plot_readouts([self.readouts[key] for key in ids], **kwargs)
+        return plot_readouts([self.readouts[key] for key in ids], axes=ax, **kwargs)
 
     def summarize(
         self,

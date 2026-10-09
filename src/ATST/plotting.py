@@ -89,29 +89,45 @@ def plot_readouts(
     group_by: str | Iterable[str] | None = None,
     filters: dict[str, Any] | None = None,
     facet_by: str | Iterable[str] | None = None,
+    require_all_filters: bool = True,
+    points_only: bool = False,
     summary: Literal["replicates", "median_minmax", "mean_sd"] = "replicates",
     time_unit: str | None = None,
     labels: dict[Any, str] | None = None,
     colors: dict[Any, Any] | None = None,
     title: str | None = None,
     axes: Axes | Iterable[Axes] | None = None,
+    return_fig: bool = False,
 ):
-    """Return one matplotlib Figure without requiring pyplot calls.
+    """Plot readouts; return None unless return_fig=True is requested.
 
     group_by defines condition colours and replicate aggregation; facet_by defines
     panels within each readout. filters maps layout columns to values or lists.
+    With facet_by, require_all_filters=True keeps only panels containing every
+    requested value for every filter column after filtering. For example,
+    filters={"phage_id": ["Pa2", ""]} requires both Pa2 and controls in each
+    facet. False keeps every nonempty filtered panel, including partial matches.
+    Row filtering always uses AND across columns and OR within each value list.
     summary is 'replicates', 'median_minmax' (whiskers), or 'mean_sd' (shading).
     Summaries require explicit group_by; replicate labels are not required or checked.
     labels/colors map condition keys (scalar for one column, tuple for multiple)
-    to legend labels/colours. Blank condition values are retained as ''.
+    to legend labels/colours. Missing/blank phage_id displays as 'control';
+    underlying condition keys remain unchanged, including for custom labels.
+    points_only=True draws unconnected points; median_minmax adds whiskers,
+    while mean_sd is rejected. Legends are shared above the figure's panels,
+    titled with group_by columns in the same order as the legend values.
     Time defaults to ASSAY.time_unit; conversion supports s, min, h.
     Readouts always occupy separate panels and retain their own time grids.
-    ax accepts one Axes per panel (a single Axes or an array/list of Axes).
-    Supplied axes must belong to one figure; their layout is left to the caller.
+    axes accepts one Axes per panel (a single Axes or an array/list of Axes).
+    Supplied axes must belong to one figure. Layout reserves space for the legend.
     With supplied axes, title sets the panel title instead of the figure title.
+    The default return avoids duplicate notebook display; use return_fig=True
+    when assigning the figure for further customization or saving.
     """
     if summary not in {"replicates", "median_minmax", "mean_sd"}:
         raise ValueError("summary must be replicates, median_minmax, or mean_sd")
+    if points_only and summary == "mean_sd":
+        raise ValueError("points_only does not support mean_sd; use replicates or median_minmax")
     columns = _as_list(group_by) if group_by is not None else []
     facets = _as_list(facet_by) if facet_by is not None else []
     panels = []
@@ -121,10 +137,17 @@ def plot_readouts(
         if facets:
             key = layout_key_column(layout)
             for group in _groups(atst, layout, facets):
+                panel_layout = layout[layout[key].isin(group["wells"])]
+                if require_all_filters and any(
+                    not panel_layout[column].isin([value]).any()
+                    for column, values in (filters or {}).items()
+                    for value in (values if isinstance(values, (list, tuple, set)) else [values])
+                ):
+                    continue
                 panels.append(
                     (
                         atst,
-                        layout[layout[key].isin(group["wells"])],
+                        panel_layout,
                         group["title"].split("\n")[0],
                         mode,
                     )
@@ -132,7 +155,7 @@ def plot_readouts(
         else:
             panels.append((atst, layout, "", mode))
     if not panels:
-        raise ValueError("Select at least one readout")
+        raise ValueError("No panels match the requested filters and facet requirements")
 
     # Prepare and validate before creating a figure.
     prepared = []
@@ -164,13 +187,14 @@ def plot_readouts(
             raise ValueError("Supplied axes must belong to one figure")
     else:
         ncols = min(2, len(prepared))
-        fig, ax = plt.subplots(
+        fig, axes = plt.subplots(
             math.ceil(len(prepared) / ncols),
             ncols,
             figsize=(6 * ncols, 4.5 * math.ceil(len(prepared) / ncols)),
             squeeze=False,
         )
-    assert axes
+
+    assert axes is not None
 
     palette = plt.rcParams["axes.prop_cycle"].by_key()["color"]
     condition_colors = {}
@@ -183,7 +207,10 @@ def plot_readouts(
                 condition = condition[0]
             label = (labels or {}).get(
                 condition,
-                " | ".join(map(str, group["key"])) if columns else str(condition),
+                " | ".join(
+                    "control" if column == "phage_id" and (pd.isna(value) or value == "") else str(value)
+                    for column, value in zip(columns, group["key"])
+                ) if columns else str(condition),
             )
             color = (colors or {}).get(condition)
             if color is None:
@@ -197,6 +224,8 @@ def plot_readouts(
                         atst.readings.data[curve],
                         color=color,
                         alpha=0.6,
+                        linestyle="None" if points_only else "-",
+                        marker="o" if points_only else None,
                         label=label if index == 0 else None,
                     )
             else:
@@ -218,25 +247,47 @@ def plot_readouts(
                             median - selected["min"].to_numpy(dtype=float),
                             selected["max"].to_numpy(dtype=float) - median,
                         ],
-                        fmt="o-",
+                        fmt="o" if points_only else "o-",
                         capsize=3,
                         color=color,
                         label=label,
                     )
         ax.set(
             xlabel=f"Time ({unit})",
-            ylabel=atst.assay.readout_unit,
+            ylabel=str(atst.assay.readout_unit).upper(),
             title=title
             if supplied_axes and title is not None
             else " | ".join(value for value in [atst.readout_id, facet_title] if value),
         )
-        ax.legend(frameon=False)
-        
+        if ax.get_legend() is not None:
+            ax.get_legend().remove()
+
     if not supplied_axes:
         for ax in list(axes.flat)[len(prepared) :]:
             fig.delaxes(ax)
         if title:
             fig.suptitle(title)
-        fig.tight_layout()
-        
-    return fig
+    legend_entries = {}
+    for axis in fig.axes:
+        handles, legend_labels = axis.get_legend_handles_labels()
+        for handle, label in zip(handles, legend_labels):
+            legend_entries.setdefault(label, handle)
+    for legend in list(fig.legends):
+        if legend.get_gid() == "atst_legend":
+            legend.remove()
+    legend_height = 0
+    title_height = 0.3 / fig.get_figheight() if fig._suptitle is not None else 0
+    if legend_entries:
+        ncols = 1 if max(map(len, legend_entries)) > 40 else min(4, len(legend_entries))
+        legend_title = " | ".join(columns) if columns else layout_key_column(prepared[0][0].layout.data)
+        legend = fig.legend(
+            list(legend_entries.values()), list(legend_entries),
+            title=legend_title, loc="upper center",
+            bbox_to_anchor=(0.5, 1 - title_height), ncol=ncols, frameon=False,
+        )
+        legend.set_gid("atst_legend")
+        legend_height = (0.25 * math.ceil(len(legend_entries) / ncols) + 0.4) / fig.get_figheight()
+    fig.tight_layout(rect=(0, 0, 1, 1 - legend_height - title_height))
+
+    if return_fig:
+        return fig

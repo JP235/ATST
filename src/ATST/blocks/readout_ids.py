@@ -35,5 +35,7 @@ class ReadoutIds(WideTableBlock):
                 "READOUT_IDS contains duplicate readout_id values"
             )
 
-
+    def __getitem__(self, key):
+        return self.data['readout_id'][key]
+    
 __all__ = ["ReadoutIds"]
