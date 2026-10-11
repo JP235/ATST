@@ -5,8 +5,8 @@ One Costa study combines the two public plate-reader workbooks into two workbook
 ## Walkthrough
 
 1. Run [write_atst.ipynb](read_shared_data/write_atst.ipynb) from `read_shared_data/`. It reads the original XLSX files, curated layouts and entity definitions, then writes the linked ATST package to `../atst_costa_2024/`.
-2. Run [read_atst.ipynb](read_atst.ipynb) from this directory. It plots all three Pa3, MOI 10 replicates and three uninfected controls for both PAO1 + Zorya Type I and PAO1 + pEmpty, then prints assay conditions and isolate, phage and medium details from the linked package and calculates mean and sample SD from the replicates.
-3. Run [direct_read.ipynb](direct_read.ipynb) from this directory. It makes the same plot directly from the shared XLSX; the following markdown cell gathers the same context with pointers to the paper and supplements.
+2. Run [read_atst.ipynb](read_atst.ipynb) from this directory. The ATST and direct readers select `raw_all`, retain isolates with both Pa2 and uninfected controls, and plot mean ± sample SD for each phage/dose condition. The ATST reader also displays stored assay and entity context.
+3. Run [direct_read.ipynb](direct_read.ipynb) from this directory for matching plots read directly from the source files.
 
 Use Python 3.10+ with pandas, openpyxl, matplotlib and a Jupyter/IPython kernel. The writer and ATST reader also require the local ATST package. The direct-reading notebook reads the source workbooks.
 
@@ -36,6 +36,3 @@ Share the whole `atst_costa_2024/` folder to share the standalone ATST package. 
 
 Each layout has exactly six columns: `curve_id`, `type`, `isolate_id`, `phage_id`, `moi` or `pfu_ml`, and `replicate`. The MOI10 workbook uses `moi`; the raw workbook uses `pfu_ml`. Curve IDs start at `curve_A` within each readout. The curated layout inputs retain source-column and worksheet order.
 
-## Verification and limits
-
-The two local workbooks match Zenodo v1.0 byte-for-byte. The linked package was regenerated from the writer notebook and reloaded with structural validation. Source time and measurement values were checked against all 783 curves. Both reading notebooks display the same twelve demonstration curves. The two linked layouts combine source worksheets with matching metadata, assay and Time values.

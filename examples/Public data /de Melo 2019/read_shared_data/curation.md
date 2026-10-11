@@ -2,7 +2,7 @@
 
 Sources: [paper](https://doi.org/10.1186/s12866-019-1481-z) and [Additional file 8](sources/12866_2019_1481_MOESM7_ESM.xlsx), the shared absorbance workbook.
 
-| Readout | Sheet | Phage dose annotation | Infected time + raw triplicates | Control time + raw triplicates |
+| Source block | Sheet | Phage dose annotation | Infected time + raw triplicates | Control time + raw triplicates |
 | --- | --- | --- | --- | --- |
 | Lfar01_1e6 | Plan1 | B3:B4 | B7:E14 | B21:E28 |
 | Lfar01_1e7 | Plan1 | B32:B34 | B37:E44 | B51:E58 |

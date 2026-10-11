@@ -3,8 +3,8 @@
 One study links five OD600 source blocks: main Figures 1A and 6A, supplementary Figures S1B, S1C and S6B. The [standalone linked ATST package](atst_burkle_2025/) is separate from [sources and curation](read_shared_data/). The package contains OD600 readings.
 
 1. Run [write_atst.ipynb](read_shared_data/write_atst.ipynb) from `read_shared_data/` to regenerate the package.
-2. Run [read_atst.ipynb](read_atst.ipynb) from this folder for S6B raw curves, medians with hourly min-max whiskers, assay/entity details and a summary table.
-3. Run [direct_read.ipynb](direct_read.ipynb) here for matching plots from hard-coded workbook ranges, followed by paper/workbook source pointers.
+2. Run [read_atst.ipynb](read_atst.ipynb) from this directory. Both readers select `Fig_S6B` and show individual curves plus median/min-max whiskers grouped by treatment. Times remain in source minutes; the ATST reader also displays stored context and summary values.
+3. Run [direct_read.ipynb](direct_read.ipynb) from this directory for matching plots read directly from the source files.
 
 Use Python 3.10+ with pandas, openpyxl, matplotlib, IPython/Jupyter and the local ATST package for the writer and ATST reader. The direct reader uses the source workbook. [Curation notes](read_shared_data/curation.md) document source positions, missing readings, duplicate curves and unresolved provenance.
 

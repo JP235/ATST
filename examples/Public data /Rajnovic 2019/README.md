@@ -4,7 +4,7 @@ One linked ATST study includes the ten bacterial-concentration sheets (90 condit
 
 1. Run [write_atst.ipynb](read_shared_data/write_atst.ipynb) from `read_shared_data/` to regenerate the package.
 2. Run [read_atst.ipynb](read_atst.ipynb) from this folder to plot all 10^5 CFU/mL conditions, calculate median/min-max, and inspect linked assay/entities.
-3. Run [direct_read.ipynb](direct_read.ipynb) here for matching plots from fixed workbook ranges and source pointers into the paper/workbook.
+3. Run [direct_read.ipynb](direct_read.ipynb) here for matching plots from fixed workbook ranges.
 
 Requires Python 3.10+, pandas, openpyxl, matplotlib, IPython/Jupyter and the local ATST package for writing and ATST reading. The direct reader uses fixed workbook ranges. [Curation notes](read_shared_data/curation.md) document gaps, starred text cells, and provenance.
 
