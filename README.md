@@ -285,7 +285,7 @@ print(atst.readings.data.head())
 
 ```python
 treatment_wells = atst.layout.data.loc[
-    atst.layout.data["type"] == "Treatment_1",
+    atst.layout.data["type"] == "treated",
     "well_loc",
 ]
 
@@ -620,66 +620,91 @@ five linkable blocks are linked; `linked_blocks` selects a case-sensitive subset
 and rejects unknown names. Multi-readout payload filenames contain their
 `readout_id`, and entity filenames are lowercase.
 
-`write_linked_atst_bundle` remains available when the same fully linked output
-is needed as one ZIP. The Streamlit generator exposes that ZIP form as
+Use `write_linked_atst_bundle` to package fully linked output as one ZIP. The Streamlit generator exposes that ZIP form as
 `Linked-files ZIP` in its download format control.
-For browser uploads, use a standalone ATST file: uploading a container alone
-does not upload the files referenced by its relative links.
+The generator's template upload accepts standalone ATST files. Inspect File
+accepts standalone ATST files and linked-files ZIPs. Uploading a linked
+container alone does not include the files referenced by its relative links.
 
 ## Condition plots and summaries
 
-`plot()` returns a matplotlib Figure; notebooks display it without importing
-matplotlib. Available on a single readout and a multi-readout study:
+`ATSTFile` and `MultiReadoutATST` provide `.plot()` and `.summarize()`.
+Plotting uses LAYOUT columns to identify conditions and selects the matching
+READINGS columns. Column names and readout IDs come from the loaded data.
+
+The snippets below assume an `ATSTFile` named `atst` with illustrative LAYOUT
+columns `condition`, `dose`, and `sample_id`. Use the columns that describe
+conditions in your own file:
 
 ```python
-readout = study.readouts["Fig_1A"]
-readout.plot(group_by="phage_id", summary="replicates")
-readout.plot(group_by="phage_id", summary="median_minmax")
-readout.plot(group_by="phage_id", summary="mean_sd")
-stats = readout.summarize(group_by="phage_id")
-
-study.plot(readouts=["Fig_1A"], group_by="phage_id", summary="mean_sd")
-stats = study.summarize(readouts=["Fig_1A"], group_by="phage_id")
+atst.plot(group_by=["condition", "dose"])
+atst.plot(group_by=["condition", "dose"], summary="median_minmax")
+atst.plot(group_by=["condition", "dose"], summary="mean_sd")
+stats = atst.summarize(group_by=["condition", "dose"])
 ```
 
-`replicates` draws individual curves, `median_minmax` draws median lines with
-min-max whiskers, and `mean_sd` draws mean lines with ±SD shading. `filters`
-selects any LAYOUT column (`filters={"phage_id": ["VAC1", "VAC3"]}`);
-`facet_by` creates panels within each readout. Each selected readout has its
-own panels and time grid. `time_unit="h"` converts ASSAY time units among
-`s`, `min`, and `h`; omitted units retain the original scale.
+| `summary` | Representation |
+| --- | --- |
+| `"replicates"` (default) | Individual curves |
+| `"median_minmax"` | Median with min-max whiskers |
+| `"mean_sd"` | Mean with ± sample SD shading |
 
-With facets, `require_all_filters=True` (default) requires every requested
-value of every filter column in each panel after filtering. For example,
-`filters={"phage_id": ["Pa2", ""]}` retains only facets with both Pa2 and
-controls. Set `require_all_filters=False` to retain partial matches.
-`points_only=True` draws unconnected points, supports `median_minmax`
-whiskers, and rejects `mean_sd`.
+`group_by` must include every LAYOUT column needed to distinguish conditions.
+Summaries require explicit grouping; if the selection contains one group, all
+its curves contribute to that summary. Each curve contributes once, regardless
+of whether replicate labels repeat, are blank, or are absent. Without
+`group_by`, the default plot shows individual curves with their own labels and
+colours. `points_only=True` draws unconnected points and supports
+`"replicates"` and `"median_minmax"`; it cannot be combined with `"mean_sd"`.
 
-Use `group_by` to specify all columns needed to distinguish conditions.
-Blank condition values are retained. `labels` and `colors` map condition
-values to legend labels and colours; for multiple grouping columns, use tuple
-keys in column order. `title` sets the figure title. Without `group_by`, raw
-curves receive individual labels and colours. ENTITIES remain available on the
-object; use `labels` for desired entity display names.
+`filters` maps LAYOUT columns to a value or a list of values. Rows must match
+every filter column; any listed value may match within a column. `facet_by`
+creates separate panels for combinations of the specified LAYOUT columns:
 
-Missing or blank `phage_id` appears as `control` in automatic legend labels.
+```python
+conditions = atst.layout.data["condition"].drop_duplicates().tolist()
+atst.plot(
+    group_by=["condition", "dose"],
+    filters={"condition": conditions},
+    facet_by="sample_id",
+)
+```
+
+With facets, `require_all_filters=True` requires every requested value of every
+filter column to occur in each panel after row filtering. Set it to `False`
+to retain nonempty panels containing only some requested values. This checks
+value coverage within each column, not every possible combination of values.
+
+For a loaded `MultiReadoutATST` named `study`, select IDs from its readout
+mapping. Selected readouts retain separate panels and time grids; their curves
+are never pooled:
+
+```python
+readout_ids = list(study.readouts)
+readout_id = readout_ids[0]
+study.plot(readouts=[readout_id], group_by=["condition", "dose"])
+stats = study.summarize(readouts=[readout_id], group_by=["condition", "dose"])
+```
+
+`time_unit` defaults to the stored ASSAY unit; conversions support `"s"`,
+`"min"`, and `"h"`. Axis labels use the readout and time units. `title` sets
+the figure title, or the panel title when drawing into supplied `ax` axes.
+Supply one axis per panel, all belonging to the same figure.
+
 One shared legend appears above the panels, titled with the `group_by` fields
-in the order used by its labels. Pass `ax` to draw into existing
-axes, one per panel; `title` then sets the panel title. `.plot()` returns
-`None` by default to avoid duplicate notebook display. Use
-`fig = readout.plot(return_fig=True)` when the figure object is needed.
+in label order. Missing or blank `phage_id` appears as `control` in automatic
+labels. `labels` and `colors` map condition keys to custom labels and colours;
+keys are scalar values for one grouping column or tuples in column order for
+multiple columns. Custom labels do not change condition keys or grouping.
 
-Summary data requires explicit `group_by` condition columns. Each curve in a
-condition contributes once, including when only one condition remains.
-Replicate labels may repeat, be blank, or be absent; they do not define summary
-groups. Summaries contain condition columns, `Time`, `n`,
-`mean`, `sd`, `median`, `min`, and `max`; multi-readout summaries also include
+`.plot()` returns `None` by default, allowing a bare notebook call to display
+once. Use `fig = atst.plot(return_fig=True)` when the figure object is needed.
+
+`.summarize()` returns a DataFrame with the grouping columns, `Time`, `n`,
+`mean`, `sd`, `median`, `min`, and `max`. Multi-readout summaries also include
 `readout_id`. Statistics ignore missing readings; `n` counts available values
-at each time and SD uses `ddof=1` (undefined for fewer than two values).
-Summary times retain the source units. Readouts are never pooled.
-
-`plot_full_plate()` remains available; the `.plt()` shorthand was removed.
+at each time, and SD uses `ddof=1` (undefined for fewer than two values).
+Summary times retain their source units.
 
 ## Development
 
